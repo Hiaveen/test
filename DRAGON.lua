@@ -321,7 +321,7 @@ var = 'هكر القلوب'
 elseif tonumber(user_id) == tonumber(1523435687) then
 var = 'مبرمج سورس'
 elseif tonumber(user_id) == tonumber(1414888743) then
-var = 'مبرمج سورس'
+var = 'بلال الهكر'
 elseif tonumber(user_id) == tonumber(1174250096) then
 var = 'مبرمج جوست'
 elseif tonumber(user_id) == tonumber(SUDO) then
@@ -3020,7 +3020,33 @@ keyboard.inline_keyboard = {
 local msg_id = msg.id_/2097152/0.5
 https.request("https://api.telegram.org/bot"..token..'/sendPhoto?chat_id=' .. msg.chat_id_ .. '&photo=https://t.me/source_Laren&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
 end
-
+if text == "هيفين" then
+local TEXT_SUD = database:get(bot_id..'Tshake:TEXT_SUDO')
+if TEXT_SUDO then 
+send(msg.chat_id_, msg.id_,TEXT_SUDO)
+else
+tdcli_function ({ID = "GetUser",user_id_ = 1661260546,},function(arg,result) 
+local function taha(extra, taha, success)
+if taha.photos_[0] then
+local Name = 'هيفين للتواصل معه اتبع الازرارا ⇧\n['..result.first_name_..'](t.me/H_I_v_e_e_n101)\n'
+keyboard = {} 
+keyboard.inline_keyboard = {
+{
+{text = '  ❨ '..result.first_name_..'  ❩ ',url="t.me/H_I_v_e_e_n101"},
+},
+{
+{text = '𖠲  𝚂𝙾𝚄𝚁𝙲𝙴 𝙻𝙰𝚁𝙴𝙽 𖠲', url="t.me/source_Laren"},
+},
+}
+local msg_id = msg.id_/2097152/0.5
+https.request("https://api.telegram.org/bot"..token..'/sendPhoto?chat_id='..msg.chat_id_..'&caption='..URL.escape(Name)..'&photo='..taha.photos_[0].sizes_[1].photo_.persistent_id_..'&reply_to_message_id='..msg_id..'&parse_mode=markdown&disable_web_page_preview=true&reply_markup='..JSON.encode(keyboard)) 
+else
+sendText(msg.chat_id_,Name,msg.id_/2097152/0.5,'md')
+ end end
+tdcli_function ({ ID = "GetUserProfilePhotos", user_id_ = 1661260546, offset_ = 0, limit_ = 1 }, taha, nil)
+end,nil)
+end
+end
 --------------------------------------------------------------------------------------------------------------
 if Chat_Type == 'GroupBot' and ChekAdd(msg.chat_id_) == true then
 if text == 'رفع نسخه الاحتياطيه' and DevSoFi(msg) then   
@@ -11403,7 +11429,7 @@ local List = {
 ᯓ 𝟔𝟔𝟔𖡋 𝗖𝗛 - @source_Laren ☯.
 ]],
 [[
-☯◉ 𝐮𝐬𝐞𝐫 : #username 𖣬  
+☯◉ 𝐮𝐬𝐞?? : #username 𖣬  
 ☯◉ 𝐦𝐬𝐠  : #msgs 𖣬 
 ☯◉ 𝐬𝐭𝐚 : #stast 𖣬 
 ☯◉ 𝐢𝐝  : #id 𖣬
@@ -13104,9 +13130,6 @@ keyboard.inline_keyboard = {
 },
 {
 {text = '𝚂𝙾𝚄𝚁𝙲𝙴 𝙲𝙷𝙰𝙽𝙽𝙴𝙻 ', url="t.me/source_Laren "},
-},
-{
-{text = 'اضف البوت لمجموعتك 𖠕', url="http://t.me/"..sudos.UserName.."?startgroup=new"},
 },
 }
 local msg_id = msg.id_/2097152/0.5
