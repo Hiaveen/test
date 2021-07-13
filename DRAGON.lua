@@ -3014,7 +3014,7 @@ keyboard.inline_keyboard = {
 {text = ' ²₀²₁ ˝₀₆˝₁₅ | ₆:₀₀ 𝙿𝙼  ', url = "https://t.me/source_Laren"},
 },
 {
-{text =  اضف البوت لمجموعتك 𖠕 , url="http://t.me/"..sudos.UserName.."?startgroup=new"},
+{text = ' اضف البوت لمجموعتك 𖠕 ', url="http://t.me/"..sudos.UserName.."?startgroup=new"},
 },
 }
 local msg_id = msg.id_/2097152/0.5
