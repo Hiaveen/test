@@ -2992,33 +2992,27 @@ end,nil)
 end
 if text == 'السورس' or text == 'سورس' or text == '.سورس' or text == ". سورس" then
 local Text =[[
-[◍ ᴡᴇʟᴄᴏᴍᴇ ᴛᴏ ʟᴀʀᴇɴ  ◍](t.me/source_Laren)
 
-[◍ ᴛʜᴇ ʙᴇѕᴛ ᴏɴ ѕᴏụʀᴄᴇ ᴛᴇʟᴇ ◍](t.me/source_Laren)
+◍ ᴛʜᴇ ʙᴇѕᴛ ᴇɢ ʟụᴀ ѕᴏụʀᴄᴇ ɪɴ ᴛᴇʟᴇɢʀᴀᴍ
 
-[◍ ғᴏʟʟᴏᴡ ᴛʜᴇ ʙụᴛᴛᴏɴѕ ʙᴇʟᴏᴡ ◍](t.me/source_Laren)
+◍ ᴘᴍ ᴍᴇ ᴛᴏ ᴍᴀᴋᴇ ʏᴏụʀ ᴏᴡɴ ᴏɴᴇ 🐾
+...
 
 ]]
 keyboard = {} 
 keyboard.inline_keyboard = {
 {
-{text = ' ◍ 𝙳𝙴𝚅 𝙷𝙸𝙰𝚅𝙴𝙴𝙽  ', url = "https://t.me/User_Laren"},{text = '◍ 𝙳𝙴𝚅 𝙼𝙰𝙶𝙴𝙳 ', url = "https://t.me/User_Laren"},
+{text = '  ◍ D𝙴𝚅𝙴𝙻𝙾𝙿𝙴𝚁 𖣌   ', url = "https://t.me/User_Laren"},{text = ' ◍ D𝙴𝚅𝙴𝙻𝙾𝙿𝙴𝚁 𖣌  ', url = "https://t.me/User_Laren"},
 },
 {
-{text = '◍ 𝙳𝙴𝚅𝙴 𝙺𝙷𝙰𝙻𝙴𝙳', url = "https://t.me/User_Laren"},
-},
-{
-{text = '◍ M𝚈 𝙲𝙷𝙰𝙽𝙽𝙴𝙻𝚂  ', url = "https://t.me/source_Laren"},
+{text = ' ◍ D𝙴𝚅𝙴𝙻𝙾𝙿𝙴𝚁 𖣌 ', url = "https://t.me/User_Laren"},
 },
 {
 {text = ' ²₀²₁ ˝₀₆˝₁₅ | ₆:₀₀ 𝙿𝙼  ', url = "https://t.me/source_Laren"},
 },
-{
-{text = ' اضف البوت لمجموعتك 𖠕 ', url="http://t.me/"..sudos.UserName.."?startgroup=new"},
-},
 }
 local msg_id = msg.id_/2097152/0.5
-https.request("https://api.telegram.org/bot"..token..'/sendPhoto?chat_id=' .. msg.chat_id_ .. '&photo=https://t.me/source_Laren&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
+https.request("https://api.telegram.org/bot"..token..'/sendPhoto?chat_id=' .. msg.chat_id_ .. '&photo=https://t.me/laren_aoamer/10&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
 end
 if text == "هيفين" then
 local TEXT_SUD = database:get(bot_id..'Tshake:TEXT_SUDO')
@@ -11854,7 +11848,7 @@ Msᴀɢ ~ #msgs
 ➭- 𝒔𝒕𝒂𓂅 #stast 𓍯. 💕
 ➮- 𝒖𝒔𝒆𝒓𓂅 #username 𓍯. 💕
 ➭- 𝒎??𝒈𝒆𓂅 #msgs ??. 💕
-➭- 𝒊𝒅 𓂅 #id 𓍯. 💕
+➭- 𝒊𝒅 𓂅 #id ??. 💕
 ➭- 𝗖𝗛 - @source_Laren 💞.
 ]],
 [[
