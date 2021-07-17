@@ -961,17 +961,17 @@ end
 if Chat_Type == 'UserBot' then
 if text == '/start' or text == 'العوده' then  
 if AddChannel(msg.sender_user_id_) == false then
-local textchuser = database:get(bot_id..'text:ch:user')
-if textchuser then
-send(msg.chat_id_, msg.id_,'['..textchuser..']')
+local sanforab7 = database:get(bot_id..'text:ch:user')
+if sanforab7 then
+send(msg.chat_id_, msg.id_,'['..sanforab7..']')
 else
-send(msg.chat_id_, msg.id_,' ⋆لا تستطيع استخدام البوت يرجى الاشتراك في القناة حتى تتمكن من استخدام الاوامر \n ⋆اشترك هنا ['..database:get(bot_id..'add:ch:username')..']')
+send(msg.chat_id_, msg.id_,'    يرجى الاشتراك في القناة حتى تتمكن من استخدام الاوامر \n  ['..database:get(bot_id..'add:ch:username')..']')
 end
 return false
 end
 if text == "/start" then
 if not DevSoFi(msg) then
-local Namebot = (database:get(bot_id..'Name:Bot') or 'لارين') 
+local Namebot = (database:get(bot_id..'Name:Bot') or 'باريس') 
 local DRAGON_Msg = { 
 ' ◉مرحبا عزيزي انا بوت اسمي  '..Namebot..' اختصائي حمايه جروبات من الدرجه الاوله\n↫ مـن آلسـبآم وآلتوجيه وآلتكرآر وآلخ..\n↫ ◉طريقه تفعيلي في المجموعات\n↫ ❬◉1-قم بي اضافتي الي مجموعتك❭\n↫ ❬ارفع البوت ادمن في المجموعه❭\n↫ ❬وارسل تفعيل ◉و سيتم تفعيل البوت و تثبيت مشرفين المجموعه ادمن في البوت ❭',
 } 
@@ -3035,8 +3035,9 @@ keyboard.inline_keyboard = {
 },
 }
 local msg_id = msg.id_/2097152/0.5
-https.request("https://api.telegram.org/bot"..token..'/sendvideo?chat_id=' .. msg.chat_id_ .. '&photo=https://t.me/laren_aoamer/20&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
+https.request("https://api.telegram.org/bot"..token..'/sendvideo?chat_id=' .. msg.chat_id_ .. '&video=https://t.me/laren_aoamer/20&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
 end
+
 if text == 'هيفين' or text == 'مطور السورس' then  
 local TEXT_SUD = database:get(bot_id..'Tshake:TEXT_SUDO')
 if TEXT_SUDO then 
@@ -11204,16 +11205,23 @@ end
 end
 tdcli_function ({ID = "SearchPublicChat",username_ = username}, start_function, nil)
 end
-if text == 'كشف' and tonumber(msg.reply_to_message_id_) > 0 then
-function start_function(extra, result, success)
-tdcli_function ({ID = "GetUser",user_id_ = result.sender_user_id_},function(extra,data) 
-local rtp = Rutba(result.sender_user_id_,msg.chat_id_)
-local username = ('[@'..data.username_..']' or 'لا يوجد')
-local iduser = result.sender_user_id_
-send(msg.chat_id_, msg.id_,' ◉ ↚ الايدي » ('..iduser..')\n ◉ ↚ المعرف » ('..username..')\n ◉ ↚ الرتبه » ('..rtp..')\n ◉ ↚ نوع الكشف » بالرد')
-end,nil)
-end
-tdcli_function ({ID = "GetMessage",chat_id_ = msg.chat_id_,message_id_ = tonumber(msg.reply_to_message_id_)}, start_function, nil)
+if text == 'كشف' and tonumber(msg.reply_to_message_id_) > 0 then 
+function start_function(extra, result, success) 
+tdcli_function ({ID = "GetUser",user_id_ = result.sender_user_id_},function(extra,data)  
+local Text = { 
+"سعر الكشف 150 ج \nههه بهزر معاك يا عم من غير فلوس طبعا ❤️😂", 
+"سعر الكشف 20 جني مش منزل عن كدا 😒", 
+"سعر الكشف مجاني لانك فقير مجلخ 😂", 
+"مبروك المدام حامل 😂", 
+} 
+local ttt = Text[math.random(#Text)] 
+local rtp = Rutba(result.sender_user_id_,msg.chat_id_) 
+local username = ('[@'..data.username_..']' or 'لا يوجد') 
+local iduser = result.sender_user_id_ 
+send(msg.chat_id_, msg.id_,' ◉ الايدي ⤌ ('..iduser..')\n ◉ المعرف ⤌ ('..username..')\n ◉ الرتبه ⤌ ('..rtp..')\n ◉ نوع الكشف ⤌ بالرد\n ◉ '..ttt..' ') 
+end,nil) 
+end 
+tdcli_function ({ID = "GetMessage",chat_id_ = msg.chat_id_,message_id_ = tonumber(msg.reply_to_message_id_)}, start_function, nil) 
 end
 ---------
 if text and text:match("^كشف @(.*)$") then
@@ -12556,7 +12564,7 @@ Msᴀɢ ~ #msgs
 👳🏼‍♂ - 𝄬 username . #username . 🇪🇬
 👳🏼‍♂ - 𝄬 stast . #stast . 🇪🇬
 👳🏼‍♂ - 𝄬 id . #id . 🇪🇬
-👳🏼‍♂ - 𝄬 auto . #auto . 🇪🇬
+??🏼‍♂ - 𝄬 auto . #auto . 🇪🇬
 👳🏼‍♂ - 𝄬 msgs . #msgs . 🇪🇬
 👳🏼‍♂ - 𝄬 𝗖𝗛 - @source_Laren ☯
 ]],
