@@ -992,7 +992,7 @@ https.request("https://api.telegram.org/bot"..token..'/sendPhoto?chat_id=' .. ms
 else 
 send(msg.chat_id_, msg.id_,Namebot, 1, 'md') 
 end 
-end
+end 
 tdcli_function ({ ID = "GetUserProfilePhotos", user_id_ = bot_id, offset_ = 0, limit_ = 1 }, getpro, nil) 
 end
 end
