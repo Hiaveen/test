@@ -960,22 +960,6 @@ end
 if Chat_Type == 'UserBot' then
 if text == '/start' or text == 'العوده' then  
 if AddChannel(msg.sender_user_id_) == false then
-local textchuser = database:get(bot_id..'text:ch:user')
-if textchuser then
-send(msg.chat_id_, msg.id_,'['..textchuser..']')
-else
-send(msg.chat_id_, msg.id_,' ⋆لا تستطيع استخدام البوت يرجى الاشتراك في القناة حتى تتمكن من استخدام الاوامر \n ⋆اشترك هنا ['..database:get(bot_id..'add:ch:username')..']')
-end
-return false
-end
-if text == "/start" then
-if not DevSoFi(msg) then
-local Namebot = (database:get(bot_id..'Name:Bot') or 'باريس') 
-local DRAGON_Msg = { 
-' ◉مرحبا عزيزي انا بوت اسمي  '..Namebot..' اختصائي حمايه جروبات من الدرجه الاوله\n↫ مـن آلسـبآم وآلتوجيه وآلتكرآر وآلخ..\n↫ ◉طريقه تفعيلي في المجموعات\n↫ ❬◉1-قم بي اضافتي الي مجموعتك❭\n↫ ❬ارفع البوت ادمن في المجموعه❭\n↫ ❬وارسل تفعيل ◉و سيتم تفعيل البوت و تثبيت مشرفين المجموعه ادمن في البوت ❭',
-if Chat_Type == 'UserBot' then
-if text == '/start' or text == 'العوده' then  
-if AddChannel(msg.sender_user_id_) == false then
 local sanforab7 = database:get(bot_id..'text:ch:user')
 if sanforab7 then
 send(msg.chat_id_, msg.id_,'['..sanforab7..']')
@@ -988,6 +972,21 @@ if text == "/start" then
 if not DevSoFi(msg) then
 local Namebot = (database:get(bot_id..'Name:Bot') or 'باريس') 
 local DRAGON_Msg = { 
+' 🔵°اهـــلا انا بـوت اسمــي '..Namebot..' ⛓│آختـصاصـي حمايـه آلمجـموعـات ..🥺\n🔵│ مـن آلسـبآم وآلتوجيه وآلتكرآر وآلخ..\n🚸╽ لتفعيل آلبوت آتبــع الشـروط 😈❕\n↫ ❬اضف البوت الى المجموعه❭\n↫ ❬ارفع البوت ادمن في المجموعه❭\n↫ ❬وارسل تفعيل وسيتم تفعيل البوت ورفع مشرفي الكروب تلقائين ❭',
+if Chat_Type == 'UserBot' then
+if text == '/start' or text == 'العوده' then  
+if AddChannel(msg.sender_user_id_) == false then
+local sanforab7 = database:get(bot_id..'text:ch:user')
+if sanforab7 then
+send(msg.chat_id_, msg.id_,'['..sanforab7..']')
+else
+send(msg.chat_id_, msg.id_,'    يرجى الاشتراك في القناة حتى تتمكن من استخدام الاوامر \n  ['..database:get(bot_id..'add:ch:username')..']')
+end
+return false
+end
+tdcli_function ({ ID = "GetUserProfilePhotos", user_id_ = bot_id, offset_ = 0, limit_ = 1 }, getpro, nil) 
+end
+end
 if DevSoFi(msg) then
 local bl = '●انت الان المطور الاساسي في البوت \n● سورس لارين\n ●يمكنك تحكم في البوتات من الكيبورد أسفل \n[تابع جديدنا](t.me/source_Laren)'
 local keyboard = {
@@ -12081,7 +12080,7 @@ Msᴀɢ ~ #msgs
  𝚄𝚂𝙴𝚁 𓄹𓄼 #username
  𝙸𝙳  𓄹𓄼 #id 
  ??𝚃𝙰 𓄹𓄼 #stast 
- 𝙼𝚂𝙶𝚂??𓄼 #msgs
+ 𝙼𝚂𝙶𝚂𓄹𓄼 #msgs
  𝗖𝗛 - @source_Laren ☯
 ]],
 [[
@@ -12127,7 +12126,7 @@ Msᴀɢ ~ #msgs
 -›   𝚂𝚃𝙰𝚂𝚃 . #stast 🇪🇬 ꙰
 -›   𝙸𝙳 . #id 🇪🇬 ꙰ 
 -›   𝙶𝙼𝙰𝚂 . #stast 🇪🇬 ꙰ 
--›   𝙼𝚂𝙶𝚂 . #msgs 🇪🇬 ꙰
+-›   ??𝚂𝙶𝚂 . #msgs 🇪🇬 ꙰
 -›   𝗖𝗛 - @source_Laren 🇪🇬 ꙰.
 ]],
 [[
