@@ -1008,6 +1008,7 @@ local keyboard = {
 }
 send_inline_key(msg.chat_id_,bl,keyboard)
 end
+end
 if not DevSoFi(msg) and not database:sismember(bot_id..'Ban:User_Bot',msg.sender_user_id_) and not database:get(bot_id..'Tuasl:Bots') then
 send(msg.sender_user_id_, msg.id_,'◉ تـم ارسـال رسالـتك للمـطور')
 tdcli_function ({ID = "ForwardMessages", chat_id_ = SUDO,    from_chat_id_ = msg.sender_user_id_,    message_ids_ = {[0] = msg.id_},    disable_notification_ = 1,    from_background_ = 1 },function(arg,data) 
@@ -12095,7 +12096,7 @@ Msᴀɢ ~ #msgs
 𖡋 𝗖𝗛 - @source_Laren ☯
 ]],
 [[
-𖤂 ~ 𝑢𝑠?? #username  𖤐
+𖤂 ~ ??𝑠𝑒 #username  𖤐
 𖤂 ~ 𝑚𝑠𝑔 #msgs 𖤐
 𖤂 ~ 𝑠𝑡𝑎 #stast  
 𖤂 ~ 𝑖𝑑 #id 𖤐
