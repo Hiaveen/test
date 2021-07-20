@@ -960,15 +960,40 @@ end
 if Chat_Type == 'UserBot' then
 if text == '/start' or text == 'العوده' then  
 if AddChannel(msg.sender_user_id_) == false then
-local sanforab7 = database:get(bot_id..'text:ch:user')
-if sanforab7 then
-send(msg.chat_id_, msg.id_,'['..sanforab7..']')
+local textchuser = database:get(bot_id..'text:ch:user')
+if textchuser then
+send(msg.chat_id_, msg.id_,'['..textchuser..']')
 else
-send(msg.chat_id_, msg.id_,'    يرجى الاشتراك في القناة حتى تتمكن من استخدام الاوامر \n  ['..database:get(bot_id..'add:ch:username')..']')
+send(msg.chat_id_, msg.id_,' ⋆لا تستطيع استخدام البوت يرجى الاشتراك في القناة حتى تتمكن من استخدام الاوامر \n ⋆اشترك هنا ['..database:get(bot_id..'add:ch:username')..']')
 end
 return false
 end
+if text == "/start" then
+if not DevSoFi(msg) then
+local Namebot = (database:get(bot_id..'Name:Bot') or 'لارين') 
+local DRAGON_Msg = { 
+' ◉مرحبا عزيزي انا بوت اسمي  '..Namebot..' اختصائي حمايه جروبات من الدرجه الاوله\n↫ مـن آلسـبآم وآلتوجيه وآلتكرآر وآلخ..\n↫ ◉طريقه تفعيلي في المجموعات\n↫ ❬◉1-قم بي اضافتي الي مجموعتك❭\n↫ ❬ارفع البوت ادمن في المجموعه❭\n↫ ❬وارسل تفعيل ◉و سيتم تفعيل البوت و تثبيت مشرفين المجموعه ادمن في البوت ❭',
+} 
+Namebot = DRAGON_Msg[math.random(#DRAGON_Msg)] 
+local msg_id = msg.id_/2097152/0.5  
+keyboard = {} 
+keyboard.inline_keyboard = {
+{
+{text = 'الـمـطـور', url="http://t.me/"..sudos.UserName},
+},
+{
+{text = 'اضف البوت الي مجموعتك ↯', url = "https://t.me/"..data.username_.."?startgroup=new"},
+},
+}
+local function getpro(extra, result, success) 
+if result.photos_[0] then 
+https.request("https://api.telegram.org/bot"..token..'/sendPhoto?chat_id=' .. msg.chat_id_ .. '&photo='..result.photos_[0].sizes_[1].photo_.persistent_id_..'&caption=' .. URL.escape(Namebot).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
+else 
+send(msg.chat_id_, msg.id_,Namebot, 1, 'md') 
+end 
+end 
 tdcli_function ({ ID = "GetUserProfilePhotos", user_id_ = bot_id, offset_ = 0, limit_ = 1 }, getpro, nil) 
+end
 end
 if DevSoFi(msg) then
 local bl = '●انت الان المطور الاساسي في البوت \n● سورس لارين\n ●يمكنك تحكم في البوتات من الكيبورد أسفل \n[تابع جديدنا](t.me/source_Laren)'
@@ -10950,11 +10975,11 @@ local Namebot = (database:get(bot_id..'Name:Bot') or 'لارين')
 local DRAGON_Msg = { 
 'اسمي  '..Namebot..' ياقلبي🙂💘',
 'اسمي '..Namebot..' ياروحي 🙈❤️',
-'اسمي  '..Namebot..' يعمري🌚🌹',
+'اسمي  '..Namebot..' يعمري🌚🌹
 'اسمي  '..Namebot..' ياقمر ❤️',
 'اسمي  '..Namebot..' يامزه 🥺💞',
 'مقولت اسمي '..Namebot..' في اي 🙄', 
-'اسمي الكيوت '..Namebot..' 🌝❤️',
+'اسمي الكيوت '..Namebot..' 🌝 ◉', 
 'اسمي  '..Namebot..' ياحياتي 🦦💜',
 'اسمي  '..Namebot..' يانن عيني🙊💙',
 } 
@@ -12109,7 +12134,7 @@ Msᴀɢ ~ #msgs
 -›   𝚂𝚃𝙰𝚂𝚃 . #stast 🇪🇬 ꙰
 -›   𝙸𝙳 . #id 🇪🇬 ꙰ 
 -›   𝙶𝙼𝙰𝚂 . #stast 🇪🇬 ꙰ 
--›   ??𝚂??𝚂 . #msgs 🇪🇬 ꙰
+-›   𝙼𝚂𝙶𝚂 . #msgs 🇪🇬 ꙰
 -›   𝗖𝗛 - @source_Laren 🇪🇬 ꙰.
 ]],
 [[
@@ -12545,7 +12570,7 @@ Msᴀɢ ~ #msgs
 🇪🇬 - 𝄬 id . #id 𓃠
 🇪🇬 - 𝄬 gmas . #gmas 𓃠
 🇪🇬 - 𝄬 msgs . #msgs  𓃠
-🇪🇬 - 𝄬 ??𝗛 - @source_Laren ☯
+🇪🇬 - 𝄬 𝗖𝗛 - @source_Laren ☯
 ]],
 [[
 .𖣂 ??𝙨𝙚𝙧𝙣𝙖𝙢𝙚 , #username  🖤 ↴
