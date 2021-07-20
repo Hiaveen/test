@@ -2546,9 +2546,9 @@ for k,v in pairs(filter) do
 if v == msg.content_.animation_.animation_.persistent_id_ then
 tdcli_function({ID = "GetUser",user_id_ = msg.sender_user_id_},function(arg,data) 
 if data.username_ ~= false then
-send(msg.chat_id_,0," ◉ ↚ عذرا » {[@"..data.username_.."]}\n ◉ ↚ عذرا تم منع المتحركه \n") 
+send(msg.chat_id_,0," ◉ عذرا ← {[@"..data.username_.."]}\n ◉ عذرا تم منع المتحركه \n") 
 else
-send(msg.chat_id_,0," ◉ ↚ عذرا » {["..data.first_name_.."](T.ME/source_Laren)}\n ◉ ↚ عذرا تم منع المتحركه \n" ) 
+send(msg.chat_id_,0," ◉ عذرا ← {["..data.first_name_.."](T.ME/sanforab7)}\n ◉ عذرا تم منع المتحركه \n" ) 
 end
 end,nil)   
 DeleteMessage(msg.chat_id_,{[0] = msg.id_})       
@@ -2559,29 +2559,29 @@ end
 
 if text == 'تفعيل' and Sudo(msg) then
 if AddChannel(msg.sender_user_id_) == false then
-local textchuser = database:get(bot_id..'text:ch:user')
-if textchuser then
-send(msg.chat_id_, msg.id_,'['..textchuser..']')
+local sanforab7 = database:get(bot_id..'text:ch:user')
+if sanforab7 then
+send(msg.chat_id_, msg.id_,'['..sanforab7..']')
 else
-send(msg.chat_id_, msg.id_,' ◉ ↚ لا تستطيع استخدام البوت \n  ◉ ↚ يرجى الاشتراك بالقناه اولا \n  ◉ ↚ اشترك هنا ['..database:get(bot_id..'add:ch:username')..']')
+send(msg.chat_id_, msg.id_,'    \n  ◉ اشترك اولا بلقناه \n  ['..database:get(bot_id..'add:ch:username')..']')
 end
 return false
 end
 if msg.can_be_deleted_ == false then 
-send(msg.chat_id_, msg.id_,' ◉ ↚ عذرا يرجى ترقيه البوت مشرف !')
+send(msg.chat_id_, msg.id_,' ◉ عذرا يرجى ترقيه البوت مشرف !')
 return false  
 end
 tdcli_function ({ ID = "GetChannelFull", channel_id_ = getChatId(msg.chat_id_).ID }, function(arg,data)  
 if tonumber(data.member_count_) < tonumber(database:get(bot_id..'Num:Add:Bot') or 0) and not DevSoFi(msg) then
-send(msg.chat_id_, msg.id_,' ◉ ↚ عدد اعضاء الروم قليله يرجى جمع >> {'..(database:get(bot_id..'Num:Add:Bot') or 0)..'} عضو')
+send(msg.chat_id_, msg.id_,' ◉ عدد اعضاء الجروب قليله يرجى جمع >> {'..(database:get(bot_id..'Num:Add:Bot') or 0)..'} عضو')
 return false
 end
 tdcli_function ({ID = "GetUser",user_id_ = msg.sender_user_id_},function(extra,result,success)
 tdcli_function({ID ="GetChat",chat_id_=msg.chat_id_},function(arg,chat)  
 if database:sismember(bot_id..'Chek:Groups',msg.chat_id_) then
-send(msg.chat_id_, msg.id_,' ◉ ↚ بالتأكيد تم تفعيل الروم')
+send(msg.chat_id_, msg.id_,' ◉ بالتأكيد تم تفعيل الجروب')
 else
-sendText(msg.chat_id_,'\n ◉ ↚ بواسطه » ['..string.sub(result.first_name_,0, 70)..'](tg://user?id='..result.id_..')\n ◉ ↚ تم تفعيل الروم {'..chat.title_..'}',msg.id_/2097152/0.5,'md')
+sendText(msg.chat_id_,'\n ◉ بواسطه ← ['..string.sub(result.first_name_,0, 70)..'](tg://user?id='..result.id_..')\n ◉ تم تفعيل الجروب {'..chat.title_..'}',msg.id_/2097152/0.5,'md')
 database:sadd(bot_id..'Chek:Groups',msg.chat_id_)
 local Name = '['..result.first_name_..'](tg://user?id='..result.id_..')'
 local NameChat = chat.title_
@@ -2593,12 +2593,12 @@ LinkGp = linkgpp.result
 else
 LinkGp = 'لا يوجد'
 end
-Text = ' ◉ ↚ تم تفعيل كروب جديده\n'..
-'\n ◉ ↚ بواسطة {'..Name..'}'..
-'\n ◉ ↚ ايدي الروم {'..IdChat..'}'..
-'\n ◉ ↚ اسم الروم {['..NameChat..']}'..
-'\n ◉ ↚ عدد اعضاء الروم *{'..NumMember..'}*'..
-'\n ◉ ↚ الرابط {['..LinkGp..']}'
+Text = ' ◉ تم تفعيل جروب جديده\n'..
+'\n ◉ بواسطة {'..Name..'}'..
+'\n ◉ ايدي الجروب {'..IdChat..'}'..
+'\n ◉ اسم الجروب {['..NameChat..']}'..
+'\n ◉ عدد اعضاء الجروب *{'..NumMember..'}*'..
+'\n ◉ الرابط {['..LinkGp..']}'
 if not DevSoFi(msg) then
 sendText(SUDO,Text,0,'md')
 end
@@ -2607,22 +2607,23 @@ end,nil)
 end,nil) 
 end,nil)
 end
+
 if text == 'تعطيل' and Sudo(msg) then
 if AddChannel(msg.sender_user_id_) == false then
-local textchuser = database:get(bot_id..'text:ch:user')
-if textchuser then
-send(msg.chat_id_, msg.id_,'['..textchuser..']')
+local sanforab7 = database:get(bot_id..'text:ch:user')
+if sanforab7 then
+send(msg.chat_id_, msg.id_,'['..sanforab7..']')
 else
-send(msg.chat_id_, msg.id_,' ◉ ↚ لا تستطيع استخدام البوت \n  ◉ ↚ يرجى الاشتراك بالقناه اولا \n  ◉ ↚ اشترك هنا ['..database:get(bot_id..'add:ch:username')..']')
+send(msg.chat_id_, msg.id_,'    \n  ◉ اشترك اولا بلقناه \n  ['..database:get(bot_id..'add:ch:username')..']')
 end
 return false
 end
 tdcli_function ({ID = "GetUser",user_id_ = msg.sender_user_id_},function(extra,result,success)
 tdcli_function({ID ="GetChat",chat_id_=msg.chat_id_},function(arg,chat)  
 if not database:sismember(bot_id..'Chek:Groups',msg.chat_id_) then
-send(msg.chat_id_, msg.id_,' ◉ ↚ بالتأكيد تم تعطيل الروم')
+send(msg.chat_id_, msg.id_,' ◉ بالتأكيد تم تعطيل الجروب')
 else
-sendText(msg.chat_id_,'\n ◉ ↚ بواسطه » ['..string.sub(result.first_name_,0, 70)..'](tg://user?id='..result.id_..')\n ◉ ↚ تم تعطيل الروم {'..chat.title_..'}',msg.id_/2097152/0.5,'md')
+sendText(msg.chat_id_,'\n ◉ بواسطه ← ['..string.sub(result.first_name_,0, 70)..'](tg://user?id='..result.id_..')\n ◉ تم تعطيل الجروب {'..chat.title_..'}',msg.id_/2097152/0.5,'md')
 database:srem(bot_id..'Chek:Groups',msg.chat_id_)  
 local Name = '['..result.first_name_..'](tg://user?id='..result.id_..')'
 local NameChat = chat.title_
@@ -2634,11 +2635,12 @@ LinkGp = linkgpp.result
 else
 LinkGp = 'لا يوجد'
 end
-Text = '\nتم تعطيل الروم  ◉ ↚ '..
-'\n ◉ ↚ بواسطة {'..Name..'}'..
-'\n ◉ ↚ ايدي الروم {'..IdChat..'}'..
-'\n ◉ ↚ اسم الروم {['..NameChat..']}'..
-'\n ◉ ↚ الرابط {['..LinkGp..']}'
+Text = ' ◉ تم تعطيل الجروب\n'..
+'\n ◉ بواسطة {'..Name..'}'..
+'\n ◉ ايدي الجروب {'..IdChat..'}'..
+'\n ◉ عدد اعضاء الجروب *{'..NumMember..'}*'..
+'\n ◉ اسم الجروب {['..NameChat..']}'..
+'\n ◉ الرابط {['..LinkGp..']}'
 if not DevSoFi(msg) then
 sendText(SUDO,Text,0,'md')
 end
@@ -2648,21 +2650,21 @@ end,nil)
 end
 if text == 'تفعيل' and not Sudo(msg) and not database:get(bot_id..'Free:Bots') then
 if AddChannel(msg.sender_user_id_) == false then
-local textchuser = database:get(bot_id..'text:ch:user')
-if textchuser then
-send(msg.chat_id_, msg.id_,'['..textchuser..']')
+local sanforab7 = database:get(bot_id..'text:ch:user')
+if sanforab7 then
+send(msg.chat_id_, msg.id_,'['..sanforab7..']')
 else
-send(msg.chat_id_, msg.id_,' ◉ ↚ لا تستطيع استخدام البوت \n  ◉ ↚ يرجى الاشتراك بالقناه اولا \n  ◉ ↚ اشترك هنا ['..database:get(bot_id..'add:ch:username')..']')
+send(msg.chat_id_, msg.id_,' ◉ لا تستطيع استخدام البوت \n  ◉ يرجى الاشتراك بالقناه اولا \n  ['..database:get(bot_id..'add:ch:username')..']')
 end
 return false
 end
 if msg.can_be_deleted_ == false then 
-send(msg.chat_id_, msg.id_,' ◉ ↚ عذرا يرجى ترقيه البوت مشرف !')
+send(msg.chat_id_, msg.id_,' ◉ عذرا يرجى ترقيه البوت مشرف !')
 return false  
 end
 tdcli_function ({ ID = "GetChannelFull", channel_id_ = getChatId(msg.chat_id_).ID }, function(arg,data)  
 if tonumber(data.member_count_) < tonumber(database:get(bot_id..'Num:Add:Bot') or 0) and not DevSoFi(msg) then
-send(msg.chat_id_, msg.id_,' ◉ ↚ عدد اعضاء الروم قليله يرجى جمع >> {'..(database:get(bot_id..'Num:Add:Bot') or 0)..'} عضو')
+send(msg.chat_id_, msg.id_,' ◉ عدد اعضاء الجروب قليله يرجى جمع >> {'..(database:get(bot_id..'Num:Add:Bot') or 0)..'} عضو')
 return false
 end
 tdcli_function ({ID = "GetUser",user_id_ = msg.sender_user_id_},function(extra,result,success)
@@ -2676,9 +2678,9 @@ elseif da.status_.ID == "ChatMemberStatusEditor" then
 var = 'مشرف'
 end
 if database:sismember(bot_id..'Chek:Groups',msg.chat_id_) then
-send(msg.chat_id_, msg.id_,' ◉ ↚ تم تفعيل الروم')
+send(msg.chat_id_, msg.id_,' ◉ تم تفعيل الجروب')
 else
-sendText(msg.chat_id_,'\n ◉ ↚ بواسطه » ['..string.sub(result.first_name_,0, 70)..'](tg://user?id='..result.id_..')\n ◉ ↚ تم تفعيل الروم {'..chat.title_..'}',msg.id_/2097152/0.5,'md')
+sendText(msg.chat_id_,'\n ◉ بواسطه ← ['..string.sub(result.first_name_,0, 70)..'](tg://user?id='..result.id_..')\n ◉ تم تفعيل الجروب {'..chat.title_..'}',msg.id_/2097152/0.5,'md')
 database:sadd(bot_id..'Chek:Groups',msg.chat_id_)  
 database:sadd(bot_id..'CoSu'..msg.chat_id_, msg.sender_user_id_)
 local Name = '['..result.first_name_..'](tg://user?id='..result.id_..')'
@@ -2692,13 +2694,13 @@ LinkGp = linkgpp.result
 else
 LinkGp = 'لا يوجد'
 end
-Text = ' ◉ ↚ تم تفعيل كروب جديده\n'..
-'\n ◉ ↚ بواسطة {'..Name..'}'..
-'\n ◉ ↚ موقعه في الروم {'..AddPy..'}' ..
-'\n ◉ ↚ ايدي الروم {'..IdChat..'}'..
-'\n ◉ ↚ عدد اعضاء الروم *{'..NumMember..'}*'..
-'\n ◉ ↚ اسم الروم {['..NameChat..']}'..
-'\n ◉ ↚ الرابط {['..LinkGp..']}'
+Text = ' ◉ تم تفعيل جروب جديده\n'..
+'\n ◉ بواسطة {'..Name..'}'..
+'\n ◉ موقعه في الجروب {'..AddPy..'}' ..
+'\n ◉ ايدي الجروب {'..IdChat..'}'..
+'\n ◉ عدد اعضاء الجروب *{'..NumMember..'}*'..
+'\n ◉ اسم الجروب {['..NameChat..']}'..
+'\n ◉ الرابط {['..LinkGp..']}'
 if not DevSoFi(msg) then
 sendText(SUDO,Text,0,'md')
 end
@@ -2709,6 +2711,31 @@ end,nil)
 end,nil) 
 end,nil) 
 end,nil)
+end
+if msg.content_.ID == "MessageChatDeleteMember" and tonumber(msg.content_.user_.id_) == tonumber(AHMED) then  
+ghhhhh:srem(AHMED.."Chek:Groups", msg.chat_id_)  
+tdcli_function ({ID = "GetUser",user_id_ = msg.sender_user_id_},function(extra,result,success) 
+tdcli_function({ID ="GetChat",chat_id_=msg.chat_id_},function(arg,dp)  
+local Name1 = result.first_name_ 
+local Name1 = Name1:gsub('"',"")  
+local Name1 = Name1:gsub("'","")  
+local Name1 = Name1:gsub("","")  
+local Name1 = Name1:gsub("*","")  
+local Name1 = Name1:gsub("{","")  
+local Name1 = Name1:gsub("}","")  
+local Name = '['..Name1..'](tg://user?id='..result.id_..')' 
+local NameChat = dp.title_ 
+local NameChat = NameChat:gsub('"',"")  
+local NameChat = NameChat:gsub("'","")  
+local NameChat = NameChat:gsub("","")  
+local NameChat = NameChat:gsub("*","")  
+local NameChat = NameChat:gsub("{","")  
+local NameChat = NameChat:gsub("}","")  
+if not popppp(msg) then 
+yadstt(ahmed,"◉ تم طرد البوت من جروب \n\n◉ بواسطة  {"..Name.."}\n◉ اسم الجروب {"..NameChat.."}\n◉ ايدي الجروب {"..msg.chat_id_.."} ",0,'md') 
+end 
+end,nil) 
+end,nil) 
 end
 if text and text:match("^ضع عدد الاعضاء (%d+)$") and DevSoFi(msg) then
 local Num = text:match("ضع عدد الاعضاء (%d+)$") 
