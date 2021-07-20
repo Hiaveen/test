@@ -1010,13 +1010,13 @@ send_inline_key(msg.chat_id_,bl,keyboard)
 end
 end
 if not DevSoFi(msg) and not database:sismember(bot_id..'Ban:User_Bot',msg.sender_user_id_) and not database:get(bot_id..'Tuasl:Bots') then
-send(msg.sender_user_id_, msg.id_,'◉ تـم ارسـال رسالـتك للمـطور')
+send(msg.sender_user_id_, msg.id_,' ⋆تم ارسال رسالتك\n ⋆سيتم رد في اقرب وقت')
 tdcli_function ({ID = "ForwardMessages", chat_id_ = SUDO,    from_chat_id_ = msg.sender_user_id_,    message_ids_ = {[0] = msg.id_},    disable_notification_ = 1,    from_background_ = 1 },function(arg,data) 
 tdcli_function ({ID = "GetUser",user_id_ = msg.sender_user_id_},function(arg,ta) 
 vardump(data)
 if data and data.messages_[0].content_.sticker_ then
 local Name = '['..string.sub(ta.first_name_,0, 40)..'](tg://user?id='..ta.id_..')'
-local Text = ' ◉ تم ارسال الملصق من ↓\n - '..Name
+local Text = ' ⋆تم ارسال الملصق من ↓\n - '..Name
 sendText(SUDO,Text,0,'md')
 end 
 end,nil) 
@@ -1964,7 +1964,7 @@ end
 if msg.content_.ID == "MessageChatAddMembers" then 
 if msg.content_.members_[0].id_ == tonumber(bot_id) then 
 print("it is Bot")
-N = (database:get(bot_id.."Name:Bot") or "س")
+N = (database:get(bot_id.."Name:Bot") or "لارين")
 tdcli_function ({ID = "GetUser",user_id_ = bot_id,},function(arg,data) 
 tdcli_function ({ID = "GetUserProfilePhotos",user_id_ = bot_id,offset_ = 0,limit_ = 1},function(extra,result,success) 
 if result.photos_[0] then
@@ -3124,7 +3124,7 @@ end,nil)
 end
 end
 
-if text == 'هكر القلوب' or text == 'ماجد' or text == '⇣◉ -◉ -◉ -◉ ⟮𝙳𝙴𝚅𝙴𝙻𝙾𝙿𝙴𝚁 𝙼𝙰𝙶𝙴𝙳⟯◉ -◉ -◉ -◉ ⇣' then
+if text == 'ماقد' or text == 'ماجد' or text == '⇣◉ -◉ -◉ -◉ ⟮𝙳𝙴𝚅𝙴𝙻𝙾𝙿𝙴𝚁 𝙼𝙰𝙶𝙴𝙳⟯◉ -◉ -◉ -◉ ⇣' then
 local TEXT_SUD = database:get(bot_id..'Tshake:TEXT_SUDO')
 if TEXT_SUDO then 
 send(msg.chat_id_, msg.id_,TEXT_SUDO)
@@ -10973,16 +10973,15 @@ end
 if text == "بوت" or text == 'البوت' then 
 local Namebot = (database:get(bot_id..'Name:Bot') or 'لارين') 
 local DRAGON_Msg = { 
-'اسمي  '..Namebot..' . قلبي 🤤💚', 
-'اسمي '..Namebot..' . روحي🙈❤️', 
-'اسمي  '..Namebot..' يعمري🌚🌹', 
-'اسمي  '..Namebot..' . قمر 🐭🤍', 
-'اسمي  '..Namebot..' .مزه 🥺❤️', 
-'اسمي  '..Namebot..' يعم 😒', 
+'اسمي  '..Namebot..' ياقلبي🙂💘',
+'اسمي '..Namebot..' ياروحي 🙈❤️',
+'اسمي  '..Namebot..' يعمري🌚🌹
+'اسمي  '..Namebot..' ياقمر ❤️',
+'اسمي  '..Namebot..' يامزه 🥺💞',
 'مقولت اسمي '..Namebot..' في اي 🙄', 
 'اسمي الكيوت '..Namebot..' 🌝 ◉', 
-'اسمي  '..Namebot..' .ح.تي🧸♥️', 
-'اسمي  '..Namebot..' يوتكه🙈🍑', 
+'اسمي  '..Namebot..' ياحياتي 🦦💜',
+'اسمي  '..Namebot..' يانن عيني🙊💙',
 } 
  
 local text = DRAGON_Msg[math.random(#DRAGON_Msg)] 
@@ -12071,8 +12070,8 @@ Msᴀɢ ~ #msgs
 [[
 ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉
  𝗨𝗦𝗘𝗥 ⟿ #username  « 
- 𝗠𝗦??𝗦 ⟿  #msgs  « 
- 𝗦𝗧𝗔 ⟿ #stast  « 
+ 𝗠????𝗦 ⟿  #msgs  « 
+ ??𝗧𝗔 ⟿ #stast  « 
  ??𝗗  ⟿ #id  « 
 ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉
 𝗖𝗛 - @source_Laren ☯
