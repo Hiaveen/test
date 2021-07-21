@@ -13362,24 +13362,24 @@ return false
 end
 ----------------------------------------------------------------- انتهئ الاوامر الجديدة
 if text == "تعطيل الزخرفه" and Manager(msg) then
-send(msg.chat_id_, msg.id_, ' ◉ ↚ تم تعطيل الزخرفه')
+send(msg.chat_id_, msg.id_, ' تم تعطيل الزخرفه')
 database:set(bot_id.." sofi:zhrf_Bots"..msg.chat_id_,"close")
 end
 if text == "تفعيل الزخرفه" and Manager(msg) then
-send(msg.chat_id_, msg.id_,' ◉ ↚ تم تفعيل الزخرفه')
+send(msg.chat_id_, msg.id_,' تم تفعيل الزخرفه')
 database:set(bot_id.." sofi:zhrf_Bots"..msg.chat_id_,"open")
 end
 if text and text:match("^زخرفه (.*)$") and database:get(bot_id.." sofi:zhrf_Bots"..msg.chat_id_) == "open" then
 local TextZhrfa = text:match("^زخرفه (.*)$")
-zh = https.request('https://rudi-dev.tk/Amir1/Boyka.php?en='..URL.escape(TextZhrfa)..'')
+zh = https.request('https://apiabs.ml/zrf.php?abs='..URL.escape(TextZhrfa)..'')
 zx = JSON.decode(zh)
-t = "\n ◉ ↚ قائمه الزخرفه \n༫═════⛥═════༫\n"
+t = "\n ◉قائمه الزخرفه \n༫═════⛥═════༫\n"
 i = 0
 for k,v in pairs(zx.ok) do
 i = i + 1
 t = t..i.."-  "..v.." \n"
 end
-send(msg.chat_id_, msg.id_, t..'༫═════⛥═════༫\n ◉ ↚ ➫ .[ 𝚂𝙾𝚄𝚁𝙲𝙴 𝙻𝙰𝚁𝙴𝙽  ](t.me/source_Laren)➤ ')
+send(msg.chat_id_, msg.id_, t..'༫═════⛥═════༫\nاضغط علي الاسم ليتم نسخه\n༫═════⛥═════༫ٴ\n ◉ ❲[𝚂𝙾𝚄𝚁𝙲𝙴 𝙲𝙷𝙰𝙽𝙽𝙴𝙻 ‘](t.me/source_Laren)❳ ◉ ')
 end
 if text == "تعطيل الابراج" and Manager(msg) then
 send(msg.chat_id_, msg.id_, ' ◉ ↚ تم تعطيل الابراج')
