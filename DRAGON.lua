@@ -972,7 +972,7 @@ if text == "/start" then
 if not DevSoFi(msg) then
 local Namebot = (database:get(bot_id..'Name:Bot') or 'باريس') 
 local DRAGON_Msg = { 
-' 🔵°اهـــلا انا بـوت اسمــي '..Namebot..' ⛓│آختـصاصـي حمايـه آلمجـموعـات ..🥺\n🔵│ مـن آلسـبآم وآلتوجيه وآلتكرآر وآلخ..\n🚸╽ لتفعيل آلبوت آتبــع الشـروط 😈❕\n↫ ❬اضف البوت الى المجموعه❭\n↫ ❬ارفع البوت ادمن في المجموعه❭\n↫ ❬وارسل تفعيل وسيتم تفعيل البوت ورفع مشرفي الكروب تلقائين ❭',
+' ◉مرحبا عزيزي انا بوت اسمي  '..Namebot..' اختصائي حمايه جروبات من الدرجه الاوله\n↫ مـن آلسـبآم وآلتوجيه وآلتكرآر وآلخ..\n↫ ◉طريقه تفعيلي في المجموعات\n↫ ❬◉1-قم بي اضافتي الي مجموعتك❭\n↫ ❬ارفع البوت ادمن في المجموعه❭\n↫ ❬وارسل تفعيل ◉و سيتم تفعيل البوت و تثبيت مشرفين المجموعه ادمن في البوت ❭',
 } 
 Namebot = DRAGON_Msg[math.random(#DRAGON_Msg)] 
 local msg_id = msg.id_/2097152/0.5  
@@ -11640,7 +11640,7 @@ local List = {
 [[
 ¦◉  𝚄𝚂𝙴𝚁  ⇉⁞ #username ↝🇪🇬.
 ¦◉  𝙼𝚂𝙶𝚂 ⇉ ⁞  #msgs  ↝ 🇪🇬.
-¦◉  𝚁𝙰𝙽𝙺  ⇉⁞ #stast  ↝🇪🇬.
+¦◉  𝚁𝙰𝙽𝙺  ⇉⁞ #stast  ↝??🇬.
 ¦◉  𝙸?? 𝚂𝚃𝙰 ⇉ #id  ↝🇪🇬.
 ¦◉  𝗖𝗛 - @source_Laren ☯.
 ]],
@@ -15058,7 +15058,7 @@ end
 if text == 'الالعاب' then
 local Text = [[ 
  ─────── ◉ ───────
-◉ لستخدام الالعاب اتبع مايلي ..↑↓
+◉ لستخدام الاوامر { رفع - تنزيل } ..↑↓
  ─────── ◉ ───────
 ◉ منوعات اولاين ← لبدء العبه
 ◉ مسبقات اولاين ← لبدء العبه
@@ -15104,6 +15104,52 @@ keyboard.inline_keyboard = {
 } 
 local msg_id = msg.id_/2097152/0.5 
 https.request("https://api.telegram.org/bot"..token..'/sendPhoto?chat_id=' .. msg.chat_id_ .. '&photo=https://t.me/laren_aoamer/9&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
+end
+
+if text == 'قسم التسليه' then
+local Text = [[ 
+ ─────── ◉ ───────
+◉ لستخدام الاوامر { رفع - تنزيل } ..↑↓
+ ─────── ◉ ───────
+◉ رفع فلات← تنزيل فلات
+◉ رفع كيرفي ← تنزيل كيرفي
+◉ رفع علق ← تنزيل علق
+◉ رفع فرسه ← تنزيل فرسه
+◉ رفع قرد ← تنزيل قرد
+◉ رفع عره ← تنزيل عره
+◉ رفع غبي ← تنزيل غبي
+◉ رفع بقره ← تنزيل بقره
+◉ رفع متوحد ← تنزيل متوحد
+◉ رفع متخزوق ← تنزيل متخزوق
+◉ رفع عبيط ← تنزيل عبيط
+◉ رفع خاينه ← تنزيل خاينه
+◉ رفع خاين ← تنزيل خاين
+◉ رفع بنتي ← تنزيل بنتي
+ ─────── ◉ ───────
+◉ رفع قطتي ← تنزيل قطتي
+◉ رفع دكري ← تنزيل دكري
+◉ رفع ابني ← تنزيل ابني
+◉ رفع فاشل ← تنزيل فاشل
+◉ رفع حيوان ← تنزيل حيوان
+◉ رفع وتكه ← تنزيل وتكه
+◉ رفع رقاصه ← تنزيل رقاصه
+◉ رفع زوجتي ← زواج
+◉ طلاق ←  رفع مطلقه
+◉ رفع حمار ← تنزيل حمار
+◉ رفع شاذ ← تنزيل شاذ
+◉ رفع بقلبي ← تنزيل بقلبي
+◉ رفع كلب ← تنزيل كلب
+◉ رفع خنزير ← تنزيل خنزير
+╾╾╾╾╾╾╾╾╾╾╾╾╾╾╾╸
+◉ 𝙲𝙷  - [𝚂𝙾𝚄𝚁𝙲𝙴 𝙻𝙰𝙴𝚁𝙽 ⚘ ](t.me/source_Laren) 
+╾╾╾╾╾╾╾╾╾╾╾╾╾╾╾╸
+]]
+keyboard = {}  
+keyboard.inline_keyboard = { 
+{{text = '𝚂𝙾𝚄𝚁𝙲𝙴 𝙲𝙷𝙰𝙽𝙽𝙴𝙻 ', url="t.me/source_Laren"}}, 
+} 
+local msg_id = msg.id_/2097152/0.5 
+https.request("https://api.telegram.org/bot"..token..'/sendPhoto?chat_id=' .. msg.chat_id_ .. '&photo=https://t.me/laren_aoamer/24&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
 end
 
 if text == "كتبات" or text == "حكمه" or text == "قصيده" then 
