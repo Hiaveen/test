@@ -904,7 +904,7 @@ local bl = '●انت الان العضو في البوت \n● سورس لار�
 local keyboard = {
 {'قـسم مـطورين الـسورس'},
 {'قـسم الالـعـاب'},
-{'قـسم ممـيزات php'},
+{'قـسم ممـيزات'},
 }
 send_inline_key(msg.chat_id_,bl,keyboard)
 end
@@ -3083,7 +3083,7 @@ keyboard.inline_keyboard = {
 {text = '  ❨ '..result.first_name_..'  ❩ ',url="t.me/H_I_v_e_e_n101"},
 },
 {
-{text = '𖠲  𝚂𝙾𝚄𝚁𝙲𝙴 𝙻𝙰𝚁𝙴𝙽 𖠲', url="t.me/source_Laren"},
+{text = ' ²₀²₁ ˝₀₆˝₁₅ | ₆:₀₀ 𝙿𝙼 ', url="t.me/source_Laren"},
 },
 }
 local msg_id = msg.id_/2097152/0.5
@@ -3111,7 +3111,7 @@ keyboard.inline_keyboard = {
 {text = '  ❨ '..result.first_name_..'  ❩ ',url="t.me/UU_K2"},
 },
 {
-{text = '𖠲  𝚂𝙾𝚄𝚁𝙲𝙴 𝙻𝙰𝚁𝙴𝙽 𖠲', url="t.me/source_Laren"},
+{text = ' ²₀²₁ ˝₀₆˝₁₅ | ₆:₀₀ 𝙿𝙼 ', url="t.me/source_Laren"},
 },
 }
 local msg_id = msg.id_/2097152/0.5
@@ -3139,7 +3139,7 @@ keyboard.inline_keyboard = {
 {text = '  ❨ '..result.first_name_..'  ❩ ',url="t.me/K_1_D"},
 },
 {
-{text = '𖠲  𝚂𝙾𝚄𝚁𝙲𝙴 𝙻𝙰𝚁𝙴𝙽 𖠲', url="t.me/source_Laren"},
+{text = ' ²₀²₁ ˝₀₆˝₁₅ | ₆:₀₀ 𝙿𝙼 ', url="t.me/source_Laren"},
 },
 }
 local msg_id = msg.id_/2097152/0.5
@@ -4046,6 +4046,7 @@ keyboard.inline_keyboard = {
 local msg_id = msg.id_/2097152/0.5 
 https.request("https://api.telegram.org/bot"..token..'/sendPhoto?chat_id=' .. msg.chat_id_ .. '&photo=https://t.me/wffhvv/'..ght..'&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
 end
+
 if text == "لو خيروك بالصور" and not  database:get(bot_id.."sing:for:me"..msg.chat_id_) then 
 ght = math.random(1,24); 
 local Text ='مرحبا اليك لو خيروك بالصوره◉'
@@ -4056,6 +4057,7 @@ keyboard.inline_keyboard = {
 local msg_id = msg.id_/2097152/0.5 
 https.request("https://api.telegram.org/bot"..token..'/sendPhoto?chat_id=' .. msg.chat_id_ .. '&photo=https://t.me/bebo44y/'..ght..'&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
 end
+
 if text == "حروف بالصور" and not  database:get(bot_id.."sing:for:me"..msg.chat_id_) then 
 ght = math.random(1,15); 
 local Text ='مرحبا إليك حروف بالصوره◉'
@@ -11641,7 +11643,7 @@ local List = {
 ¦◉  𝚄𝚂𝙴𝚁  ⇉⁞ #username ↝🇪🇬.
 ¦◉  𝙼𝚂𝙶𝚂 ⇉ ⁞  #msgs  ↝ 🇪🇬.
 ¦◉  𝚁𝙰𝙽𝙺  ⇉⁞ #stast  ↝??🇬.
-¦◉  𝙸?? 𝚂𝚃𝙰 ⇉ #id  ↝🇪🇬.
+¦◉  𝙸?? ????𝙰 ⇉ #id  ↝🇪🇬.
 ¦◉  𝗖𝗛 - @source_Laren ☯.
 ]],
 [[
@@ -12507,7 +12509,7 @@ Msᴀɢ ~ #msgs
 ]],
 [[
 🇪🇬 - 𝄬 𝐔ˢᴱᴿᴺᴬᴹᴱ . #username  𓃠
-🇪?? - 𝄬 ˢᵀᴬˢᵀ . #stast  𓃠
+🇪?? - ?? ˢᵀᴬˢᵀ . #stast  𓃠
 ??🇬 - 𝄬 ᴵᴰ . #id 𓃠
 🇪🇬 - 𝄬 ᴳᴹᴬˢ . #gmas 𓃠
 🇪🇬 - 𝄬 ᴹˢᴳˢ . #msgs  𓃠
