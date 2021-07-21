@@ -904,7 +904,7 @@ local bl = '●انت الان العضو في البوت \n● سورس لار�
 local keyboard = {
 {'قـسم مـطورين الـسورس'},
 {'قـسم الالـعـاب'},
-{'قـسم ممـيزات php'},
+{'قـسم ممـيزات'},
 }
 send_inline_key(msg.chat_id_,bl,keyboard)
 end
@@ -960,19 +960,43 @@ end
 if Chat_Type == 'UserBot' then
 if text == '/start' or text == 'العوده' then  
 if AddChannel(msg.sender_user_id_) == false then
-local sanforab7 = database:get(bot_id..'text:ch:user')
-if sanforab7 then
-send(msg.chat_id_, msg.id_,'['..sanforab7..']')
+local textchuser = database:get(bot_id..'text:ch:user')
+if textchuser then
+send(msg.chat_id_, msg.id_,'['..textchuser..']')
 else
-send(msg.chat_id_, msg.id_,'    يرجى الاشتراك في القناة حتى تتمكن من استخدام الاوامر \n  ['..database:get(bot_id..'add:ch:username')..']')
+send(msg.chat_id_, msg.id_,' ⋆لا تستطيع استخدام البوت يرجى الاشتراك في القناة حتى تتمكن من استخدام الاوامر \n ⋆اشترك هنا ['..database:get(bot_id..'add:ch:username')..']')
 end
 return false
 end
+if text == "/start" then
+if not DevSoFi(msg) then
+local Namebot = (database:get(bot_id..'Name:Bot') or 'باريس') 
+local DRAGON_Msg = { 
+' ◉مرحبا عزيزي انا بوت اسمي  '..Namebot..' اختصائي حمايه جروبات من الدرجه الاوله\n↫ مـن آلسـبآم وآلتوجيه وآلتكرآر وآلخ..\n↫ ◉طريقه تفعيلي في المجموعات\n↫ ❬◉1-قم بي اضافتي الي مجموعتك❭\n↫ ❬ارفع البوت ادمن في المجموعه❭\n↫ ❬وارسل تفعيل ◉و سيتم تفعيل البوت و تثبيت مشرفين المجموعه ادمن في البوت ❭',
+} 
+Namebot = DRAGON_Msg[math.random(#DRAGON_Msg)] 
+local msg_id = msg.id_/2097152/0.5  
+keyboard = {} 
+keyboard.inline_keyboard = {
+{
+{text = 'الـمـطـور', url="http://t.me/"..sudos.UserName},
+},
+{
+{text = 'اضف البوت لمجموعتك 𖠕', url="http://t.me/"..sudos.UserName.."?startgroup=new"},
+},
+}
+local function getpro(extra, result, success) 
+if result.photos_[0] then 
+https.request("https://api.telegram.org/bot"..token..'/sendPhoto?chat_id=' .. msg.chat_id_ .. '&photo='..result.photos_[0].sizes_[1].photo_.persistent_id_..'&caption=' .. URL.escape(Namebot).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
+else 
+send(msg.chat_id_, msg.id_,Namebot, 1, 'md') 
+end 
+end 
 tdcli_function ({ ID = "GetUserProfilePhotos", user_id_ = bot_id, offset_ = 0, limit_ = 1 }, getpro, nil) 
 end
 end
 if DevSoFi(msg) then
-local bl = '●انت الان المطور الاساسي في البوت \n● سورس سون\n ●يمكنك تحكم في البوتات من الكيبورد أسفل \n[تابع جديدنا](t.me/source_Laren)'
+local bl = '●انت الان المطور الاساسي في البوت \n● سورس لارين\n ●يمكنك تحكم في البوتات من الكيبورد أسفل \n[تابع جديدنا](t.me/source_Laren)'
 local keyboard = {
 {'قـسم الـسورس'},
 {'ضع اسم للبوت','معلومات الكيبورد'},
@@ -3059,7 +3083,7 @@ keyboard.inline_keyboard = {
 {text = '  ❨ '..result.first_name_..'  ❩ ',url="t.me/H_I_v_e_e_n101"},
 },
 {
-{text = '𖠲  𝚂𝙾𝚄𝚁𝙲𝙴 𝙻𝙰𝚁𝙴𝙽 𖠲', url="t.me/source_Laren"},
+{text = ' ²₀²₁ ˝₀₆˝₁₅ | ₆:₀₀ 𝙿𝙼 ', url="t.me/source_Laren"},
 },
 }
 local msg_id = msg.id_/2097152/0.5
@@ -3087,7 +3111,7 @@ keyboard.inline_keyboard = {
 {text = '  ❨ '..result.first_name_..'  ❩ ',url="t.me/UU_K2"},
 },
 {
-{text = '𖠲  𝚂𝙾𝚄𝚁𝙲𝙴 𝙻𝙰𝚁𝙴𝙽 𖠲', url="t.me/source_Laren"},
+{text = ' ²₀²₁ ˝₀₆˝₁₅ | ₆:₀₀ 𝙿𝙼 ', url="t.me/source_Laren"},
 },
 }
 local msg_id = msg.id_/2097152/0.5
@@ -3115,7 +3139,7 @@ keyboard.inline_keyboard = {
 {text = '  ❨ '..result.first_name_..'  ❩ ',url="t.me/K_1_D"},
 },
 {
-{text = '𖠲  𝚂𝙾𝚄𝚁𝙲𝙴 𝙻𝙰𝚁𝙴𝙽 𖠲', url="t.me/source_Laren"},
+{text = ' ²₀²₁ ˝₀₆˝₁₅ | ₆:₀₀ 𝙿𝙼 ', url="t.me/source_Laren"},
 },
 }
 local msg_id = msg.id_/2097152/0.5
@@ -4022,6 +4046,7 @@ keyboard.inline_keyboard = {
 local msg_id = msg.id_/2097152/0.5 
 https.request("https://api.telegram.org/bot"..token..'/sendPhoto?chat_id=' .. msg.chat_id_ .. '&photo=https://t.me/wffhvv/'..ght..'&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
 end
+
 if text == "لو خيروك بالصور" and not  database:get(bot_id.."sing:for:me"..msg.chat_id_) then 
 ght = math.random(1,24); 
 local Text ='مرحبا اليك لو خيروك بالصوره◉'
@@ -4032,6 +4057,7 @@ keyboard.inline_keyboard = {
 local msg_id = msg.id_/2097152/0.5 
 https.request("https://api.telegram.org/bot"..token..'/sendPhoto?chat_id=' .. msg.chat_id_ .. '&photo=https://t.me/bebo44y/'..ght..'&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
 end
+
 if text == "حروف بالصور" and not  database:get(bot_id.."sing:for:me"..msg.chat_id_) then 
 ght = math.random(1,15); 
 local Text ='مرحبا إليك حروف بالصوره◉'
@@ -10955,7 +10981,7 @@ local DRAGON_Msg = {
 'اسمي  '..Namebot..' ياقمر ❤️',
 'اسمي  '..Namebot..' يامزه 🥺💞',
 'مقولت اسمي '..Namebot..' في اي 🙄', 
-'اسمي الكيوت '..Namebot..' 🌝❤️',
+'اسمي الكيوت '..Namebot..' 🌝 ❤️',
 'اسمي  '..Namebot..' ياحياتي 🦦💜',
 'اسمي  '..Namebot..' يانن عيني🙊💙',
 } 
@@ -11611,13 +11637,13 @@ local List = {
 🌯 ¦✙◉  𝒎𝒔𝒈𝒔 ➢ ⁞  #msgs  📝
 🌯 ¦✙◉  𝒓𝒂𝒏𝒌 ➢ ⁞ #stast  
 🌯 ¦✙◉  𝒊𝒅 𝒔𝒕𝒂 ➢ ⁞ #id  🆔
-🌯 ¦ 𝗖𝗛 - @source_Laren ☯.
+🌯 ¦ 𝗖?? - @source_Laren ☯.
 ]],
 [[
 ¦◉  𝚄𝚂𝙴𝚁  ⇉⁞ #username ↝🇪🇬.
 ¦◉  𝙼𝚂𝙶𝚂 ⇉ ⁞  #msgs  ↝ 🇪🇬.
-¦◉  𝚁𝙰𝙽𝙺  ⇉⁞ #stast  ↝🇪🇬.
-¦◉  𝙸𝙳 𝚂𝚃𝙰 ⇉ #id  ↝🇪🇬.
+¦◉  𝚁𝙰𝙽𝙺  ⇉⁞ #stast  ↝??🇬.
+¦◉  𝙸?? ????𝙰 ⇉ #id  ↝🇪🇬.
 ¦◉  𝗖𝗛 - @source_Laren ☯.
 ]],
 [[
@@ -12046,7 +12072,7 @@ Msᴀɢ ~ #msgs
 [[
 ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉
  𝗨𝗦𝗘𝗥 ⟿ #username  « 
- 𝗠????𝗦 ⟿  #msgs  « 
+ ??????𝗦 ⟿  #msgs  « 
  ??𝗧𝗔 ⟿ #stast  « 
  ??𝗗  ⟿ #id  « 
 ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉
@@ -12110,7 +12136,7 @@ Msᴀɢ ~ #msgs
 -›   𝚂𝚃𝙰𝚂𝚃 . #stast 🇪🇬 ꙰
 -›   𝙸𝙳 . #id 🇪🇬 ꙰ 
 -›   𝙶𝙼𝙰𝚂 . #stast 🇪🇬 ꙰ 
--›   ??????𝚂 . #msgs 🇪🇬 ꙰
+-›   𝙼𝚂𝙶𝚂 . #msgs 🇪🇬 ꙰
 -›   𝗖𝗛 - @source_Laren 🇪🇬 ꙰.
 ]],
 [[
@@ -12483,7 +12509,7 @@ Msᴀɢ ~ #msgs
 ]],
 [[
 🇪🇬 - 𝄬 𝐔ˢᴱᴿᴺᴬᴹᴱ . #username  𓃠
-🇪🇬 - 𝄬 ˢᵀᴬˢᵀ . #stast  𓃠
+🇪?? - ?? ˢᵀᴬˢᵀ . #stast  𓃠
 ??🇬 - 𝄬 ᴵᴰ . #id 𓃠
 🇪🇬 - 𝄬 ᴳᴹᴬˢ . #gmas 𓃠
 🇪🇬 - 𝄬 ᴹˢᴳˢ . #msgs  𓃠
@@ -12546,7 +12572,7 @@ Msᴀɢ ~ #msgs
 🇪🇬 - 𝄬 id . #id 𓃠
 🇪🇬 - 𝄬 gmas . #gmas 𓃠
 🇪🇬 - 𝄬 msgs . #msgs  𓃠
-🇪🇬 - 𝄬 ??𝗛 - @source_Laren ☯
+🇪🇬 - 𝄬 𝗖𝗛 - @source_Laren ☯
 ]],
 [[
 .𖣂 ??𝙨𝙚𝙧𝙣𝙖𝙢𝙚 , #username  🖤 ↴
@@ -13336,24 +13362,24 @@ return false
 end
 ----------------------------------------------------------------- انتهئ الاوامر الجديدة
 if text == "تعطيل الزخرفه" and Manager(msg) then
-send(msg.chat_id_, msg.id_, ' ◉ ↚ تم تعطيل الزخرفه')
+send(msg.chat_id_, msg.id_, ' تم تعطيل الزخرفه')
 database:set(bot_id.." sofi:zhrf_Bots"..msg.chat_id_,"close")
 end
 if text == "تفعيل الزخرفه" and Manager(msg) then
-send(msg.chat_id_, msg.id_,' ◉ ↚ تم تفعيل الزخرفه')
+send(msg.chat_id_, msg.id_,' تم تفعيل الزخرفه')
 database:set(bot_id.." sofi:zhrf_Bots"..msg.chat_id_,"open")
 end
 if text and text:match("^زخرفه (.*)$") and database:get(bot_id.." sofi:zhrf_Bots"..msg.chat_id_) == "open" then
 local TextZhrfa = text:match("^زخرفه (.*)$")
-zh = https.request('https://rudi-dev.tk/Amir1/Boyka.php?en='..URL.escape(TextZhrfa)..'')
+zh = https.request('https://apiabs.ml/zrf.php?abs='..URL.escape(TextZhrfa)..'')
 zx = JSON.decode(zh)
-t = "\n ◉ ↚ قائمه الزخرفه \n༫═════⛥═════༫\n"
+t = "\n ◉قائمه الزخرفه \n༫═════⛥═════༫\n"
 i = 0
 for k,v in pairs(zx.ok) do
 i = i + 1
 t = t..i.."-  "..v.." \n"
 end
-send(msg.chat_id_, msg.id_, t..'༫═════⛥═════༫\n ◉ ↚ ➫ .[ 𝚂𝙾𝚄𝚁𝙲𝙴 𝙻𝙰𝚁𝙴𝙽  ](t.me/source_Laren)➤ ')
+send(msg.chat_id_, msg.id_, t..'༫═════⛥═════༫\nاضغط علي الاسم ليتم نسخه\n༫═════⛥═════༫ٴ\n ◉ ❲[𝚂𝙾𝚄𝚁𝙲𝙴 𝙲𝙷𝙰𝙽𝙽𝙴𝙻 ‘](t.me/source_Laren)❳ ◉ ')
 end
 if text == "تعطيل الابراج" and Manager(msg) then
 send(msg.chat_id_, msg.id_, ' ◉ ↚ تم تعطيل الابراج')
@@ -15034,7 +15060,7 @@ end
 if text == 'الالعاب' then
 local Text = [[ 
  ─────── ◉ ───────
-◉ لستخدام الالعاب اتبع مايلي ..↑↓
+◉ لستخدام الاوامر { رفع - تنزيل } ..↑↓
  ─────── ◉ ───────
 ◉ منوعات اولاين ← لبدء العبه
 ◉ مسبقات اولاين ← لبدء العبه
@@ -15080,6 +15106,52 @@ keyboard.inline_keyboard = {
 } 
 local msg_id = msg.id_/2097152/0.5 
 https.request("https://api.telegram.org/bot"..token..'/sendPhoto?chat_id=' .. msg.chat_id_ .. '&photo=https://t.me/laren_aoamer/9&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
+end
+
+if text == 'قسم التسليه' then
+local Text = [[ 
+ ─────── ◉ ───────
+◉ لستخدام الاوامر { رفع - تنزيل } ..↑↓
+ ─────── ◉ ───────
+◉ رفع فلات← تنزيل فلات
+◉ رفع كيرفي ← تنزيل كيرفي
+◉ رفع علق ← تنزيل علق
+◉ رفع فرسه ← تنزيل فرسه
+◉ رفع قرد ← تنزيل قرد
+◉ رفع عره ← تنزيل عره
+◉ رفع غبي ← تنزيل غبي
+◉ رفع بقره ← تنزيل بقره
+◉ رفع متوحد ← تنزيل متوحد
+◉ رفع متخزوق ← تنزيل متخزوق
+◉ رفع عبيط ← تنزيل عبيط
+◉ رفع خاينه ← تنزيل خاينه
+◉ رفع خاين ← تنزيل خاين
+◉ رفع بنتي ← تنزيل بنتي
+ ─────── ◉ ───────
+◉ رفع قطتي ← تنزيل قطتي
+◉ رفع دكري ← تنزيل دكري
+◉ رفع ابني ← تنزيل ابني
+◉ رفع فاشل ← تنزيل فاشل
+◉ رفع حيوان ← تنزيل حيوان
+◉ رفع وتكه ← تنزيل وتكه
+◉ رفع رقاصه ← تنزيل رقاصه
+◉ رفع زوجتي ← زواج
+◉ طلاق ←  رفع مطلقه
+◉ رفع حمار ← تنزيل حمار
+◉ رفع شاذ ← تنزيل شاذ
+◉ رفع بقلبي ← تنزيل بقلبي
+◉ رفع كلب ← تنزيل كلب
+◉ رفع خنزير ← تنزيل خنزير
+╾╾╾╾╾╾╾╾╾╾╾╾╾╾╾╸
+◉ 𝙲𝙷  - [𝚂𝙾𝚄𝚁𝙲𝙴 𝙻𝙰𝙴𝚁𝙽 ⚘ ](t.me/source_Laren) 
+╾╾╾╾╾╾╾╾╾╾╾╾╾╾╾╸
+]]
+keyboard = {}  
+keyboard.inline_keyboard = { 
+{{text = '𝚂𝙾𝚄𝚁𝙲𝙴 𝙲𝙷𝙰𝙽𝙽𝙴𝙻 ', url="t.me/source_Laren"}}, 
+} 
+local msg_id = msg.id_/2097152/0.5 
+https.request("https://api.telegram.org/bot"..token..'/sendPhoto?chat_id=' .. msg.chat_id_ .. '&photo=https://t.me/laren_aoamer/24&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
 end
 
 if text == "كتبات" or text == "حكمه" or text == "قصيده" then 
@@ -15437,7 +15509,7 @@ local TWEET_Msg = {
 send(msg.chat_id_, msg.id_,'['..TWEET_Msg[math.random(#TWEET_Msg)]..']')  
 return false 
 end
-if text == 'العاب لارين ' or text == 'العاب' or text == 'العاب متطوره' then  
+if text == 'العاب لارين ' or text == 'العاب2' or text == 'العاب متطوره' then  
 local Text = [[  
  اهلا في قائمه الالعاب المتطوره 
 تفضل اختر لعبه من القائمه 
