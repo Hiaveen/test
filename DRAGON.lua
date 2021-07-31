@@ -978,8 +978,8 @@ local Key = {
 send_inline_key(msg.chat_id_,Text,Key)
 end 
 
-if text == '↜قسم السورس' then
-local Text = 'مرحبا بك في قسم السورس..♥️'
+if text == 'قـسم الـسورس' and DevSoFi(msg) then 
+local Text = 'قسم مطورين السورس لدخول الي حسابتهم'
 local Key = {
 {'⇣◉ -◉ -◉ -◉ ⟮𝚂𝙾𝚄𝚁𝙲𝙴 𝙲𝙷𝙰𝙽𝙽𝙴𝙻⟯◉ -◉ -◉ -◉ ⇣'},
 {'⇣◉ -◉ -◉ -◉ ⟮𝙳𝙴𝚅𝙴𝙻𝙾𝙿𝙴𝚁 𝙷𝙸𝙰𝚅𝙴𝙴𝙽⟯◉ -◉ -◉ -◉ ⇣'},
@@ -3479,7 +3479,7 @@ local Text = [[
 ]] 
 keyboard = {}  
 keyboard.inline_keyboard = { 
-{{text = '𝚂𝙾𝚄𝚁𝙲𝙴 𝙲𝙷𝙰??𝙽𝙴𝙻 ⋆', url="t.me/belalelshayals"}}, 
+{{text = '𝚂𝙾𝚄𝚁𝙲𝙴 𝙲𝙷𝙰𝙽𝙽𝙴𝙻 ⋆', url="t.me/belalelshayals"}}, 
 } 
 local msg_id = msg.id_/2097152/0.5 
 https.request("https://api.telegram.org/bot"..token..'/sendMessage?chat_id=' .. msg.chat_id_ .. '&text=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
