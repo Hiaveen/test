@@ -12596,26 +12596,7 @@ download_to_file("https://translate"..Antk.result.google..Antk.result.code.."UTF
 local curlm = 'curl "'..'https://api.telegram.org/bot'..token..'/sendDocument'..'" -F "chat_id='.. msg.chat_id_ ..'" -F "document=@'..''..textntk..'.mp3'..'"' io.popen(curlm) 
 end   
 end
-if text == "غنيلي" and not database:get(bot_id.."sing:for:me"..msg.chat_id_) then
 
-ght = math.random(3,200);
-
-local Text ='تم اختيار المقطع الصوتي لك'
-
-keyboard = {} 
-
-keyboard.inline_keyboard = {
-
-{{text = '⌯ ᴍᴜѕɪᴄ ѕᴏᴜʀᴄᴇ ʟᴀʀɪɴ.',url="t.me/source_Laren"}},
-{{text = 'اضف البوت لمجموعتك 𖠕', url="http://t.me/"..sudos.UserName.."?startgroup=new"}},
- 
-}
-
-local msg_id = msg.id_/2097152/0.5
-
-https.request("https://api.telegram.org/bot"..token..'/sendVoice?chat_id=' .. msg.chat_id_ .. '&voice=https://t.me/M_usicc7/'..ght..'&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
-
-end
 if text == "استوري" and not  database:get(bot_id.."sing:for:me"..msg.chat_id_) then 
 ght = math.random(2,22); 
 local Text ='تم اختيار فديو استوري  لك' 
@@ -15830,7 +15811,7 @@ if DAata == 'noKikedMe'..data.sender_user_id_ then
 local Text ="*✬ تم الغاء الطرد بنجاح .*"
 keyboard = {} 
 keyboard.inline_keyboard = {
-{{text = '𝒔𝒐𝒖𝒓𝒄𝒆 𝒑𝒂𝒓𝒊𝒔',url='http://t.me/belalelshayals'}},
+{{text = '𝒔𝒐𝒖𝒓𝒄𝒆 𝒑𝒂??𝒊𝒔',url='http://t.me/belalelshayals'}},
 }
 return https.request("https://api.telegram.org/bot"..token..'/editMessageText?chat_id='..Chat_id..'&text='..URL.escape(Text)..'&message_id='..msg_idd..'&parse_mode=markdown&disable_web_page_preview=true&reply_markup='..JSON.encode(keyboard)) 
 end
