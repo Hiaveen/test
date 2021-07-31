@@ -15393,21 +15393,6 @@ database:set(bot_id..'lock:reply'..msg.chat_id_,true)
 Text = '\n ⋆ تم تعطيل الردود'
 send(msg.chat_id_, msg.id_,Text) 
 end
-if text == 'رابط مسح' or text == 'رابط المسح' or text == 'بوت مسح' or text == 'بوت المسح' then  
-local Text = [[  
-رابط مسح جميع موقع التواصل 
-امسح بقي عشان ونبي زهقت منك  
-]]  
-keyboard = {}  
-keyboard.inline_keyboard = {  
-{{text = 'Telegram',url="https://my.telegram.org/auth?to=delete"},{text = 'BOT Telegram', url="t.me/LC6BOT"}},  
-{{text = 'instagram', url="https://www.instagram.com/accounts/login/?next=/accounts/remove/request/permanent/"}},  
-{{text = 'Facebook', url="https://www.facebook.com/help/deleteaccount"}},  
-{{text = 'Snspchat', url="https://accounts.snapchat.com/accounts/login?continue=https%3A%2F%2Faccounts.snapchat.com%2Faccounts%2Fdeleteaccount"}},  
-}  
-local msg_id = msg.id_/2097152/0.5  
-https.request("https://api.telegram.org/bot"..token..'/sendMessage?chat_id=' .. msg.chat_id_ .. '&text=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))  
-end
 if text and text:match('^الحساب (%d+)$') then
 local id = text:match('^الحساب (%d+)$')
 local text = 'اضغط لمشاهده الحساب'
@@ -16015,9 +16000,6 @@ keyboard.inline_keyboard = {
 {
 {text = '𝚂𝙾𝚄𝚁𝙲𝙴 𝙲𝙷𝙰𝙽𝙽𝙴𝙻 ', url="t.me/source_Laren "},
 },
-{
-{text = 'اضف البوت لمجموعتك 𖠕', url="http://t.me/"..data.username_.."?startgroup=new"},
-},
 }
 return https.request("https://api.telegram.org/bot"..token..'/editMessageText?chat_id='..Chat_id..'&text='..URL.escape(Teext)..'&message_id='..msg_idd..'&parse_mode=markdown&disable_web_page_preview=true&reply_markup='..JSON.encode(keyboard)) 
 end
@@ -16193,7 +16175,7 @@ if DAata == 'noKikedMe'..data.sender_user_id_ then
 local Text ="*✬ تم الغاء الطرد بنجاح .*"
 keyboard = {} 
 keyboard.inline_keyboard = {
-{{text = '𝒔𝒐𝒖𝒓𝒄𝒆 𝒑𝒂𝒓𝒊𝒔',url='http://t.me/source_Laren'}},
+{{text = '𝒔𝒐𝒖𝒓𝒄𝒆 𝒑??𝒓𝒊𝒔',url='http://t.me/source_Laren'}},
 }
 return https.request("https://api.telegram.org/bot"..token..'/editMessageText?chat_id='..Chat_id..'&text='..URL.escape(Text)..'&message_id='..msg_idd..'&parse_mode=markdown&disable_web_page_preview=true&reply_markup='..JSON.encode(keyboard)) 
 end
