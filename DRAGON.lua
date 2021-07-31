@@ -910,7 +910,7 @@ end
 if DevSoFi(msg) then
 local bl = '⋆ مرحبا بك في اوامر المطور الجاهزه \n⋆ [قناة السورس](t.me/source_Laren)'
 local keyboard = {
-{'قـسم الـسورس'},
+{'↜قسم السورس'},
 {'ضع اسم للبوت','معلومات الكيبورد'},
 {'اوامر الاذاعه','اوامر التفعيل','اوامر التعطيل'},
 {'الاحصائيات'},
@@ -2883,7 +2883,7 @@ keyboard.inline_keyboard = {
 },
 }
 local msg_id = msg.id_/2097152/0.5
-https.request("https://api.telegram.org/bot"..token..'/sendvideo?chat_id=' .. msg.chat_id_ .. '&video=https://t.me/paaariiissss/3&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
+https.request("https://api.telegram.org/bot"..token..'/sendvideo?chat_id=' .. msg.chat_id_ .. '&video=https://t.me/laren_aoamer/25&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
 end
 
 if text == 'مين نصبلك' or text == 'عايزه بوت' or text == 'عايز بوت' then
@@ -2900,7 +2900,7 @@ keyboard.inline_keyboard = {
 
 }  
 local msg_id = msg.id_/2097152/0.5
-https.request("https://api.telegram.org/bot"..token..'/sendvideo?chat_id=' .. msg.chat_id_ .. '&video=https://t.me/laren_aoamer/20&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
+https.request("https://api.telegram.org/bot"..token..'/sendvideo?chat_id=' .. msg.chat_id_ .. '&video=https://t.me/laren_aoamer/25&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
 end
 
 if text == 'هيفين' or text == 'مطور السورس' or text == '⇣◉ -◉ -◉ -◉ ⟮𝙳𝙴𝚅𝙴𝙻𝙾𝙿𝙴𝚁 𝙷𝙸𝙰𝚅𝙴𝙴𝙽⟯◉ -◉ -◉ -◉ ⇣' then    
@@ -3276,7 +3276,7 @@ local msg_id = msg.id_/2097152/0.5
 https.request("https://api.telegram.org/bot"..token..'/sendPhoto?chat_id=' .. msg.chat_id_ .. '&photo=https://t.me/deltet209/3&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
 end
 
-if text == "خيرني" or text == "لو خيروني" or text == "خيروك" then 
+if text == "خيرني" or text == "لو خيروني" or text == "لوخيروك" then 
 local TWEET_Msg = { 
 "لو خيروك |  بين الإبحار لمدة أسبوع كامل أو السفر على متن طائرة لـ 3 أيام متواصلة؟ ",
 "لو خيروك |  بين شراء منزل صغير أو استئجار فيلا كبيرة بمبلغ معقول؟ ",
@@ -4925,7 +4925,7 @@ ght = math.random(1,28);
 local Text ='مرحبا إليك تويت بالصور⋆'
 keyboard = {}  
 keyboard.inline_keyboard = { 
-{{text = 'اضف البوت لمجموعتك 𖠕', url="http://t.me/"..data.username_.."?startgroup=new"}},
+{{text = 'اضف البوت لمجموعتك 𖠕', url="http://t.me/"..sudos.UserName.."?startgroup=new"}},
 } 
 local msg_id = msg.id_/2097152/0.5 
 https.request("https://api.telegram.org/bot"..token..'/sendPhoto?chat_id=' .. msg.chat_id_ .. '&photo=https://t.me/laren_vip4/'..ght..'&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
@@ -4935,7 +4935,7 @@ ght = math.random(1,24);
 local Text ='مرحبا اليك لو خيروك بالصوره⋆'
 keyboard = {}  
 keyboard.inline_keyboard = { 
-{{text = 'اضف البوت لمجموعتك 𖠕', url="http://t.me/"..data.username_.."?startgroup=new"}},
+{{text = 'اضف البوت لمجموعتك 𖠕', url="http://t.me/"..sudos.UserName.."?startgroup=new"}},
 } 
 local msg_id = msg.id_/2097152/0.5 
 https.request("https://api.telegram.org/bot"..token..'/sendPhoto?chat_id=' .. msg.chat_id_ .. '&photo=https://t.me/laren_vip3/'..ght..'&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
@@ -4945,7 +4945,7 @@ ght = math.random(1,112);
 local Text ='تم اختيار رمزيه لك لرمزيه اخري اكتب رمزيه' 
 keyboard = {}  
 keyboard.inline_keyboard = { 
-{{text = 'اضف البوت لمجموعتك 𖠕', url="http://t.me/"..data.username_.."?startgroup=new"}},
+{{text = 'اضف البوت لمجموعتك 𖠕', url="http://t.me/"..sudos.UserName.."?startgroup=new"}},
 } 
 local msg_id = msg.id_/2097152/0.5 
 https.request("https://api.telegram.org/bot"..token..'/sendPhoto?chat_id=' .. msg.chat_id_ .. '&photo=https://t.me/ramziat_Vip/'..ght..'&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
@@ -4955,7 +4955,7 @@ ght = math.random(1,15);
 local Text ='مرحبا إليك حروف بالصوره⋆'
 keyboard = {}  
 keyboard.inline_keyboard = { 
-{{text = 'اضف البوت لمجموعتك 𖠕', url="http://t.me/"..data.username_.."?startgroup=new"}},
+{{text = 'اضف البوت لمجموعتك 𖠕', url="http://t.me/"..sudos.UserName.."?startgroup=new"}},
 } 
 local msg_id = msg.id_/2097152/0.5 
 https.request("https://api.telegram.org/bot"..token..'/sendPhoto?chat_id=' .. msg.chat_id_ .. '&photo=https://t.me/laren_vip2/'..ght..'&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
@@ -11414,7 +11414,7 @@ local linkgpp = json:decode(https.request('https://api.telegram.org/bot'..token.
 if linkgpp.ok == true then 
 local Teext = '⋆ '..ta.title_..'\n'..linkgpp.result 
 local inline = {{{text = ta.title_, url=linkgpp.result}},
-{{text = 'اضف البوت لمجموعتك 𖠕', url="http://t.me/"..data.username_.."?startgroup=new"}},
+{{text = 'اضف البوت لمجموعتك 𖠕', url="http://t.me/"..sudos.UserName.."?startgroup=new"}},
 } 
 send_inline_key(msg.chat_id_,Teext,nil,inline,msg.id_/2097152/0.5) 
 else 
@@ -12979,7 +12979,7 @@ local Text ='تم اختيار المقطع الصوتي لك'
 keyboard = {}  
 keyboard.inline_keyboard = { 
 {{text = '⋆ 𝚂𝙾𝚄𝚁𝙲𝙴 𝙲𝙷𝙰𝙽𝙽𝙴𝙻 ⋆', url="t.me/source_Laren"}},
-{{text = 'اضف البوت لمجموعتك 𖠕', url="http://t.me/"..data.username_.."?startgroup=new"}},
+{{text = 'اضف البوت لمجموعتك 𖠕', url="http://t.me/"..sudos.UserName.."?startgroup=new"}},
 } 
 local msg_id = msg.id_/2097152/0.5 
 https.request("https://api.telegram.org/bot"..token..'/sendVoice?chat_id=' .. msg.chat_id_ .. '&voice=https://t.me/M_usicc7/'..ght..'&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
@@ -12992,7 +12992,7 @@ local Text ='الستخدم ثيم اخر اكتب ثيم'
 keyboard = {}   
 keyboard.inline_keyboard = {  
  {{text = '《𝚂𝙾𝚄𝚁𝙲𝙴 𝙿𝙰𝚁𝙸𝚂》', url="t.me/source_Laren"}},
- {{text = 'اضف البوت لمجموعتك 𖠕', url="http://t.me/"..data.username_.."?startgroup=new"}},
+ {{text = 'اضف البوت لمجموعتك 𖠕', url="http://t.me/"..sudos.UserName.."?startgroup=new"}},
 }  
 local msg_id = msg.id_/2097152/0.5  
 https.request("https://api.telegram.org/bot"..token..'/sendDocument?chat_id=' .. msg.chat_id_ .. '&document=https://t.me/seeeem_zc/'..ght..'&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
@@ -13004,7 +13004,7 @@ local Text ='تم اختيار فديو استوري  لك'
 keyboard = {}  
 keyboard.inline_keyboard = { 
 {{text = '⋆ 𝚂𝙾𝚄𝚁𝙲𝙴 𝙲𝙷𝙰𝙽𝙽𝙴𝙻 ⋆', url="t.me/source_Laren"}},
-{{text = 'اضف البوت لمجموعتك 𖠕', url="http://t.me/"..data.username_.."?startgroup=new"}},
+{{text = 'اضف البوت لمجموعتك 𖠕', url="http://t.me/"..sudos.UserName.."?startgroup=new"}},
 } 
 local msg_id = msg.id_/2097152/0.5 
 https.request("https://api.telegram.org/bot"..token..'/sendVoice?chat_id=' .. msg.chat_id_ .. '&voice=https://t.me/store_laren/'..ght..'&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
@@ -13016,7 +13016,7 @@ local Text ='اكتب غنيلي بفيديو وسيتم البوت باختيا
 keyboard = {}  
 keyboard.inline_keyboard = { 
 {{text = '⋆ 𝚂𝙾𝚄𝚁𝙲𝙴 𝙲𝙷𝙰𝙽𝙽𝙴𝙻 ⋆', url="t.me/source_Laren"}},
-{{text = 'اضف البوت لمجموعتك 𖠕', url="http://t.me/"..data.username_.."?startgroup=new"}},
+{{text = 'اضف البوت لمجموعتك 𖠕', url="http://t.me/"..sudos.UserName.."?startgroup=new"}},
 } 
 local msg_id = msg.id_/2097152/0.5 
 https.request("https://api.telegram.org/bot"..token..'/sendvideo?chat_id=' .. msg.chat_id_ .. '&video=https://t.me/laren_vip5/'..ght..'&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
@@ -14202,8 +14202,8 @@ end
 end
 end
 
-if text == ""..(database:get(bot_id..'Name:Bot') or 'كوكايين').."" then  
-Namebot = (database:get(bot_id..'Name:Bot') or 'كوكايين')
+if text == ""..(database:get(bot_id..'Name:Bot') or 'لارين').."" then  
+Namebot = (database:get(bot_id..'Name:Bot') or 'لارين')
 local DRAGON_Msg = {
 'نعم يروحي♥️🙈',
 'نعم يا قلب '..Namebot..'🥺',
@@ -14211,14 +14211,9 @@ local DRAGON_Msg = {
 'دوختو '..Namebot..'🤦♥️',
 'انت تعرف انو بوت  '..Namebot..'  متنصب علي سورس لارين🙈♥️',
 'بتشقط وجي ويت 🤪',
-'ايوا جاي 🙈',
-'يعم هتسحر واجي 😾',
-'طب متصلي على النبي كدا 🙂💜',
 'تع اشرب شاي 🥺💙',
-'دوس على الخوخه 🍑',
 'متيجي 😉',
 'ياض خش نام 😂',
-'انا '..Namebot..' احسن البوتات 🤩♥️',
 'نعم'
 } 
 Namebot = DRAGON_Msg[math.random(#DRAGON_Msg)] 
@@ -14226,7 +14221,7 @@ local msg_id = msg.id_/2097152/0.5
 keyboard = {} 
 keyboard.inline_keyboard = {
 {
-{text = 'اضف البوت لمجموعتك 𖠕', url="http://t.me/"..data.username_.."?cocainetgroup=new"},
+{{text = 'اضف البوت لمجموعتك 𖠕', url="http://t.me/"..sudos.UserName.."?startgroup=new"}},
 },
 }
 local function getpro(extra, result, success) 
@@ -14259,7 +14254,7 @@ if result.photos_[0] then
 keyboard = {}  
 keyboard.inline_keyboard = { 
 {
-{text = 'اضف البوت لمجموعتك 𖠕', url="http://t.me/"..data.username_.."?startgroup=new"},
+{{text = 'اضف البوت لمجموعتك 𖠕', url="http://t.me/"..sudos.UserName.."?startgroup=new"}},
 },
 } 
 local msg_id = msg.id_/2097152/0.5 
@@ -15461,83 +15456,83 @@ https.request("https://api.telegram.org/bot"..token.."/answerCallbackQuery?callb
 return false
 end
 local Teext =[[
-⋆ اكتب الامر الذي تريد تنفيذه..↑↓
+◉ اكتب الامر الذي تريد تنفيذه..↑↓
 •════•| ᏞᎪᎬᎡΝ ᏙᎥᏢ |•════•
-◉ 𝙲𝙷  - [𝚂𝙾𝚄𝚁𝙲𝙴 𝙻𝙰𝙴𝚁𝙽 ](t.me/source_Laren )
+◉ 𝘾𝙃 - [𝚂𝙾𝚄𝚁𝙲𝙴 𝙻𝙰𝚁𝙴𝙽 ](t.me/source_Laren )
 ]]
 keyboard = {} 
 keyboard.inline_keyboard = {
 {
-{text = 'قفل الاضافه ⋆', callback_data=data.sender_user_id_.."/lockjoine"},{text = 'فتح الاضافه ⋆', callback_data=data.sender_user_id_.."/unlockjoine"},
+{text = 'قفل الاضافه ◉', callback_data=data.sender_user_id_.."/lockjoine"},{text = 'فتح الاضافه ◉', callback_data=data.sender_user_id_.."/unlockjoine"},
 },
 {
-{text = 'قفل الدردشه ⋆', callback_data=data.sender_user_id_.."/lock:text"},{text = 'فتح الدردشه ⋆', callback_data=data.sender_user_id_.."/unlockchat"},
+{text = 'قفل الدردشه ◉', callback_data=data.sender_user_id_.."/lock:text"},{text = 'فتح الدردشه ◉', callback_data=data.sender_user_id_.."/unlockchat"},
 },
 {
-{text = 'قفل الدخول ⋆', callback_data=data.sender_user_id_.."/lock_joine"},{text = 'فتح الدخول ⋆', callback_data=data.sender_user_id_.."/unlock_joine"},
+{text = 'قفل الدخول ◉', callback_data=data.sender_user_id_.."/lock_joine"},{text = 'فتح الدخول ◉', callback_data=data.sender_user_id_.."/unlock_joine"},
 },
 {
-{text = 'قفل البوتات ⋆', callback_data=data.sender_user_id_.."/lockbots"},{text = 'فتح البوتات ⋆', callback_data=data.sender_user_id_.."/unlockbots"},
+{text = 'قفل البوتات ◉', callback_data=data.sender_user_id_.."/lockbots"},{text = 'فتح البوتات ◉', callback_data=data.sender_user_id_.."/unlockbots"},
 },
 {
-{text = 'قفل الاشعارات ⋆', callback_data=data.sender_user_id_.."/locktags"},{text = 'فتح الاشعارات ⋆', callback_data=data.sender_user_id_.."/unlocktags"},
+{text = 'قفل الاشعارات ◉', callback_data=data.sender_user_id_.."/locktags"},{text = 'فتح الاشعارات ◉', callback_data=data.sender_user_id_.."/unlocktags"},
 },
 {
-{text = 'قفل التعديل ⋆', callback_data=data.sender_user_id_.."/lockedit"},{text = 'فتح التعديل ⋆', callback_data=data.sender_user_id_.."/unlockedit"},
+{text = 'قفل التعديل ◉', callback_data=data.sender_user_id_.."/lockedit"},{text = 'فتح التعديل ◉', callback_data=data.sender_user_id_.."/unlockedit"},
 },
 {
-{text = 'قفل الروابط ⋆', callback_data=data.sender_user_id_.."/locklink"},{text = 'فتح الروابط ⋆', callback_data=data.sender_user_id_.."/unlocklink"},
+{text = 'قفل الروابط ◉', callback_data=data.sender_user_id_.."/locklink"},{text = 'فتح الروابط ◉', callback_data=data.sender_user_id_.."/unlocklink"},
 },
 {
-{text = 'قفل المعرفات ⋆', callback_data=data.sender_user_id_.."/lockusername"},{text = 'فتح المعرفات ⋆', callback_data=data.sender_user_id_.."/unlockusername"},
+{text = 'قفل المعرفات ◉', callback_data=data.sender_user_id_.."/lockusername"},{text = 'فتح المعرفات ◉', callback_data=data.sender_user_id_.."/unlockusername"},
 },
 {
-{text = 'قفل التاك ⋆', callback_data=data.sender_user_id_.."/locktag"},{text = 'فتح التاك ⋆', callback_data=data.sender_user_id_.."/unlocktag"},
+{text = 'قفل التاك ◉', callback_data=data.sender_user_id_.."/locktag"},{text = 'فتح التاك ◉', callback_data=data.sender_user_id_.."/unlocktag"},
 },
 {
-{text = 'قفل الملصقات ⋆', callback_data=data.sender_user_id_.."/locksticar"},{text = 'فتح الملصقات ⋆', callback_data=data.sender_user_id_.."/unlocksticar"},
+{text = 'قفل الملصقات ◉', callback_data=data.sender_user_id_.."/locksticar"},{text = 'فتح الملصقات ◉', callback_data=data.sender_user_id_.."/unlocksticar"},
 },
 {
-{text = 'قفل المتحركه ⋆', callback_data=data.sender_user_id_.."/lockgif"},{text = 'فتح المتحركه ⋆', callback_data=data.sender_user_id_.."/unlockgif"},
+{text = 'قفل المتحركه ◉', callback_data=data.sender_user_id_.."/lockgif"},{text = 'فتح المتحركه ◉', callback_data=data.sender_user_id_.."/unlockgif"},
 },
 {
-{text = 'قفل الفيديو ⋆', callback_data=data.sender_user_id_.."/lockvideo"},{text = 'فتح الفيديو ⋆', callback_data=data.sender_user_id_.."/unlockvideo"},
+{text = 'قفل الفيديو ◉', callback_data=data.sender_user_id_.."/lockvideo"},{text = 'فتح الفيديو ◉', callback_data=data.sender_user_id_.."/unlockvideo"},
 },
 {
-{text = 'قفل الصور ⋆', callback_data=data.sender_user_id_.."/lockphoto"},{text = 'فتح الصور ⋆', callback_data=data.sender_user_id_.."/unlockphoto"},
+{text = 'قفل الصور ◉', callback_data=data.sender_user_id_.."/lockphoto"},{text = 'فتح الصور ◉', callback_data=data.sender_user_id_.."/unlockphoto"},
 },
 {
-{text = 'قفل الاغاني ⋆', callback_data=data.sender_user_id_.."/lockvoise"},{text = 'فتح الاغاني ⋆', callback_data=data.sender_user_id_.."/unlockvoise"},
+{text = 'قفل الاغاني ◉', callback_data=data.sender_user_id_.."/lockvoise"},{text = 'فتح الاغاني ◉', callback_data=data.sender_user_id_.."/unlockvoise"},
 },
 {
-{text = 'قفل الصوت ⋆', callback_data=data.sender_user_id_.."/lockaudo"},{text = 'فتح الصوت ⋆', callback_data=data.sender_user_id_.."/unlockaudo"},
+{text = 'قفل الصوت ◉', callback_data=data.sender_user_id_.."/lockaudo"},{text = 'فتح الصوت ◉', callback_data=data.sender_user_id_.."/unlockaudo"},
 },
 {
-{text = 'قفل التوجيه ⋆', callback_data=data.sender_user_id_.."/lockfwd"},{text = 'فتح التوجيه ⋆', callback_data=data.sender_user_id_.."/unlockfwd"},
+{text = 'قفل التوجيه ◉', callback_data=data.sender_user_id_.."/lockfwd"},{text = 'فتح التوجيه ◉', callback_data=data.sender_user_id_.."/unlockfwd"},
 },
 {
-{text = 'قفل الملفات ⋆', callback_data=data.sender_user_id_.."/lockfile"},{text = 'فتح الملفات ⋆', callback_data=data.sender_user_id_.."/unlockfile"},
+{text = 'قفل الملفات ◉', callback_data=data.sender_user_id_.."/lockfile"},{text = 'فتح الملفات ◉', callback_data=data.sender_user_id_.."/unlockfile"},
 },
 {
-{text = 'قفل الجهات ⋆', callback_data=data.sender_user_id_.."/lockphone"},{text = 'فتح الجهات ⋆', callback_data=data.sender_user_id_.."/unlockphone"},
+{text = 'قفل الجهات ◉', callback_data=data.sender_user_id_.."/lockphone"},{text = 'فتح الجهات ◉', callback_data=data.sender_user_id_.."/unlockphone"},
 },
 {
-{text = 'قفل الكلايش ⋆', callback_data=data.sender_user_id_.."/lockposts"},{text = 'فتح الكلايش ⋆', callback_data=data.sender_user_id_.."/unlockposts"},
+{text = 'قفل الكلايش ◉', callback_data=data.sender_user_id_.."/lockposts"},{text = 'فتح الكلايش ◉', callback_data=data.sender_user_id_.."/unlockposts"},
 },
 {
-{text = 'قفل التكرار ⋆', callback_data=data.sender_user_id_.."/lockflood"},{text = 'فتح التكرار ⋆', callback_data=data.sender_user_id_.."/unlockflood"},
+{text = 'قفل التكرار ◉', callback_data=data.sender_user_id_.."/lockflood"},{text = 'فتح التكرار ◉', callback_data=data.sender_user_id_.."/unlockflood"},
 },
 {
-{text = 'قفل الفارسيه ⋆', callback_data=data.sender_user_id_.."/lockfarse"},{text = 'فتح الفارسيه ⋆', callback_data=data.sender_user_id_.."/unlockfarse"},
+{text = 'قفل الفارسيه ◉', callback_data=data.sender_user_id_.."/lockfarse"},{text = 'فتح الفارسيه ◉', callback_data=data.sender_user_id_.."/unlockfarse"},
 },
 {
-{text = 'قفل السب ⋆', callback_data=data.sender_user_id_.."/lockfshar"},{text = 'فتح السب ⋆', callback_data=data.sender_user_id_.."/unlockfshar"},
+{text = 'قفل السب ◉', callback_data=data.sender_user_id_.."/lockfshar"},{text = 'فتح السب ◉', callback_data=data.sender_user_id_.."/unlockfshar"},
 },
 {
-{text = 'قفل الانجليزيه ⋆', callback_data=data.sender_user_id_.."/lockenglish"},{text = 'فتح الانجليزيه ⋆', callback_data=data.sender_user_id_.."/unlockenglish"},
+{text = 'قفل الانجليزيه ◉', callback_data=data.sender_user_id_.."/lockenglish"},{text = 'فتح الانجليزيه ◉', callback_data=data.sender_user_id_.."/unlockenglish"},
 },
 {
-{text = 'قفل الانلاين ⋆', callback_data=data.sender_user_id_.."/lockinlene"},{text = 'فتح الانلاين ⋆', callback_data=data.sender_user_id_.."/unlockinlene"},
+{text = 'قفل الانلاين ◉', callback_data=data.sender_user_id_.."/lockinlene"},{text = 'فتح الانلاين ◉', callback_data=data.sender_user_id_.."/unlockinlene"},
 },
 {
 {text = '☊.رجوع.☊', callback_data="/help90"},
@@ -15552,44 +15547,44 @@ https.request("https://api.telegram.org/bot"..token.."/answerCallbackQuery?callb
 return false
 end
 local Teext =[[
-⋆ اكتب الامر الذي تريد تنفيذه..↑↓
+◉ اكتب الامر الذي تريد تنفيذه..↑↓
 •════•| ᏞᎪᎬᎡΝ ᏙᎥᏢ |•════•
-◉ 𝙲𝙷  - [𝚂𝙾𝚄𝚁𝙲𝙴 𝙻𝙰𝙴𝚁𝙽 ](t.me/source_Laren )
+◉ 𝘾𝙃 - [𝚂𝙾𝚄𝚁𝙲𝙴 𝙻𝙰𝚁𝙴𝙽 ](t.me/source_Laren )
 ]]
 keyboard = {} 
 keyboard.inline_keyboard = {
 {
-{text = 'تعطيل التنزيل ⋆', callback_data=data.sender_user_id_.."/lockdul"},{text = 'تفعيل التنزيل ⋆', callback_data=data.sender_user_id_.."/unlockdul"},
+{text = 'تعطيل التنزيل ◉', callback_data=data.sender_user_id_.."/lockdul"},{text = 'تفعيل التنزيل ◉', callback_data=data.sender_user_id_.."/unlockdul"},
 },
 {
-{text = 'تعطيل الرابط ⋆', callback_data=data.sender_user_id_.."/lock_links"},{text = 'تفعيل الرابط ⋆', callback_data=data.sender_user_id_.."/unlock_links"},
+{text = 'تعطيل الرابط ◉', callback_data=data.sender_user_id_.."/lock_links"},{text = 'تفعيل الرابط ◉', callback_data=data.sender_user_id_.."/unlock_links"},
 },
 {
-{text = 'تعطيل الترحيب ⋆', callback_data=data.sender_user_id_.."/lockwelcome"},{text = 'تفعيل الترحيب ⋆', callback_data=data.sender_user_id_.."/unlockwelcome"},
+{text = 'تعطيل الترحيب ◉', callback_data=data.sender_user_id_.."/lockwelcome"},{text = 'تفعيل الترحيب ◉', callback_data=data.sender_user_id_.."/unlockwelcome"},
 },
 {
-{text = 'تعطيل الردود العامه ⋆', callback_data=data.sender_user_id_.."/lockrepall"},{text = 'تفعيل الردود العامه ⋆', callback_data=data.sender_user_id_.."/unlockrepall"},
+{text = 'تعطيل الردود العامه ◉', callback_data=data.sender_user_id_.."/lockrepall"},{text = 'تفعيل الردود العامه ◉', callback_data=data.sender_user_id_.."/unlockrepall"},
 },
 {
-{text = 'تعطيل الايدي ⋆', callback_data=data.sender_user_id_.."/lockide"},{text = 'تفعيل الايدي ⋆', callback_data=data.sender_user_id_.."/unlockide"},
+{text = 'تعطيل الايدي ◉', callback_data=data.sender_user_id_.."/lockide"},{text = 'تفعيل الايدي ◉', callback_data=data.sender_user_id_.."/unlockide"},
 },
 {
-{text = 'تعطيل الايدي بالصوره ⋆', callback_data=data.sender_user_id_.."/lockidephoto"},{text = 'تفعيل الايدي بالصوره ⋆', callback_data=data.sender_user_id_.."/unlockidephoto"},
+{text = 'تعطيل الايدي بالصوره ◉', callback_data=data.sender_user_id_.."/lockidephoto"},{text = 'تفعيل الايدي بالصوره ◉', callback_data=data.sender_user_id_.."/unlockidephoto"},
 },
 {
-{text = 'تعطيل الحظر ⋆', callback_data=data.sender_user_id_.."/lockkiked"},{text = 'تفعيل الحظر ⋆', callback_data=data.sender_user_id_.."/unlockkiked"},
+{text = 'تعطيل الحظر ◉', callback_data=data.sender_user_id_.."/lockkiked"},{text = 'تفعيل الحظر ◉', callback_data=data.sender_user_id_.."/unlockkiked"},
 },
 {
-{text = 'تعطيل الرفع ⋆', callback_data=data.sender_user_id_.."/locksetm"},{text = 'تفعيل الرفع ⋆', callback_data=data.sender_user_id_.."/unlocksetm"},
+{text = 'تعطيل الرفع ◉', callback_data=data.sender_user_id_.."/locksetm"},{text = 'تفعيل الرفع ◉', callback_data=data.sender_user_id_.."/unlocksetm"},
 },
 {
-{text = 'تعطيل اطردني ⋆', callback_data=data.sender_user_id_.."/lockkikedme"},{text = 'تفعيل اطردني ⋆', callback_data=data.sender_user_id_.."/unlockkikedme"},
+{text = 'تعطيل اطردني ◉', callback_data=data.sender_user_id_.."/lockkikedme"},{text = 'تفعيل اطردني ◉', callback_data=data.sender_user_id_.."/unlockkikedme"},
 },
 {
-{text = 'تعطيل الالعاب ⋆', callback_data=data.sender_user_id_.."/lockgames"},{text = 'تفعيل الالعاب ⋆', callback_data=data.sender_user_id_.."/unlockgames"},
+{text = 'تعطيل الالعاب ◉', callback_data=data.sender_user_id_.."/lockgames"},{text = 'تفعيل الالعاب ◉', callback_data=data.sender_user_id_.."/unlockgames"},
 },
 {
-{text = 'تعطيل الردود ⋆', callback_data=data.sender_user_id_.."/lockrepgr"},{text = 'تفعيل الردود ⋆', callback_data=data.sender_user_id_.."/unlockrepgr"},
+{text = 'تعطيل الردود ◉', callback_data=data.sender_user_id_.."/lockrepgr"},{text = 'تفعيل الردود ◉', callback_data=data.sender_user_id_.."/unlockrepgr"},
 },
 {
 {text = '☊.رجوع.☊', callback_data="/help90"},
@@ -15604,42 +15599,42 @@ https.request("https://api.telegram.org/bot"..token.."/answerCallbackQuery?callb
 return false
 end
 local Teext =[[
-⋆ قائمة اوامر الحماية..↑↓
+◉ قائمة اوامر الحماية..↑↓
 •════•| ᏞᎪᎬᎡΝ ᏙᎥᏢ |•════•
-⋆ قـفـل او فـتـح + الامــر.
-⋆ قفل او فتح الامر بالتقييد.
-⋆ قفل او فتح الامر بالـطرد.
-⋆ قـفل او فتح الامر بالكتم.
+◉ قـفـل او فـتـح + الامــر.
+◉ قفل او فتح الامر بالتقييد.
+◉ قفل او فتح الامر بالـطرد.
+◉ قـفل او فتح الامر بالكتم.
 •════•| ᏞᎪᎬᎡΝ ᏙᎥᏢ |•════•
-⋆ الـروابـط. 
-⋆ المعرفات.
-⋆ الشاررحه.
-⋆ التـعديل.
-⋆ التـثبيت.
-⋆ المتحركه.
-⋆ المـلفات.
-⋆ الـصـور.
-⋆ الـتـاك.
+◉ الـروابـط. 
+◉ المعرفات.
+◉ الشاررحه.
+◉ التـعديل.
+◉ التـثبيت.
+◉ المتحركه.
+◉ المـلفات.
+◉ الـصـور.
+◉ الـتـاك.
 •════•| ᏞᎪᎬᎡΝ ᏙᎥᏢ |•════•
-⋆ المـلصقات.
-⋆ الاشعارات.
-⋆ الـدردشه.
-⋆ الفـيديو.
-⋆ لاننلاين.
-⋆ التوجيه.
-⋆ الاغاني.
-⋆ الصوت.
-⋆ الجهات.
+◉ المـلصقات.
+◉ الاشعارات.
+◉ الـدردشه.
+◉ الفـيديو.
+◉ لاننلاين.
+◉ التوجيه.
+◉ الاغاني.
+◉ الصوت.
+◉ الجهات.
 •════•| ᏞᎪᎬᎡΝ ᏙᎥᏢ |•════•
-⋆ المـاركداون.
-⋆ الكـلايش.
-⋆ الممنوعه.
-⋆ السيلفي.
-⋆ البوتات.
-⋆ التكرار.
-⋆ السب.
+◉ المـاركداون.
+◉ الكـلايش.
+◉ الممنوعه.
+◉ السيلفي.
+◉ البوتات.
+◉ التكرار.
+◉ السب.
 •════•| ᏞᎪᎬᎡΝ ᏙᎥᏢ |•════•
-◉ 𝙲𝙷  - [𝚂𝙾𝚄𝚁𝙲𝙴 𝙻𝙰𝙴𝚁𝙽](t.me/source_Laren )
+◉ 𝘾𝙃 - [𝚂𝙾𝚄𝚁𝙲𝙴 𝙻𝙰𝚁𝙴𝙽](t.me/source_Laren )
 ]]
 keyboard = {} 
 keyboard.inline_keyboard = {
@@ -15656,70 +15651,70 @@ https.request("https://api.telegram.org/bot"..token.."/answerCallbackQuery?callb
 return false
 end
 local Teext =[[
-⋆ قائمة اوامر الادمنية..↑↓
+◉ قائمة اوامر الادمنية..↑↓
 •════•| ᏞᎪᎬᎡΝ ᏙᎥᏢ |•════•
-⋆ رفع او تنزيل مميز.
-⋆ عدد الجروب.
-⋆ الغاء تقـييد.
-⋆ المحظورين.
-⋆ المـكتومين.
-⋆ الصتلاحيات.
-⋆ قائمه الـمنع.
-⋆ الغاء حظر.
-⋆ تاك للكل.
-⋆ الغاء كتم.
-⋆ الغاء منع.
-⋆ المميزين.
-⋆ تقييد.
-⋆ كـتـم.
-⋆ حـظر.
-⋆ طـرد.
-⋆ مـنع.
+◉ رفع او تنزيل مميز.
+◉ عدد الجروب.
+◉ الغاء تقـييد.
+◉ المحظورين.
+◉ المـكتومين.
+◉ الصتلاحيات.
+◉ قائمه الـمنع.
+◉ الغاء حظر.
+◉ تاك للكل.
+◉ الغاء كتم.
+◉ الغاء منع.
+◉ المميزين.
+◉ تقييد.
+◉ كـتـم.
+◉ حـظر.
+◉ طـرد.
+◉ مـنع.
 •════•| ᏞᎪᎬᎡΝ ᏙᎥᏢ |•════•
-⋆ الغاء تثـبيت.
-⋆ تـثـبـيـت.
-⋆ الاعدادات.
+◉ الغاء تثـبيت.
+◉ تـثـبـيـت.
+◉ الاعدادات.
 •════•| ᏞᎪᎬᎡΝ ᏙᎥᏢ |•════•
-⋆ الرابط.
-⋆ القوانين.
-⋆ الترحيب.
+◉ الرابط.
+◉ القوانين.
+◉ الترحيب.
 •════•| ᏞᎪᎬᎡΝ ᏙᎥᏢ |•════•
-⋆ تفعيل او تعطيل الترحيب.↑↓
-⋆ اضف او مسح صلاحيه.↑↓
-⋆ وضع تكرار + العدد.↑↓
-⋆ كشف البوتات.↑↓
-⋆ ايـدي.
-⋆ جهـاتي.
-⋆ رسائـلي.
-⋆ سحكاتي.
-•════•| ᏞᎪᎬᎡΝ ᏙᎥᏢ |•════•
-        ╔═══════════════╗        
-             ⋆ وضع + الاوامر الادناه..↑↓
-        ╚═══════════════╝        
-•════•| ᏞᎪᎬᎡΝ ᏙᎥᏢ |•════•
-⋆ اسـم.
-⋆ رابـط.
-⋆ صـوره.
-⋆ وصـف.
-⋆ قـوانين.
-⋆ ترحـيب.
+◉ تفعيل او تعطيل الترحيب.↑↓
+◉ اضف او مسح صلاحيه.↑↓
+◉ وضع تكرار + العدد.↑↓
+◉ كشف البوتات.↑↓
+◉ ايـدي.
+◉ جهـاتي.
+◉ رسائـلي.
+◉ سحكاتي.
 •════•| ᏞᎪᎬᎡΝ ᏙᎥᏢ |•════•
         ╔═══════════════╗        
-             ⋆ مسح + الاوامر الادناه..↑↓
+             ◉ وضع + الاوامر الادناه..↑↓
         ╚═══════════════╝        
 •════•| ᏞᎪᎬᎡΝ ᏙᎥᏢ |•════•
-⋆ قائمه المـنع.
-⋆ الصـلاحيات.
-⋆ المـحظورين.
-⋆ المـكتومين.
-⋆ المطرودين.
-⋆ الممـيزين.
-⋆ القـوانين.
-⋆ البـوتات.
-⋆ الصـوره.
-⋆ الرابـط.
+◉ اسـم.
+◉ رابـط.
+◉ صـوره.
+◉ وصـف.
+◉ قـوانين.
+◉ ترحـيب.
 •════•| ᏞᎪᎬᎡΝ ᏙᎥᏢ |•════•
-◉ 𝙲𝙷  - [𝚂𝙾𝚄𝚁𝙲𝙴 𝙻𝙰𝙴𝚁𝙽 ](t.me/source_Laren )
+        ╔═══════════════╗        
+             ◉ مسح + الاوامر الادناه..↑↓
+        ╚═══════════════╝        
+•════•| ᏞᎪᎬᎡΝ ᏙᎥᏢ |•════•
+◉ قائمه المـنع.
+◉ الصـلاحيات.
+◉ المـحظورين.
+◉ المـكتومين.
+◉ المطرودين.
+◉ الممـيزين.
+◉ القـوانين.
+◉ البـوتات.
+◉ الصـوره.
+◉ الرابـط.
+•════•| ᏞᎪᎬᎡΝ ᏙᎥᏢ |•════•
+◉ 𝘾𝙃 - [𝚂𝙾𝚄𝚁𝙲𝙴 𝙻𝙰𝚁𝙴𝙽 ](t.me/source_Laren )
 ]]
 keyboard = {} 
 keyboard.inline_keyboard = {
@@ -15736,59 +15731,59 @@ https.request("https://api.telegram.org/bot"..token.."/answerCallbackQuery?callb
 return false
 end
 local Teext =[[
-⋆ قائمة اوامر المدراء والمنشئ..↑↓
+◉ قائمة اوامر المدراء والمنشئ..↑↓
 •════•| ᏞᎪᎬᎡΝ ᏙᎥᏢ |•════•
-⋆ رفع او تنزيل ادمن
-⋆ رفع او كشف القيود
-⋆ تنزيل الكل
+◉ رفع او تنزيل ادمن
+◉ رفع او كشف القيود
+◉ تنزيل الكل
 •════•| ᏞᎪᎬᎡΝ ᏙᎥᏢ |•════•
-⋆ تفعيل او تعطيل الايدي بالصوره
-⋆ تفعيل او تعطيل الايدي
-⋆ تفعيل او تعطيل الردود العامه
-⋆ تفعيل او تعطيل الالعاب
-⋆ تفعيل او تعطيل الردود
-⋆ تفعيل او تعطيل اطردني
-⋆ تفعيل او تعطيل الرفع
-⋆ تفعيل او تعطيل الحظر
-⋆ تفعيل او تعطيل الرابط
-⋆ تفعيل او تعطيل اوامر التسليه
-•════•| ᏞᎪᎬᎡΝ ᏙᎥᏢ |•════•
-        ╔═══════════════╗        
-             ⋆ تعين او مسح الايدي..↑↓
-        ╚═══════════════╝        
-•════•| ᏞᎪᎬᎡΝ ᏙᎥᏢ |•════•
-⋆ رفع الادمنيه
-⋆ اضف او مسح رد
-⋆ الادمنيه
-⋆ الردود
-•════•| ᏞᎪᎬᎡΝ ᏙᎥᏢ |•════•
-⋆ مسح + عدد
-⋆ مسح الادمنيه
-⋆ مسح الردود
+◉ تفعيل او تعطيل الايدي بالصوره
+◉ تفعيل او تعطيل الايدي
+◉ تفعيل او تعطيل الردود العامه
+◉ تفعيل او تعطيل الالعاب
+◉ تفعيل او تعطيل الردود
+◉ تفعيل او تعطيل اطردني
+◉ تفعيل او تعطيل الرفع
+◉ تفعيل او تعطيل الحظر
+◉ تفعيل او تعطيل الرابط
+◉ تفعيل او تعطيل اوامر التسليه
 •════•| ᏞᎪᎬᎡΝ ᏙᎥᏢ |•════•
         ╔═══════════════╗        
-             ⋆ اوامر المنشئين الاساسين..↑↓
+             ◉ تعين او مسح الايدي..↑↓
         ╚═══════════════╝        
 •════•| ᏞᎪᎬᎡΝ ᏙᎥᏢ |•════•
-⋆ رفع او تنزيل منشئ
-⋆ مسح المنشئين
-⋆ المنشئين
+◉ رفع الادمنيه
+◉ اضف او مسح رد
+◉ الادمنيه
+◉ الردود
+•════•| ᏞᎪᎬᎡΝ ᏙᎥᏢ |•════•
+◉ مسح + عدد
+◉ مسح الادمنيه
+◉ مسح الردود
 •════•| ᏞᎪᎬᎡΝ ᏙᎥᏢ |•════•
         ╔═══════════════╗        
-             ⋆ اوامر المنشئين..↑↓
+             ◉ اوامر المنشئين الاساسين..↑↓
         ╚═══════════════╝        
 •════•| ᏞᎪᎬᎡΝ ᏙᎥᏢ |•════•
-⋆ مسح او مسح الاوامر المضافه
-⋆ اضف مجوهرات + العدد بالرد
-⋆ اضف رسائل + العدد بالرد
-⋆ تعين او مسح الايدي
-⋆ اضف او مسح امر
-⋆ رفع/تنزيل مدير
-⋆ الاوامر المضافه
-⋆ مسح المدراء
-⋆ الـمـدراء
+◉ رفع او تنزيل منشئ
+◉ مسح المنشئين
+◉ المنشئين
 •════•| ᏞᎪᎬᎡΝ ᏙᎥᏢ |•════•
-◉ 𝙲𝙷  - [𝚂𝙾𝚄𝚁𝙲𝙴 𝙻𝙰𝙴𝚁𝙽 ](t.me/source_Laren )
+        ╔═══════════════╗        
+             ◉ اوامر المنشئين..↑↓
+        ╚═══════════════╝        
+•════•| ᏞᎪᎬᎡΝ ᏙᎥᏢ |•════•
+◉ مسح او مسح الاوامر المضافه
+◉ اضف مجوهرات + العدد بالرد
+◉ اضف رسائل + العدد بالرد
+◉ تعين او مسح الايدي
+◉ اضف او مسح امر
+◉ رفع/تنزيل مدير
+◉ الاوامر المضافه
+◉ مسح المدراء
+◉ الـمـدراء
+•════•| ᏞᎪᎬᎡΝ ᏙᎥᏢ |•════•
+◉ 𝘾𝙃 - [𝚂𝙾𝚄𝚁𝙲𝙴 𝙻𝙰𝚁𝙴𝙽 ](t.me/source_Laren )
 ]]
 keyboard = {} 
 keyboard.inline_keyboard = {
@@ -15805,50 +15800,50 @@ https.request("https://api.telegram.org/bot"..token.."/answerCallbackQuery?callb
 return false
 end
 local Teext =[[
-⋆ قائمة اوامر المطورين..↑↓
+◉ قائمة اوامر المطورين..↑↓
 •════•| ᏞᎪᎬᎡΝ ᏙᎥᏢ |•════•
         ╔═══════════════╗        
-             ⋆ المـطور الـعـادي..↑↓
+             ◉ المـطور الـعـادي..↑↓
         ╚═══════════════╝        
 •════•| ᏞᎪᎬᎡΝ ᏙᎥᏢ |•════•
-⋆ اذاعه بالتوجيه للمجموعات
-⋆ اذاعه موجهه بالتـثبيت
-⋆ جلب نسخه احتياطيه
-⋆ اذاعه بالتوجيه خاص
-⋆ رفع نسخه احتياطيه
-⋆ تغيير رابط الجروب
-⋆ رفع او تنزيل مالك
-⋆ اذاعه بالمجموعات
-⋆ اذاعه بالتـثبيت
-⋆ مسح المالكين
-⋆ اذاعه خـاص
-⋆ الاحصائيات
+◉ اذاعه بالتوجيه للمجموعات
+◉ اذاعه موجهه بالتـثبيت
+◉ جلب نسخه احتياطيه
+◉ اذاعه بالتوجيه خاص
+◉ رفع نسخه احتياطيه
+◉ تغيير رابط الجروب
+◉ رفع او تنزيل مالك
+◉ اذاعه بالمجموعات
+◉ اذاعه بالتـثبيت
+◉ مسح المالكين
+◉ اذاعه خـاص
+◉ الاحصائيات
 •════•| ᏞᎪᎬᎡΝ ᏙᎥᏢ |•════•
         ╔═══════════════╗        
-             ⋆ المطور الاساسي..↑↓
+             ◉ المطور الاساسي..↑↓
         ╚═══════════════╝        
 •════•| ᏞᎪᎬᎡΝ ᏙᎥᏢ |•════•
-⋆ جلب او رفع نسخه احتياطيه
-⋆ اذاعه بالتوجيه للمجموعات
-⋆ رفع او تنزيل  مميز عام 
-⋆ اذاعه موجهه بالتثبيت
-⋆ اضف او مسح رد عام
-⋆ اذاعه بالتوجيه خاص
-⋆ تغيير رساله المغادره
-⋆ مسح المميزين عام
-⋆ مسح الردود العامه
-⋆ رفع او تنزيل مطور 
-⋆ مسح المطورين
-⋆ حظر او كتم عام 
-⋆ المكتومين  عام 
-⋆ المحظورين عام
-⋆ ضع اسم للبوت
-⋆ اذاعه بالتثبيت
-⋆ الاحصائيات
-⋆ المطورين 
-⋆ الغاء العام
+◉ جلب او رفع نسخه احتياطيه
+◉ اذاعه بالتوجيه للمجموعات
+◉ رفع او تنزيل  مميز عام 
+◉ اذاعه موجهه بالتثبيت
+◉ اضف او مسح رد عام
+◉ اذاعه بالتوجيه خاص
+◉ تغيير رساله المغادره
+◉ مسح المميزين عام
+◉ مسح الردود العامه
+◉ رفع او تنزيل مطور 
+◉ مسح المطورين
+◉ حظر او كتم عام 
+◉ المكتومين  عام 
+◉ المحظورين عام
+◉ ضع اسم للبوت
+◉ اذاعه بالتثبيت
+◉ الاحصائيات
+◉ المطورين 
+◉ الغاء العام
 •════•| ᏞᎪᎬᎡΝ ᏙᎥᏢ |•════•
-◉ 𝙲𝙷  - [𝚂𝙾𝚄𝚁𝙲𝙴 𝙻𝙰𝙴𝚁𝙽 ](t.me/source_Laren )
+◉ 𝘾𝙃 - [𝚂𝙾𝚄𝚁𝙲𝙴 𝙻𝙰𝚁𝙴𝙽 ](t.me/source_Laren )
 ]]
 keyboard = {} 
 keyboard.inline_keyboard = {
@@ -15865,112 +15860,112 @@ https.request("https://api.telegram.org/bot"..token.."/answerCallbackQuery?callb
 return false
 end
 local Teext =[[
-⋆ قائمة اوامر التسليه..↑↓
+◉ قائمة اوامر التسليه..↑↓
 •════•| ᏞᎪᎬᎡΝ ᏙᎥᏢ |•════•
-⋆ رفع + تنزيل ↚ الامر
+◉ رفع + تنزيل ← الامر
 •════•| ᏞᎪᎬᎡΝ ᏙᎥᏢ |•════•
-⋆ رفع + تنزيل ↚ متوحد 
-⋆ تاك للمتوحدين
-⋆ مسح المتوحدين
+◉ رفع + تنزيل ← متوحد 
+◉ تاك للمتوحدين
+◉ مسح المتوحدين
 •════•| ᏞᎪᎬᎡΝ ᏙᎥᏢ |•════•
-⋆ رفع + تنزيل ↚ رقاصه
-⋆ تاك للرقصات
-⋆ مسح الرقصات
+◉ رفع + تنزيل ← رقاصه
+◉ تاك للرقصات
+◉ مسح الرقصات
 •════•| ᏞᎪᎬᎡΝ ᏙᎥᏢ |•════•
-⋆ رفع + تنزيل ↚ ابني
-⋆ تاك لولادي
-⋆ مسح ولادي
+◉ رفع + تنزيل ← ابني
+◉ تاك لولادي
+◉ مسح ولادي
 •════•| ᏞᎪᎬᎡΝ ᏙᎥᏢ |•════•
-⋆ رفع + تنزيل ↚ بنتي
-⋆ تاك لبناتي
-⋆ مسح بناتي
+◉ رفع + تنزيل ← بنتي
+◉ تاك لبناتي
+◉ مسح بناتي
 •════•| ᏞᎪᎬᎡΝ ᏙᎥᏢ |•════•
-⋆ رفع + تنزيل ↚ قطتي
-⋆ تاك للقطط
-⋆ مسح القطط
+◉ رفع + تنزيل ← قطتي
+◉ تاك للقطط
+◉ مسح القطط
 •════•| ᏞᎪᎬᎡΝ ᏙᎥᏢ |•════•
-⋆ رفع + تنزيل ↚ دكري
-⋆ تاك للدكراتي
-⋆ مسح دكراتي
+◉ رفع + تنزيل ← دكري
+◉ تاك للدكراتي
+◉ مسح دكراتي
 •════•| ᏞᎪᎬᎡΝ ᏙᎥᏢ |•════•
-⋆ رفع + تنزيل ↚ فاشل
-⋆ تاك للفشله
-⋆ مسح الفشله
+◉ رفع + تنزيل ← فاشل
+◉ تاك للفشله
+◉ مسح الفشله
 •════•| ᏞᎪᎬᎡΝ ᏙᎥᏢ |•════•
-⋆ رفع + تنزيل ↚ حيوان
-⋆ تاك للحيونات
-⋆ مسح الحيوانات
+◉ رفع + تنزيل ← حيوان
+◉ تاك للحيونات
+◉ مسح الحيوانات
 •════•| ᏞᎪᎬᎡΝ ᏙᎥᏢ |•════•
-⋆ رفع + تنزيل ↚ خاينه
-⋆ تاك للخينات
-⋆ مسح الخينات
+◉ رفع + تنزيل ← خاينه
+◉ تاك للخينات
+◉ مسح الخينات
 •════•| ᏞᎪᎬᎡΝ ᏙᎥᏢ |•════•
-⋆ رفع + تنزيل ↚ عبيط
-⋆ تاك للعبايط
-⋆ مسح العبايط
+◉ رفع + تنزيل ← عبيط
+◉ تاك للعبايط
+◉ مسح العبايط
 •════•| ᏞᎪᎬᎡΝ ᏙᎥᏢ |•════•
-⋆ رفع + تنزيل ↚ خاين
-⋆ تاك للخونه
-⋆ مسح الخونه
+◉ رفع + تنزيل ← خاين
+◉ تاك للخونه
+◉ مسح الخونه
 •════•| ᏞᎪᎬᎡΝ ᏙᎥᏢ |•════•
-⋆ رفع + تنزيل ↚ مراتي
-⋆ تاك لمرتاتي
-⋆ مسح مرتاتي
+◉ رفع + تنزيل ← مراتي
+◉ تاك لمرتاتي
+◉ مسح مرتاتي
 •════•| ᏞᎪᎬᎡΝ ᏙᎥᏢ |•════•
-⋆ رفع + تنزيل ↚ شاذ
-⋆ تاك للشواذ
-⋆ مسح الشواذ
+◉ رفع + تنزيل ← شاذ
+◉ تاك للشواذ
+◉ مسح الشواذ
 •════•| ᏞᎪᎬᎡΝ ᏙᎥᏢ |•════•
-⋆ رفع + تنزيل ↚ خطيبتي
-⋆ تاك لخطيبتي
-⋆ مسح خطيبتي
+◉ رفع + تنزيل ← خطيبتي
+◉ تاك لخطيبتي
+◉ مسح خطيبتي
 •════•| ᏞᎪᎬᎡΝ ᏙᎥᏢ |•════•
-⋆ رفع + تنزيل ↚ علق
-⋆ تاك للعلوق
-⋆ مسح العلوق
+◉ رفع + تنزيل ← علق
+◉ تاك للعلوق
+◉ مسح العلوق
 •════•| ᏞᎪᎬᎡΝ ᏙᎥᏢ |•════•
-⋆ رفع + تنزيل ↚ مزه
-⋆ تاك للمزز
-⋆ مسح المزز
+◉ رفع + تنزيل ← مزه
+◉ تاك للمزز
+◉ مسح المزز
 •════•| ᏞᎪᎬᎡΝ ᏙᎥᏢ |•════•
-⋆ رفع + تنزيل ↚ وتكه
-⋆ تاك للوتكات
-⋆ مسح الوتكات
+◉ رفع + تنزيل ← وتكه
+◉ تاك للوتكات
+◉ مسح الوتكات
 •════•| ᏞᎪᎬᎡΝ ᏙᎥᏢ |•════•
-⋆ رفع + تنزيل ↚ كلب
-⋆ تاك للكلاب
-⋆ مسح الكلاب
+◉ رفع + تنزيل ← كلب
+◉ تاك للكلاب
+◉ مسح الكلاب
 •════•| ᏞᎪᎬᎡΝ ᏙᎥᏢ |•════•
-⋆ رفع + تنزيل ↚ قرد 
-⋆ تاك للقرود
-⋆ مسح القرود
+◉ رفع + تنزيل ← قرد 
+◉ تاك للقرود
+◉ مسح القرود
 •════•| ᏞᎪᎬᎡΝ ᏙᎥᏢ |•════•
-⋆ رفع + تنزيل ↚ بقره
-⋆ تاك للبقرات
-⋆ مسح البقرات
+◉ رفع + تنزيل ← بقره
+◉ تاك للبقرات
+◉ مسح البقرات
 •════•| ᏞᎪᎬᎡΝ ᏙᎥᏢ |•════•
-⋆ رفع + تنزيل ↚ غبي
-⋆ تاك للاغبياء
-⋆ مسح الاغبياء
+◉ رفع + تنزيل ← غبي
+◉ تاك للاغبياء
+◉ مسح الاغبياء
 •════•| ᏞᎪᎬᎡΝ ᏙᎥᏢ |•════•
-⋆ رفع + تنزيل ↚ حمار
-⋆ تاك للحمير
-⋆ مسح الحمير
+◉ رفع + تنزيل ← حمار
+◉ تاك للحمير
+◉ مسح الحمير
 •════•| ᏞᎪᎬᎡΝ ᏙᎥᏢ |•════•
-⋆ رفع + تنزيل 
-⋆ بقلبي او من قلبي
-⋆ تاك للي بقلبي
-⋆ مسح اللي بقلبي
+◉ رفع + تنزيل 
+◉ بقلبي او من قلبي
+◉ تاك للي بقلبي
+◉ مسح اللي بقلبي
 •════•| ᏞᎪᎬᎡΝ ᏙᎥᏢ |•════•
-⋆ رفع + تنزيل ↚ زوجتي
-⋆ تاك للزوجات
-⋆ مسح الزوجات
+◉ رفع + تنزيل ← زوجتي
+◉ تاك للزوجات
+◉ مسح الزوجات
 •════•| ᏞᎪᎬᎡΝ ᏙᎥᏢ |•════•
-⋆ رفع + تنزيل ↚ مطلقه
-⋆ تاك للمطلقات
-⋆ مسح المطلقات
+◉ رفع + تنزيل ← مطلقه
+◉ تاك للمطلقات
+◉ مسح المطلقات
 •════•| ᏞᎪᎬᎡΝ ᏙᎥᏢ |•════•
-◉ 𝙲𝙷  - [𝚂𝙾𝚄𝚁𝙲𝙴 𝙻𝙰𝙴𝚁𝙽 ](t.me/source_Laren )
+◉ 𝘾𝙃 - [𝚂𝙾𝚄𝚁𝙲𝙴 𝙻𝙰𝚁𝙴𝙽 ](t.me/source_Laren )
 ]]
 keyboard = {} 
 keyboard.inline_keyboard = {
@@ -15987,10 +15982,10 @@ https.request("https://api.telegram.org/bot"..token.."/answerCallbackQuery?callb
 return false
 end
 local Teext =[[
-⋆ قم بأختيار اللغه.. ↑↓
-⋆ Choose language.. ↑↓ 
+◉ قم بأختيار اللغه.. ↑↓
+◉ Choose language.. ↑↓ 
 •════•| ᏞᎪᎬᎡΝ ᏙᎥᏢ |•════•
-◉ 𝙲𝙷  - [𝚂𝙾𝚄𝚁𝙲𝙴 𝙻𝙰𝙴𝚁𝙽 ](t.me/source_Laren )
+◉ 𝘾𝙃 - [𝚂𝙾𝚄𝚁𝙲𝙴 𝙻𝙰𝚁𝙴𝙽 ](t.me/source_Laren )
 ]]
 keyboard = {} 
 keyboard.inline_keyboard = {
@@ -15999,6 +15994,9 @@ keyboard.inline_keyboard = {
 },
 {
 {text = '𝚂𝙾𝚄𝚁𝙲𝙴 𝙲𝙷𝙰𝙽𝙽𝙴𝙻 ', url="t.me/source_Laren "},
+},
+{
+{text = 'اضف البوت لمجموعتك 𖠕', url="http://t.me/"..sudos.UserName.."?startgroup=new"},
 },
 }
 return https.request("https://api.telegram.org/bot"..token..'/editMessageText?chat_id='..Chat_id..'&text='..URL.escape(Teext)..'&message_id='..msg_idd..'&parse_mode=markdown&disable_web_page_preview=true&reply_markup='..JSON.encode(keyboard)) 
@@ -16011,26 +16009,26 @@ https.request("https://api.telegram.org/bot"..token.."/answerCallbackQuery?callb
 return false
 end
 local Teext =[[
-⋆ اهلا بك في قسم الاوامر ..↑↓
+◉ اهلا بك في قسم الاوامر ..↑↓
 •════•| ᏞᎪᎬᎡΝ ᏙᎥᏢ |•════•
-⋆ اليك الاوامر الخاص بسورس لارين .
-⋆ اختر الامر الذي تريده من الازرار بلاسفل .
+◉ اليك الاوامر الخاص بسورس لارين .
+◉ اختر الامر الذي تريده من الازرار بلاسفل .
 •════•| ᏞᎪᎬᎡΝ ᏙᎥᏢ |•════•
-◉ 𝙲𝙷  - [𝚂𝙾𝚄𝚁𝙲𝙴 𝙻𝙰𝙴𝚁𝙽 ](t.me/source_Laren )
+◉ 𝘾𝙃 - [𝚂𝙾𝚄𝚁𝙲𝙴 𝙻𝙰𝚁𝙴𝙽 ](t.me/source_Laren )
 ]]
 keyboard = {} 
 keyboard.inline_keyboard = {
 {
-{text = '⋆ اوامر الحمايه .', callback_data="/help3"},{text = '⋆ اوامر الادمنيه .', callback_data="/help4"},
+{text = '◉ اوامر الحمايه .', callback_data="/help3"},{text = '◉ اوامر الادمنيه .', callback_data="/help4"},
 },
 {
-{text = '⋆ اوامر الاداره .', callback_data="/help5"},{text = '⋆ اوامر المطور .', callback_data="/help6"},
+{text = '◉ اوامر الاداره .', callback_data="/help5"},{text = '◉ اوامر المطور .', callback_data="/help6"},
 },
 {
-{text = '⋆ اوامر التسليه .', callback_data="/help7"},
+{text = '◉ اوامر التسليه .', callback_data="/help7"},
 },
 {
-{text = '⋆ اوامر القفل .', callback_data="/help1"},{text = '⋆ اوامر التعطيل .', callback_data="/help2"},
+{text = '◉ اوامر القفل .', callback_data="/help1"},{text = '◉ اوامر التعطيل .', callback_data="/help2"},
 },
 {
 {text = '☊.BACK.☊', callback_data="/help8"},
@@ -16046,43 +16044,43 @@ https.request("https://api.telegram.org/bot"..token.."/answerCallbackQuery?callb
 return false
 end
 local Teext =[[
-⋆️ ❬ m 1 ❭ Orders Protect Group ⇊
+◉️ ❬ m 1 ❭ Orders Protect Group ⇊
 •════•| ᏞᎪᎬᎡΝ ᏙᎥᏢ |•════•
-⋆ Lock «Open + it
-⋆ Lock «» Open ❬ All ❭
+◉ Lock «Open + it
+◉ Lock «» Open ❬ All ❭
 •════•| ᏞᎪᎬᎡΝ ᏙᎥᏢ |•════•
-⋆ Chat
-⋆ Knows
-⋆ Pictures
-⋆ videos
-⋆ Sticker
-⋆ files
+◉ Chat
+◉ Knows
+◉ Pictures
+◉ videos
+◉ Sticker
+◉ files
 Mobile moving
-⋆ Lift
-⋆ Audio
-⋆ Optiments
-⋆ Welcome
-⋆ The decorative
-⋆ Translate
-⋆ Responses
-⋆ Guidance
-⋆ Notifications
-⋆ Crown
-⋆ Delete link
-⋆ expulsion
-⋆ Games
-⋆ Novels
-⋆ towers
-⋆ Meanings of names
-⋆ Welcome
+◉ Lift
+◉ Audio
+◉ Optiments
+◉ Welcome
+◉ The decorative
+◉ Translate
+◉ Responses
+◉ Guidance
+◉ Notifications
+◉ Crown
+◉ Delete link
+◉ expulsion
+◉ Games
+◉ Novels
+◉ towers
+◉ Meanings of names
+◉ Welcome
 •════•| ᏞᎪᎬᎡΝ ᏙᎥᏢ |•════•
-⋆ Links
-⋆ Guidance
-⋆ popcorn
-⋆ Bots
-⋆ Prohibited
+◉ Links
+◉ Guidance
+◉ popcorn
+◉ Bots
+◉ Prohibited
 •════•| ᏞᎪᎬᎡΝ ᏙᎥᏢ |•════•
-◉ 𝙲𝙷  - [𝚂𝙾𝚄𝚁𝙲𝙴 𝙻𝙰𝙴𝚁𝙽](t.me/source_Laren) 
+◉ 𝘾𝙃 - [𝚂𝙾𝚄𝚁𝙲𝙴 𝙻𝙰𝚁𝙴𝙽](t.me/source_Laren) 
 •════•| ᏞᎪᎬᎡΝ ᏙᎥᏢ |•════•
 ]]
 keyboard = {} 
@@ -16095,43 +16093,43 @@ return https.request("https://api.telegram.org/bot"..token..'/editMessageText?ch
 end
 if Text == '/sofi' then
 if not Constructor(data) then
-local notText = 'المعذره هذا الامر ليس لك..??♥️'
+local notText = 'المعذره هذا الامر ليس لك..🙂♥️'
 https.request("https://api.telegram.org/bot"..token.."/answerCallbackQuery?callback_query_id="..data.id_.."&text="..URL.escape(notText).."&show_alert=true")
 return false
 end
 local Teext =[[
-⋆ ❬ m 2 ❭ 2 ⋆ entertainment orders ⇊
-⋆ Lifting «» Download + it
+◉ ❬ m 2 ❭ 2 ◉ entertainment orders ⇊
+◉ Lifting «» Download + it
 •════•| ᏞᎪᎬᎡΝ ᏙᎥᏢ |•════•
-⋆ and Take
-⋆ Crown for Soutat
-⋆ Wipe Wattat
+◉ and Take
+◉ Crown for Soutat
+◉ Wipe Wattat
 •════•| ᏞᎪᎬᎡΝ ᏙᎥᏢ |•════•
-⋆
-⋆ Crown for drapes
-⋆ Clear Docks
+◉
+◉ Crown for drapes
+◉ Clear Docks
 •════•| ᏞᎪᎬᎡΝ ᏙᎥᏢ |•════•
-⋆ Jeep
-⋆ Crown for bodies
-⋆ Scanning
+◉ Jeep
+◉ Crown for bodies
+◉ Scanning
 •════•| ᏞᎪᎬᎡΝ ᏙᎥᏢ |•════•
-⋆ animal
-⋆ Crown for animals
-⋆ Animals
+◉ animal
+◉ Crown for animals
+◉ Animals
 •════•| ᏞᎪᎬᎡΝ ᏙᎥᏢ |•════•
-⋆ failed
-⋆ Crown for failure
-⋆ Scan of failure
+◉ failed
+◉ Crown for failure
+◉ Scan of failure
 •════•| ᏞᎪᎬᎡΝ ᏙᎥᏢ |•════•
-⋆ Dermatology
-⋆ Crown for perforation
-⋆ Scanning
+◉ Dermatology
+◉ Crown for perforation
+◉ Scanning
 •════•| ᏞᎪᎬᎡΝ ᏙᎥᏢ |•════•
-⋆ Catte
-⋆ Crown for cats
-⋆ Cats survey
+◉ Catte
+◉ Crown for cats
+◉ Cats survey
 •════•| ᏞᎪᎬᎡΝ ᏙᎥᏢ |•════•
-◉ 𝙲𝙷  - [𝚂𝙾𝚄𝚁𝙲𝙴 𝙻𝙰𝙴𝚁𝙽](t.me/source_Laren) 
+◉ 𝘾𝙃 - [𝚂𝙾𝚄𝚁𝙲𝙴 𝙻𝙰𝚁𝙴𝙽](t.me/source_Laren) 
 ]]
 keyboard = {} 
 keyboard.inline_keyboard = {
@@ -16139,51 +16137,6 @@ keyboard.inline_keyboard = {
 }
 return https.request("https://api.telegram.org/bot"..token..'/editMessageText?chat_id='..Chat_id..'&text='..URL.escape(Teext)..'&message_id='..msg_idd..'&parse_mode=markdown&disable_web_page_preview=true&reply_markup='..JSON.encode(keyboard)) 
 end
-if DAata == 'OkKikedMe'..data.sender_user_id_ then  
-tdcli_function({ID="ChangeChatMemberStatus",chat_id_=Chat_id,user_id_=data.sender_user_id_,status_={ID="ChatMemberStatusKicked"},},function(arg,data) 
-if (data and data.code_ and data.code_ == 400 and data.message_ == "CHAT_ADMIN_REQUIRED") then 
-keyboard = {} 
-keyboard.inline_keyboard = {
-{{text = '𝒔𝒐𝒖𝒓𝒄𝒆 𝒑𝒂𝒓𝒊𝒔',url='http://t.me/source_Laren'}},
-}
-return https.request("https://api.telegram.org/bot"..token..'/editMessageText?chat_id='..Chat_id..'&text='..URL.escape("  ☈╽ليس لدي صلاحية حظر المستخدمين يرجى تفعيلها !*")..'&message_id='..msg_idd..'&parse_mode=markdown&disable_web_page_preview=true&reply_markup='..JSON.encode(keyboard)) 
-end
-if (data and data.code_ and data.code_ == 3) then 
-keyboard = {} 
-keyboard.inline_keyboard = {
-{{text = '𝒔𝒐𝒖𝒓𝒄𝒆 𝒑𝒂𝒓𝒊𝒔',url='http://t.me/source_Laren'}},
-}
-return https.request("https://api.telegram.org/bot"..token..'/editMessageText?chat_id='..Chat_id..'&text='..URL.escape("  ☈╽البوت ليس ادمن يرجى ترقيتي !*")..'&message_id='..msg_idd..'&parse_mode=markdown&disable_web_page_preview=true&reply_markup='..JSON.encode(keyboard)) 
-end
-if data and data.code_ and data.code_ == 400 and data.message_ == "USER_ADMIN_INVALID" then 
-keyboard = {} 
-keyboard.inline_keyboard = {
-{{text = '𝒔𝒐𝒖𝒓𝒄𝒆 𝒑𝒂𝒓𝒊𝒔',url='http://t.me/source_Laren'}},
-}
-return https.request("https://api.telegram.org/bot"..token..'/editMessageText?chat_id='..Chat_id..'&text='..URL.escape("  ☈╽عذرا لا استطيع طرد ادمنية الجروب*")..'&message_id='..msg_idd..'&parse_mode=markdown&disable_web_page_preview=true&reply_markup='..JSON.encode(keyboard)) 
-end
-if data and data.ID and data.ID == 'Ok' then
-keyboard = {} 
-keyboard.inline_keyboard = {
-{{text = '𝒔𝒐𝒖𝒓𝒄𝒆 𝒑𝒂𝒓𝒊𝒔',url='http://t.me/source_Laren'}},
-}
-return https.request("https://api.telegram.org/bot"..token..'/editMessageText?chat_id='..Chat_id..'&text='..URL.escape("  ☈╽تم الطرد بنجاح*")..'&message_id='..msg_idd..'&parse_mode=markdown&disable_web_page_preview=true&reply_markup='..JSON.encode(keyboard)) 
-end
-end,nil)   
-end
-if DAata == 'noKikedMe'..data.sender_user_id_ then  
-local Text ="*✬ تم الغاء الطرد بنجاح .*"
-keyboard = {} 
-keyboard.inline_keyboard = {
-{{text = '𝒔𝒐𝒖𝒓𝒄𝒆 𝒑??𝒓𝒊𝒔',url='http://t.me/source_Laren'}},
-}
-return https.request("https://api.telegram.org/bot"..token..'/editMessageText?chat_id='..Chat_id..'&text='..URL.escape(Text)..'&message_id='..msg_idd..'&parse_mode=markdown&disable_web_page_preview=true&reply_markup='..JSON.encode(keyboard)) 
-end
-
-end
-if data.ID == "UpdateNewMessage" then  -- new msg
-msg = data.message_
-text = msg.content_.text_
 if Text == '/change-names' then
 if not Constructor(data) then
 local notText = 'المعذره هذا الامر ليس لك..🙂♥️'
@@ -16191,43 +16144,43 @@ https.request("https://api.telegram.org/bot"..token.."/answerCallbackQuery?callb
 return false
 end
 local Teext =[[
-⋆ ❬ m 3 ❭ 3 ⋆ Tall orders ⇊
-⋆ Lifting «↚ Download + it
+◉ ❬ m 3 ❭ 3 ◉ Tall orders ⇊
+◉ Lifting «← Download + it
 •════•| ᏞᎪᎬᎡΝ ᏙᎥᏢ |•════•
-⋆ my son
-⋆ Crown for children
-⋆ Survey sons
+◉ my son
+◉ Crown for children
+◉ Survey sons
 •════•| ᏞᎪᎬᎡΝ ᏙᎥᏢ |•════•
-⋆ Crown for girls
-⋆ Clear the girls
+◉ Crown for girls
+◉ Clear the girls
 •════•| ᏞᎪᎬᎡΝ ᏙᎥᏢ |•════•
         ╔═══════════════╗        
-             ⋆ Habayeb survey..↑↓
+             ◉ Habayeb survey..↑↓
         ╚═══════════════╝        
 •════•| ᏞᎪᎬᎡΝ ᏙᎥᏢ |•════•
-⋆ my husband
-⋆ Crown for couples
-⋆ Survey of couples
+◉ my husband
+◉ Crown for couples
+◉ Survey of couples
 •════•| ᏞᎪᎬᎡΝ ᏙᎥᏢ |•════•
-⋆ My wife
-⋆ Crown for the wives
-⋆ Wipe waves
+◉ My wife
+◉ Crown for the wives
+◉ Wipe waves
 •════•| ᏞᎪᎬᎡΝ ᏙᎥᏢ |•════•
-⋆ Khayen
-⋆ Crown for him
-⋆ Clear the moon
+◉ Khayen
+◉ Crown for him
+◉ Clear the moon
 •════•| ᏞᎪᎬᎡΝ ᏙᎥᏢ |•════•
-⋆ Crown for the two
-⋆ Khiennine survey
+◉ Crown for the two
+◉ Khiennine survey
 •════•| ᏞᎪᎬᎡΝ ᏙᎥᏢ |•════•
-⋆ Abit
-⋆ Crown for the mixture
-⋆ Survey
+◉ Abit
+◉ Crown for the mixture
+◉ Survey
 •════•| ᏞᎪᎬᎡΝ ᏙᎥᏢ |•════•
-⋆ Crown for Paradise
-⋆ Storage survey
+◉ Crown for Paradise
+◉ Storage survey
 •════•| ᏞᎪᎬᎡΝ ᏙᎥᏢ |•════•
-◉ 𝙲𝙷  - [𝚂𝙾𝚄𝚁𝙲𝙴 𝙻𝙰𝙴𝚁𝙽](t.me/source_Laren) 
+◉ 𝘾𝙃 - [𝚂𝙾𝚄𝚁𝙲𝙴 𝙻𝙰𝚁𝙴𝙽](t.me/source_Laren) 
 •════•| ᏞᎪᎬᎡΝ ᏙᎥᏢ |•════•
 ]]
 keyboard = {} 
@@ -16245,43 +16198,43 @@ https.request("https://api.telegram.org/bot"..token.."/answerCallbackQuery?callb
 return false
 end
 local Teext =[[
-⋆ ❬ m 4 ❭ Orders of members ⇊
+◉ ❬ m 4 ❭ Orders of members ⇊
 •════•| ᏞᎪᎬᎡΝ ᏙᎥᏢ |•════•
-⋆ Age account
-⋆ Picture «↚
-⋆ Quran
-⋆ Settings
-⋆ Qatari
-⋆ Delete «↚ Sell ❬ Qatari
+◉ Age account
+◉ Picture «←
+◉ Quran
+◉ Settings
+◉ Qatari
+◉ Delete «← Sell ❬ Qatari
 •════•| ᏞᎪᎬᎡΝ ᏙᎥᏢ |•════•
-⋆ My messages «↚ Delete 
-⋆ Decorating «↚ Songs
-⋆ Movies «↚ Cartoon
-⋆ Translate + novels
-⋆ YouTube ↚ Games
-⋆ Weather + area
-⋆ Dark «link
+◉ My messages «← Delete 
+◉ Decorating «← Songs
+◉ Movies «← Cartoon
+◉ Translate + novels
+◉ YouTube ← Games
+◉ Weather + area
+◉ Dark «link
 •════•| ᏞᎪᎬᎡΝ ᏙᎥᏢ |•════•
-⋆ My name is 
-⋆ My Juices «↚ Delete my juices
-⋆ Powers «↚ Ping
-⋆ Say + word
-⋆ Prohibited Words
-⋆ I am Maine
-⋆ Say + word
-⋆ Qatah «↚ dog
+◉ My name is 
+◉ My Juices «← Delete my juices
+◉ Powers «← Ping
+◉ Say + word
+◉ Prohibited Words
+◉ I am Maine
+◉ Say + word
+◉ Qatah «← dog
 •════•| ᏞᎪᎬᎡΝ ᏙᎥᏢ |•════•
-⋆ Source «Developer
-⋆ link «hands
-⋆ Rank «↚ Revealed
-⋆ Reply you, Bot
-⋆ Any your opinion Yapot
-⋆ Hino «↚ Hinha
-⋆ Boso «↚ her pussy
-⋆ Mido «↚ ↚
-⋆ Delete link
+◉ Source «Developer
+◉ link «hands
+◉ Rank «← Revealed
+◉ Reply you, Bot
+◉ Any your opinion Yapot
+◉ Hino «← Hinha
+◉ Boso «← her pussy
+◉ Mido «← ←
+◉ Delete link
 •════•| ᏞᎪᎬᎡΝ ᏙᎥᏢ |•════•
-◉ 𝙲𝙷  - [𝚂𝙾𝚄𝚁𝙲𝙴 𝙻𝙰𝙴𝚁𝙽](t.me/source_Laren) 
+◉ 𝘾𝙃 - [𝚂𝙾𝚄𝚁𝙲𝙴 𝙻𝙰𝚁𝙴𝙽](t.me/source_Laren) 
 •════•| ᏞᎪᎬᎡΝ ᏙᎥᏢ |•════•
 ]]
 keyboard = {} 
@@ -16299,49 +16252,49 @@ https.request("https://api.telegram.org/bot"..token.."/answerCallbackQuery?callb
 return false
 end
 local Teext =[[
-⋆ ❬ m 5 ❭ Orders of developers ⇊
-⋆ Developer ↚⇊
+◉ ❬ m 5 ❭ Orders of developers ⇊
+◉ Developer ←⇊
 •════•| ᏞᎪᎬᎡΝ ᏙᎥᏢ |•════•
-⋆ Lifting «download ❬ owner ❭
-⋆ Change the group link
-⋆ Destination of groups
-⋆ Destination by guidance for groups
-⋆ A radio face
-⋆ Special radio
+◉ Lifting «download ❬ owner ❭
+◉ Change the group link
+◉ Destination of groups
+◉ Destination by guidance for groups
+◉ A radio face
+◉ Special radio
 •════•| ᏞᎪᎬᎡΝ ᏙᎥᏢ |•════•
-⋆ A special guidance
-⋆ Fix the installation
-⋆ bring back copy
-⋆ raise its backup copy
-⋆ Statistics
-⋆ Delete owners
+◉ A special guidance
+◉ Fix the installation
+◉ bring back copy
+◉ raise its backup copy
+◉ Statistics
+◉ Delete owners
 •════•| ᏞᎪᎬᎡΝ ᏙᎥᏢ |•════•
         ╔═══════════════╗        
-             ⋆ Basic Developer..↑↓
+             ◉ Basic Developer..↑↓
         ╚═══════════════╝        
 •════•| ᏞᎪᎬᎡΝ ᏙᎥᏢ |•════•
-⋆ Add "↚ Delete a general response
-⋆ Lifting «download ❬ special year ❭
-⋆ Featured Survey
-⋆ General responses
-⋆ Delete public responses
-⋆ A special guidance
-⋆ Destination by guidance for groups
-⋆ Fix the installation
-⋆ A radio face
-⋆ bring «↚ raising 
+◉ Add "← Delete a general response
+◉ Lifting «download ❬ special year ❭
+◉ Featured Survey
+◉ General responses
+◉ Delete public responses
+◉ A special guidance
+◉ Destination by guidance for groups
+◉ Fix the installation
+◉ A radio face
+◉ bring «← raising 
 •════•| ᏞᎪᎬᎡΝ ᏙᎥᏢ |•════•
-⋆ Statistics
-⋆ Lifting «download ❬ Developer ❭
-⋆ Developers «↚ Delete developers
-⋆ Put the name of the bot
-⋆ Change the departing message
-⋆ Prohibition «↚ Mute ❬ General ❭
-⋆ General makers
-⋆ Preventors General
-⋆ Canceling the general
+◉ Statistics
+◉ Lifting «download ❬ Developer ❭
+◉ Developers «← Delete developers
+◉ Put the name of the bot
+◉ Change the departing message
+◉ Prohibition «← Mute ❬ General ❭
+◉ General makers
+◉ Preventors General
+◉ Canceling the general
 •════•| ᏞᎪᎬᎡΝ ᏙᎥᏢ |•════•
-◉ 𝙲𝙷  - [𝚂𝙾𝚄𝚁𝙲𝙴 𝙻𝙰𝙴𝚁𝙽](t.me/source_Laren) 
+◉ 𝘾𝙃 - [𝚂𝙾𝚄𝚁𝙲𝙴 𝙻𝙰𝚁𝙴𝙽](t.me/source_Laren) 
 •════•| ᏞᎪᎬᎡΝ ᏙᎥᏢ |•════•
 ]]
 keyboard = {} 
@@ -16355,24 +16308,24 @@ end
 --- callback added
 if Text == '/add' then
 local Teext =[[
-⋆ Welcome to the orders section.. ↑↓
+◉ Welcome to the orders section.. ↑↓
 •════•| ᏞᎪᎬᎡΝ ᏙᎥᏢ |•════•
-⋆ You can use the buttons..↑↓
-⋆ By putting pressure on them..↑↓
+◉ You can use the buttons..↑↓
+◉ By putting pressure on them..↑↓
 •════•| ᏞᎪᎬᎡΝ ᏙᎥᏢ |•════•
-◉ 𝙲𝙷  - [𝚂𝙾𝚄𝚁𝙲𝙴 𝙻𝙰𝙴𝚁𝙽](t.me/source_Laren) 
+◉ 𝘾𝙃 - [𝚂𝙾𝚄𝚁𝙲𝙴 𝙻𝙰𝚁𝙴𝙽](t.me/source_Laren) 
 •════•| ᏞᎪᎬᎡΝ ᏙᎥᏢ |•════•
 ]]
 keyboard = {} 
 keyboard.inline_keyboard = {
 {
-{text = '⋆ protection', callback_data="/mute-name"},{text = '⋆ addictive', callback_data="/sofi"},
+{text = '◉ protection', callback_data="/mute-name"},{text = '◉ addictive', callback_data="/sofi"},
 },
 {
-{text = '⋆ Administration', callback_data="/change-names"},
+{text = '◉ Administration', callback_data="/change-names"},
 },
 {
-{text = '⋆ Developer', callback_data="/change-id"},{text = '⋆ Disabled orders', callback_data="/change-photo"},
+{text = '◉ Developer', callback_data="/change-id"},{text = '◉ Disabled orders', callback_data="/change-photo"},
 },
 {
 {text = '☊.BACK.☊', callback_data="/help8"},
