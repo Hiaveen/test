@@ -986,11 +986,10 @@ local Key = {
 {'⇣◉ -◉ -◉ -◉ ⟮𝙳𝙴𝚅𝙴𝙻𝙾𝙿𝙴𝚁 𝙼𝙰𝙶𝙴𝙳⟯◉ -◉ -◉ -◉ ⇣'},
 {'⇣◉ -◉ -◉ -◉ ⟮𝙳𝙴𝚅𝙴𝙻𝙾𝙿𝙴𝚁 𝙺𝙷𝙰𝙻𝙴𝙳⟯◉ -◉ -◉ -◉ ⇣'},
 {'⇣◉ -◉ -◉ -◉ ⟮𝚃𝙰𝚆𝙰𝚂𝙾𝙻 𝚂𝙾𝚄𝚁𝙲𝙴⟯◉ -◉ -◉ -◉ ⇣'},
+{'العوده'},
+}
 send_inline_key(msg.chat_id_,Text,Key)
 end 
-
-end
-end
 if text == 'اوامر الاذاعه' then  
 local bl = 'مرحبا بك في اوامر الاذاعه..💘🙂'
 local keyboard = {
@@ -3480,7 +3479,7 @@ local Text = [[
 ]] 
 keyboard = {}  
 keyboard.inline_keyboard = { 
-{{text = '𝚂𝙾𝚄𝚁𝙲𝙴 𝙲𝙷𝙰𝙽𝙽𝙴𝙻 ⋆', url="t.me/belalelshayals"}}, 
+{{text = '𝚂𝙾𝚄𝚁𝙲𝙴 𝙲𝙷𝙰??𝙽𝙴𝙻 ⋆', url="t.me/belalelshayals"}}, 
 } 
 local msg_id = msg.id_/2097152/0.5 
 https.request("https://api.telegram.org/bot"..token..'/sendMessage?chat_id=' .. msg.chat_id_ .. '&text=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
