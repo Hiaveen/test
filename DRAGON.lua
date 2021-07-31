@@ -15074,7 +15074,7 @@ end
 ---------------------- الاوامر الجديدة
 if text == 'الاوامر' then
 if not Mod(msg) then
-send(msg.chat_id_, msg.id_,'⋆ ليس لديك رتبه لاستخدام هذه الاوامر 🙂')
+send(msg.chat_id_, msg.id_,'◉ ليس لديك رتبه لاستخدام هذه الاوامر 🙂')
 return false
 end
 if AddChannel(msg.sender_user_id_) == false then
@@ -15082,16 +15082,16 @@ local source_Laren  = database:get(bot_id..'text:ch:user')
 if source_Laren  then
 send(msg.chat_id_, msg.id_,'['..source_Laren ..']')
 else
-send(msg.chat_id_, msg.id_,'⋆لا تستطيع استخدام البوت \n ⋆يرجى الاشتراك بالقناه اولا \n ⋆اشترك هنا ['..database:get(bot_id..'add:ch:username')..']')
+send(msg.chat_id_, msg.id_,'◉لا تستطيع استخدام البوت \n ◉يرجى الاشتراك بالقناه اولا \n ◉اشترك هنا ['..database:get(bot_id..'add:ch:username')..']')
 end
 return false
 end
 local Text =[[
 •════•| ᏞᎪᎬᎡΝ ᏙᎥᏢ |•════•
-⋆ قم بأختيار اللغه.. ↑↓
-⋆ Choose language.. ↑↓ 
+◉ قم بأختيار اللغه.. ↑↓
+◉ Choose language.. ↑↓ 
 •════•| ᏞᎪᎬᎡΝ ᏙᎥᏢ |•════•
-◉ 𝙲𝙷  - [𝚂𝙾𝚄𝚁𝙲𝙴 𝙻𝙰𝙴𝚁𝙽 ](t.me/source_Laren )
+◉ 𝘾𝙃 - [𝚂𝙾𝚄𝚁𝙲𝙴 𝙻𝙰𝚁𝙴𝙽 ](t.me/source_Laren )
 ]]
 keyboard = {} 
 keyboard.inline_keyboard = {
@@ -15100,9 +15100,6 @@ keyboard.inline_keyboard = {
 },
 {
 {text = '𝚂𝙾𝚄𝚁𝙲𝙴 𝙲𝙷𝙰𝙽𝙽𝙴𝙻 ', url="t.me/source_Laren "},
-},
-{
-{text = 'اضف البوت لمجموعتك 𖠕', url="http://t.me/"..data.username_.."?startgroup=new"},
 },
 }
 local msg_id = msg.id_/2097152/0.5
