@@ -934,6 +934,7 @@ local keyboard = {
 }
 send_inline_key(msg.chat_id_,bl,keyboard)
 end
+
 if text == '↜قسم الاعضاء' then
 local Text = 'مرحبا بك في قسم الاعضاء...❤️'
 local Key = {
@@ -945,6 +946,7 @@ local Key = {
 }
 send_inline_key(msg.chat_id_,Text,Key)
 end 
+
 if text == '↜القسم الديني' then
 local Text = 'مرحبا بك في القسم الديني..♥️'
 local Key = {
@@ -953,6 +955,7 @@ local Key = {
 }
 send_inline_key(msg.chat_id_,Text,Key)
 end 
+
 if text == '↜قسم الالعاب' then
 local Text = 'مرحبا بك في القسم الترفيهي..♥️'
 local Key = {
@@ -1003,6 +1006,7 @@ local Key = {
 }
 send_inline_key(msg.chat_id_,Text,Key)
 end 
+
 if text == 'اوامر الاذاعه' then  
 local bl = 'مرحبا بك في اوامر الاذاعه..💘🙂'
 local keyboard = {
