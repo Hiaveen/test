@@ -921,7 +921,7 @@ local keyboard = {
 send_inline_key(msg.chat_id_,bl,keyboard)
 end
 end
-◍--------𝙳𝙴𝚅𝙴𝙻𝙾𝙿𝙴𝚁 𝙷𝙸𝙰𝚅𝙴𝙴𝙽--------◍
+------by-Hiaveen--
 if Chat_Type == 'UserBot' then
 if not DevSoFi(msg) then
 if text == '/start' or text == 'العوده'  then  
