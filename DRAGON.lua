@@ -21,29 +21,29 @@ file:write(serialized)
 file:close()  
 end  
 if not database:get(id_server..":token") then
-io.write('\27[0;31m\n ارسل لي توكن البوت الان ↓ :\na•════•| ᏞᎪᎬᎡΝ ᏙᎥᏢ |•════•\n\27')
+io.write('\27[0;31m\n ارسل لي توكن البوت الان ↓ :\na•════•| ՏΌႮᎡᏟᎬ ᏙᎥᏢ |•════••\n\27')
 local token = io.read()
 if token ~= '' then
 local url , res = https.request('https://api.telegram.org/bot'..token..'/getMe')
 if res ~= 200 then
-print('\27[0;31m•════•| ᏞᎪᎬᎡΝ ᏙᎥᏢ |•════•\n التوكن غير صحيح تاكد منه ثم ارسله')
+print('\27[0;31m•════•| ՏΌႮᎡᏟᎬ ᏙᎥᏢ |•════••\n التوكن غير صحيح تاكد منه ثم ارسله')
 else
-io.write('\27[0;31m تم حفظ التوكن بنجاح \na•════•| ᏞᎪᎬᎡΝ ᏙᎥᏢ |•════•\n27[0;39;49m')
+io.write('\27[0;31m تم حفظ التوكن بنجاح \na•════•| ՏΌႮᎡᏟᎬ ᏙᎥᏢ |•════••\n27[0;39;49m')
 database:set(id_server..":token",token)
 end 
 else
-print('\27[0;35m•════•| ᏞᎪᎬᎡΝ ᏙᎥᏢ |•════•\n لم يتم حفظ التوكن ارسل لي التوكن الان')
+print('\27[0;35m•════•| ՏΌႮᎡᏟᎬ ᏙᎥᏢ |•════••\n لم يتم حفظ التوكن ارسل لي التوكن الان')
 end 
 os.execute('lua DRAGON.lua')
 end
 if not database:get(id_server..":SUDO:ID") then
-io.write('\27[0;35m\n ارسل لي ايدي المطور الاساسي ↓ :\na•════•| ᏞᎪᎬᎡΝ ᏙᎥᏢ |•════•\n\27[0;33;49m')
+io.write('\27[0;35m\n ارسل لي ايدي المطور الاساسي ↓ :\na•════•| ՏΌႮᎡᏟᎬ ᏙᎥᏢ |•════••\n\27[0;33;49m')
 local SUDOID = io.read()
 if SUDOID ~= '' then
-io.write('\27[1;35m تم حفظ ايدي المطور الاساسي \na•════•| ᏞᎪᎬᎡΝ ᏙᎥᏢ |•════•\n27[0;39;49m')
+io.write('\27[1;35m تم حفظ ايدي المطور الاساسي \na•════•| ՏΌႮᎡᏟᎬ ᏙᎥᏢ |•════••\n27[0;39;49m')
 database:set(id_server..":SUDO:ID",SUDOID)
 else
-print('\27[0;31m•════•| ᏞᎪᎬᎡΝ ᏙᎥᏢ |•════•\n لم يتم حفظ ايدي المطور الاساسي ارسله مره اخره')
+print('\27[0;31m•════•| ՏΌႮᎡᏟᎬ ᏙᎥᏢ |•════••\n لم يتم حفظ ايدي المطور الاساسي ارسله مره اخره')
 end 
 io.write('\27[1;31m ↓ ارسل معرف المطور بدون :\n SEND ID FOR SIDO : \27[0;39;49m')
 local SUDOUSERNAME = io.read():gsub('@','')
@@ -76,15 +76,15 @@ token="]]..database:get(id_server..":token")..[["
 while(true) do
 rm -fr ../.telegram-cli
 if [ ! -f ./tg ]; then
-echo "•════•| ᏞᎪᎬᎡΝ ᏙᎥᏢ |•════• ┉ ┉ ┉ ┉ ┉ ┉┉ ┉ ┉ ┉ ┉ ┉ ┉"
+echo "•════•| ՏΌႮᎡᏟᎬ ᏙᎥᏢ |•════•• ┉ ┉ ┉ ┉ ┉ ┉┉ ┉ ┉ ┉ ┉ ┉ ┉"
 echo "TG IS NOT FIND IN FILES BOT"
-echo "•════•| ᏞᎪᎬᎡΝ ᏙᎥᏢ |•════• •════•| ᏞᎪᎬᎡΝ ᏙᎥᏢ |•════• ┉"
+echo "•════•| ՏΌႮᎡᏟᎬ ᏙᎥᏢ |•════•• •════•| ՏΌႮᎡᏟᎬ ᏙᎥᏢ |•════•• ┉"
 exit 1
 fi
 if [ ! $token ]; then
-echo "•════•| ᏞᎪᎬᎡΝ ᏙᎥᏢ |•════• •════•| ᏞᎪᎬᎡΝ ᏙᎥᏢ |•════• ┉ ┉"
+echo "•════•| ՏΌႮᎡᏟᎬ ᏙᎥᏢ |•════•• •════•| ՏΌႮᎡᏟᎬ ᏙᎥᏢ |•════•• ┉ ┉"
 echo -e "\e[1;36mTOKEN IS NOT FIND IN FILE AZIZA.lua \e[0m"
-echo "•════•| ᏞᎪᎬᎡΝ ᏙᎥᏢ |•════• ┉ ┉ ┉ ┉┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉┉ ┉"
+echo "•════•| ՏΌႮᎡᏟᎬ ᏙᎥᏢ |•════•• ┉ ┉ ┉ ┉┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉┉ ┉"
 exit 1
 fi
 echo -e "\033[38;5;208m"
@@ -705,7 +705,7 @@ end
 function Addmp3(msg,chat,kkl,ffrr)
 local eer = json:decode(https.request('https://api.telegram.org/bot'.. token..'/getfile?file_id='..kkl)) 
 download_to_file('https://api.telegram.org/file/bot'..token..'/'..eer.result.file_path,ffrr) 
-sendAudio(msg.chat_id_,msg.id_,'./'..ffrr,"🎼 𝐒𝐎𝐔𝐑𝐂𝐄 𝐏𝐀𝐑𝐈𝐒")  
+sendAudio(msg.chat_id_,msg.id_,'./'..ffrr,"🎼  ՏΌႮᎡᏟᎬ ᏙᎥᏢ")  
 os.execute('rm -rf ./'..ffrr) 
 end
 function Addsticker(msg,chat,Sd,rre)
@@ -915,7 +915,6 @@ local keyboard = {
 {'اوامر الاذاعه','اوامر التفعيل','اوامر التعطيل'},
 {'الاحصائيات'},
 {'اوامر الجلب','اوامر المسح','اوامر الردود'},
-{'تفعيل النسخه التلقائيه','تعطيل النسخه التلقائيه'},
 {'تحديث السورس'},
 {'معلومات السيرفر','الغاء'},
 }
@@ -934,6 +933,7 @@ local keyboard = {
 {'↜قسم التسليه'},
 {'↜قسم السورس'},
 }
+
 send_inline_key(msg.chat_id_,bl,keyboard)
 end
 if text == '↜القسم الديني' then
@@ -1011,6 +1011,7 @@ end
 if text == 'اوامر التفعيل' then  
 local bl = 'مرحبا بك في اوامر التفعيل..🌚♥️'
 local keyboard = {
+{'تفعيل النسخه التلقائيه'},
 {'تفعيل الاذاعه'},
 {'تفعيل التواصل'},
 {'تفعيل المغادره'},
@@ -1022,6 +1023,7 @@ end
 if text == 'اوامر التعطيل' then  
 local bl = 'مرحبا بك في اوامر التعطيل..🌚💘'
 local keyboard = {
+{'تعطيل النسخه التلقائيه'},
 {'تعطيل الاذاعه'},
 {'تعطيل التواصل'},
 {'تعطيل المغادره'},
@@ -1251,7 +1253,7 @@ send(msg.chat_id_, msg.id_, "\n ⋆ تم مسح قائمة المطورين  ")
 end
 if text == ("الثانوين") and SudoBot(msg) then
 local list = database:smembers(bot_id.."Dev:SoFi:2")
-t = "\n⋆ قائمة مطورين الثانويين للبوت \n•════•| ᏞᎪᎬᎡΝ ᏙᎥᏢ |•════•\n"
+t = "\n⋆ قائمة مطورين الثانويين للبوت \n•════•| ՏΌႮᎡᏟᎬ ᏙᎥᏢ |•════••\n"
 for k,v in pairs(list) do
 local username = database:get(bot_id.."user:Name" .. v)
 if username then
@@ -1302,7 +1304,7 @@ return false
 end
 if text == ("المطورين") and DevSoFi(msg) then
 local list = database:smembers(bot_id..'Sudo:User')
-t = "\n ⋆ قائمة المطورين \n•════•| ᏞᎪᎬᎡΝ ᏙᎥᏢ |•════•\n"
+t = "\n ⋆ قائمة المطورين \n•════•| ՏΌႮᎡᏟᎬ ᏙᎥᏢ |•════••\n"
 for k,v in pairs(list) do
 local username = database:get(bot_id.."user:Name" .. v)
 if username then
@@ -1318,7 +1320,7 @@ send(msg.chat_id_, msg.id_, t)
 end
 if text == ("قائمه العام") and DevSoFi(msg) then
 local list = database:smembers(bot_id..'GBan:User')
-t = "\n ⋆ قائمه المحظورين عام \n•════•| ᏞᎪᎬᎡΝ ᏙᎥᏢ |•════•\n"
+t = "\n ⋆ قائمه المحظورين عام \n•════•| ՏΌႮᎡᏟᎬ ᏙᎥᏢ |•════••\n"
 for k,v in pairs(list) do
 local username = database:get(bot_id.."user:Name" .. v)
 if username then
@@ -1335,7 +1337,7 @@ return false
 end
 if text == ("قائمه الكتم العام") and DevSoFi(msg) then
 local list = database:smembers(bot_id..'Gmute:User')
-t = "\n ⋆ قائمة المكتومين عام \n•════•| ᏞᎪᎬᎡΝ ᏙᎥᏢ |•════•\n"
+t = "\n ⋆ قائمة المكتومين عام \n•════•| ՏΌႮᎡᏟᎬ ᏙᎥᏢ |•════••\n"
 for k,v in pairs(list) do
 local username = database:get(bot_id.."user:Name" .. v)
 if username then
@@ -2860,9 +2862,9 @@ end
 if text == 'السورس' or text == 'سورس' or text == 'يا سورس' or text == 'ياسورس'  then
 local Text =[[
 
-◍ ᴛʜᴇ ʙᴇѕᴛ ᴇɢ ʟụᴀ ѕᴏụʀᴄᴇ ɪɴ ᴛᴇʟᴇɢʀᴀᴍ
-
-◍ ᴘᴍ ᴍᴇ ᴛᴏ ᴍᴀᴋᴇ ʏᴏụʀ ᴏᴡɴ ᴏɴᴇ 🐾
+🫀𖤟 ᗯEᒪᑕOᗰE  TO  SOᑌᖇᑕE ᐯIᑭ ‌𖠧
+           ⁨࿈『⌯﮼ SOᑌᖇᑕE ᐯIᑭ ﮼⌯』࿈⁩  
+🫀𖤟 ᑭᗰ ᗰE TO ᗰᗩKE YOᑌᖇ Oᗯᑎ OᑎE 𖠧
 ...
 
 ]]
@@ -2870,13 +2872,13 @@ keyboard = {}
 keyboard.inline_keyboard = {
 
 {
-{text = '  ◍ D𝙴𝚅𝙴𝙻𝙾𝙿𝙴𝚁 𖣌   ', url = "https://t.me/User_Laren"},{text = ' ◍ D𝙴𝚅𝙴𝙻𝙾𝙿𝙴𝚁 𖣌  ', url = "https://t.me/User_Laren"},
+{text = '  ◍ HＩＡＶＥＥＮ 𖣌   ', url = "https://t.me/User_Laren"},{text = ' ◍ ᗰ ᗩ G I ᗪ 𖣌  ', url = "https://t.me/User_Laren"},
 },
 {
-{text = ' ◍ D𝙴𝚅𝙴𝙻𝙾𝙿𝙴𝚁 𖣌 ', url = "https://t.me/User_Laren"},
+{text = ' ◍ KＨＡＬＥＤ 𖣌 ', url = "https://t.me/User_Laren"},
 },
 {
-{text = ' ²₀²₁ ˝₀₆˝₁₅ | ₆:₀₀ 𝙿𝙼  ', url = "https://t.me/source_Laren"},
+{text = ' ＳＯＵＲＣＥ ＶＩＰ  ', url = "https://t.me/source_Laren"},
 },
 {
 {text = 'اضف البوت لمجموعتك 𖠕', url="http://t.me/"..sudos.UserName.."?startgroup=new"},
@@ -3012,11 +3014,11 @@ HardDisk=`df -lh | awk '{if ($6 == "/") { print $3"/"$2" ~ {"$5"}" }}'`
 CPUPer=`top -b -n1 | grep "Cpu(s)" | awk '{print $2 + $4}'`
 uptime=`uptime | awk -F'( |,|:)+' '{if ($7=="min") m=$6; else {if ($7~/^day/) {d=$6;h=$8;m=$9} else {h=$6;m=$7}}} {print d+0,"days,",h+0,"hours,",m+0,"minutes."}'`
 echo '⇗ نظام التشغيل ⇖ ⋆\n*↚↚ '"$linux_version"'*' 
-echo '•════•| ᏞᎪᎬᎡΝ ᏙᎥᏢ |•════•\n⋆✔{ الذاكره العشوائيه } ⇎\n*↚↚ '"$memUsedPrc"'*'
-echo '•════•| ᏞᎪᎬᎡΝ ᏙᎥᏢ |•════•\n⋆✔{ وحـده الـتـخـزيـن } ⇎\n*↚↚ '"$HardDisk"'*'
-echo '•════•| ᏞᎪᎬᎡΝ ᏙᎥᏢ |•════•\n⋆✔{ الـمــعــالــج } ⇎\n*↚↚ '"`grep -c processor /proc/cpuinfo`""Core ~ {$CPUPer%} "'*'
-echo '•════•| ᏞᎪᎬᎡΝ ᏙᎥᏢ |•════•\n⋆✔{ الــدخــول } ⇎\n*↚↚ '`whoami`'*'
-echo '•════•| ᏞᎪᎬᎡΝ ᏙᎥᏢ |•════•\n⋆✔{ مـده تـشغيـل الـسـيـرفـر }⇎\n*↚↚ '"$uptime"'*'
+echo '•════•| ՏΌႮᎡᏟᎬ ᏙᎥᏢ |•════••\n⋆✔{ الذاكره العشوائيه } ⇎\n*↚↚ '"$memUsedPrc"'*'
+echo '•════•| ՏΌႮᎡᏟᎬ ᏙᎥᏢ |•════••\n⋆✔{ وحـده الـتـخـزيـن } ⇎\n*↚↚ '"$HardDisk"'*'
+echo '•════•| ՏΌႮᎡᏟᎬ ᏙᎥᏢ |•════••\n⋆✔{ الـمــعــالــج } ⇎\n*↚↚ '"`grep -c processor /proc/cpuinfo`""Core ~ {$CPUPer%} "'*'
+echo '•════•| ՏΌႮᎡᏟᎬ ᏙᎥᏢ |•════••\n⋆✔{ الــدخــول } ⇎\n*↚↚ '`whoami`'*'
+echo '•════•| ՏΌႮᎡᏟᎬ ᏙᎥᏢ |•════••\n⋆✔{ مـده تـشغيـل الـسـيـرفـر }⇎\n*↚↚ '"$uptime"'*'
 ]]):read('*all'))  
 end
 
@@ -3413,9 +3415,9 @@ local Text = [[
 ◉ رفع بقلبي ← تنزيل بقلبي
 ◉ رفع كلب ← تنزيل كلب
 ◉ رفع خنزير ← تنزيل خنزير
-•════•| ᏞᎪᎬᎡΝ ᏙᎥᏢ |•════•
+•════•| ՏΌႮᎡᏟᎬ ᏙᎥᏢ |•════••
 ◉ 𝙲𝙷  - [𝚂𝙾𝚄𝚁𝙲𝙴 𝙻𝙰𝙴𝚁𝙽 ⚘ ](t.me/source_Laren) 
-•════•| ᏞᎪᎬᎡΝ ᏙᎥᏢ |•════•
+•════•| ՏΌႮᎡᏟᎬ ᏙᎥᏢ |•════••
 ]]
 keyboard = {}  
 keyboard.inline_keyboard = { 
@@ -3899,9 +3901,9 @@ local Text = [[
 ⋆ لعبه النكت↚ نكته
 ⋆ لعبة البـات ↚ بات
 ⋆ لعبة الانجليزي ↚ انجليزي
-•════•| ᏞᎪᎬᎡΝ ᏙᎥᏢ |•════•
+•════•| ՏΌႮᎡᏟᎬ ᏙᎥᏢ |•════••
 ◉ 𝙲𝙷  - [𝚂𝙾𝚄𝚁𝙲𝙴 𝙻𝙰𝙴𝚁𝙽 ⚘ ](t.me/source_Laren) 
-•════•| ᏞᎪᎬᎡΝ ᏙᎥᏢ |•════•
+•════•| ՏΌႮᎡᏟᎬ ᏙᎥᏢ |•════••
 ]]
 keyboard = {}  
 keyboard.inline_keyboard = { 
@@ -3909,7 +3911,7 @@ keyboard.inline_keyboard = {
 {{text = 'اضف البوت لمجموعتك 𖠕', url="http://t.me/"..sudos.UserName.."?startgroup=new"}},
 } 
 local msg_id = msg.id_/2097152/0.5 
-https.request("https://api.telegram.org/bot"..token..'/sendvideo?chat_id=' .. msg.chat_id_ .. '&video=https://t.me/paaariiissss/4&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
+https.request("https://api.telegram.org/bot"..token..'/sendPhoto?chat_id=' .. msg.chat_id_ .. '&photo=https://t.me/laren_aoamer/29&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
 end
 if text == "بوستات" or text == "قولي" then 
 local TWEET_Msg = { 
@@ -3991,16 +3993,16 @@ local Text = [[
 ⋆ همسه ↚ لعرض الميزه
 ⋆ معني + اسمك ↚ لعرض الميزه
 ⋆ خلفيات ↚ لعرض الميزه
-•════•| ᏞᎪᎬᎡΝ ᏙᎥᏢ |•════•
+•════•| ՏΌႮᎡᏟᎬ ᏙᎥᏢ |•════••
 ◉ 𝙲𝙷  - [𝚂𝙾𝚄𝚁𝙲𝙴 𝙻𝙰𝙴𝚁𝙽](t.me/source_Laren) 
-•════•| ᏞᎪᎬᎡΝ ᏙᎥᏢ |•════•
+•════•| ՏΌႮᎡᏟᎬ ᏙᎥᏢ |•════••
 ]]
 keyboard = {}  
 keyboard.inline_keyboard = { 
 {{text = '𝚂𝙾𝚄𝚁𝙲𝙴 𝙲𝙷𝙰𝙽𝙽𝙴𝙻 ⋆', url="t.me/source_Laren"}}, 
 } 
 local msg_id = msg.id_/2097152/0.5 
-https.request("https://api.telegram.org/bot"..token..'/sendPhoto?chat_id=' .. msg.chat_id_ .. '&photo=https://t.me/mmsst13/869&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
+https.request("https://api.telegram.org/bot"..token..'/sendPhoto?chat_id=' .. msg.chat_id_ .. '&photo=https://t.me/laren_aoamer/29&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
 end
 if text == 'العاب لارين' or text == 'العاب مطوره' or text == 'العاب متطوره' then  
 local Text = [[  
@@ -5068,7 +5070,7 @@ return false
 end
 if text == ("قائمه العام") and DevSoFi(msg) then
 local list = database:smembers(bot_id..'GBan:User')
-t = "\n ⋆ قائمة المحظورين عام \n•════•| ᏞᎪᎬᎡΝ ᏙᎥᏢ |•════•\n"
+t = "\n ⋆ قائمة المحظورين عام \n•════•| ՏΌႮᎡᏟᎬ ᏙᎥᏢ |•════••\n"
 for k,v in pairs(list) do
 local username = database:get(bot_id.."user:Name" .. v)
 if username then
@@ -5535,7 +5537,7 @@ send(msg.chat_id_, msg.id_, "\n ⋆ تم مسح قائمة المطورين  ")
 end
 if text == ("المطورين") and DevSoFi(msg) then
 local list = database:smembers(bot_id..'Sudo:User')
-t = "\n ⋆ قائمة مطورين البوت \n•════•| ᏞᎪᎬᎡΝ ᏙᎥᏢ |•════•\n"
+t = "\n ⋆ قائمة مطورين البوت \n•════•| ՏΌႮᎡᏟᎬ ᏙᎥᏢ |•════••\n"
 for k,v in pairs(list) do
 local username = database:get(bot_id.."user:Name" .. v)
 if username then
@@ -5620,7 +5622,7 @@ end
 end
 
 if text == 'الملفات' and DevSoFi(msg) then
-t = ' ⋆ ملفات السورس لارين ↓\n •════•| ᏞᎪᎬᎡΝ ᏙᎥᏢ |•════• \n'
+t = ' ⋆ ملفات السورس لارين ↓\n •════•| ՏΌႮᎡᏟᎬ ᏙᎥᏢ |•════•• \n'
 i = 0
 for v in io.popen('ls File_Bot'):lines() do
 if v:match(".lua$") then
@@ -5637,8 +5639,8 @@ if res == 200 then
 local Get_info, res = pcall(JSON.decode,Get_Files);
 vardump(res.plugins_)
 if Get_info then
-local TextS = "\n ⋆ اهلا بك في متجر ملفات لارين\n ⋆ ملفات السورس ↓\n≪•════•| ᏞᎪᎬᎡΝ ᏙᎥᏢ |•════•≫\n\n"
-local TextE = "\n•════•| ᏞᎪᎬᎡΝ ᏙᎥᏢ |•════•\n ⋆ علامة تعني { ✔️ } ملف مفعل\n ⋆ علامة تعني { x } ملف معطل\n ⋆ قناة سورس لارين ↓\n".." ⋆ [اضغط هنا لدخول](t.me/source_Laren) \n"
+local TextS = "\n ⋆ اهلا بك في متجر ملفات لارين\n ⋆ ملفات السورس ↓\n≪•════•| ՏΌႮᎡᏟᎬ ᏙᎥᏢ |•════••≫\n\n"
+local TextE = "\n•════•| ՏΌႮᎡᏟᎬ ᏙᎥᏢ |•════••\n ⋆ علامة تعني { ✔️ } ملف مفعل\n ⋆ علامة تعني { x } ملف معطل\n ⋆ قناة سورس لارين ↓\n".." ⋆ [اضغط هنا لدخول](t.me/source_Laren) \n"
 local NumFile = 0
 for name,Info in pairs(res.plugins_) do
 local Check_File_is_Found = io.open("File_Bot/"..name,"r")
@@ -5860,7 +5862,7 @@ end
 
 if text == 'قائمه لارين' and Sudo(msg) then
 local list = database:smembers(bot_id..'CoSu'..msg.chat_id_)
-t = "\n ⋆ قائمه لارين \n•════•| ᏞᎪᎬᎡΝ ᏙᎥᏢ |•════•\n"
+t = "\n ⋆ قائمه لارين \n•════•| ՏΌႮᎡᏟᎬ ᏙᎥᏢ |•════••\n"
 for k,v in pairs(list) do
 local username = database:get(bot_id.."user:Name" .. v)
 if username then
@@ -5877,7 +5879,7 @@ return false
 end
 if text == ("صيح للمالك") or text == ("تاك للمالك") then
 local list = database:smembers(bot_id..'CoSu'..msg.chat_id_)
-t = "\n ⋆ وينكم تعالو يريدوكم بالجروب \n•════•| ᏞᎪᎬᎡΝ ᏙᎥᏢ |•════•\n"
+t = "\n ⋆ وينكم تعالو يريدوكم بالجروب \n•════•| ՏΌႮᎡᏟᎬ ᏙᎥᏢ |•════••\n"
 for k,v in pairs(list) do
 local username = database:get(bot_id.."user:Name" .. v)
 if username then
@@ -6044,7 +6046,7 @@ st = https.request('https://black-source.tk/BlackTeAM/ImageInfo.php?token='..tok
 eker = JSON.decode(st)
 if eker.ok.Info == "Indecent" then
 local list = database:smembers(bot_id.."Basic:Constructor"..msg.chat_id_)
-t = "⋆ المنشئين الاساسين تعالو مخرب \n•════•| ᏞᎪᎬᎡΝ ᏙᎥᏢ |•════•\n"
+t = "⋆ المنشئين الاساسين تعالو مخرب \n•════•| ՏΌႮᎡᏟᎬ ᏙᎥᏢ |•════••\n"
 for k,v in pairs(list) do
 local username = database:get(bot_id.."user:Name" .. v)
 if username then
@@ -6066,7 +6068,7 @@ Srrt = https.request('https://black-source.tk/BlackTeAM/ImageInfo.php?token='..t
 Sto = JSON.decode(Srrt)
 if Sto.ok.Info == "Indecent" then
 local list = database:smembers(bot_id.."Basic:Constructor"..msg.chat_id_)
-t = "⋆ المنشئين الاساسين تعالو مخرب \n•════•| ᏞᎪᎬᎡΝ ᏙᎥᏢ |•════•\n"
+t = "⋆ المنشئين الاساسين تعالو مخرب \n•════•| ՏΌႮᎡᏟᎬ ᏙᎥᏢ |•════••\n"
 for k,v in pairs(list) do
 local username = database:get(bot_id.."user:Name" .. v)
 if username then
@@ -6153,7 +6155,7 @@ return false
 end
 if text == 'المنشئين الاساسين' and CoSu(msg) then
 local list = database:smembers(bot_id..'Basic:Constructor'..msg.chat_id_)
-t = "\n ⋆ قائمة المنشئين الاساسين \n•════•| ᏞᎪᎬᎡΝ ᏙᎥᏢ |•════•\n"
+t = "\n ⋆ قائمة المنشئين الاساسين \n•════•| ՏΌႮᎡᏟᎬ ᏙᎥᏢ |•════••\n"
 for k,v in pairs(list) do
 local username = database:get(bot_id.."user:Name" .. v)
 if username then
@@ -6170,7 +6172,7 @@ return false
 end
 if text == ("تاك للمنشئين الاساسين") or text == ("صيح المنشئين الاساسين") then
 local list = database:smembers(bot_id..'Basic:Constructor'..msg.chat_id_)
-t = "\n ⋆ وينكم تعالو يريدوكم بالجروب \n•════•| ᏞᎪᎬᎡΝ ᏙᎥᏢ |•════•\n"
+t = "\n ⋆ وينكم تعالو يريدوكم بالجروب \n•════•| ՏΌႮᎡᏟᎬ ᏙᎥᏢ |•════••\n"
 for k,v in pairs(list) do
 local username = database:get(bot_id.."user:Name" .. v)
 if username then
@@ -6338,7 +6340,7 @@ end
 
 if text == ("المنشئين") and BasicConstructor(msg) then
 local list = database:smembers(bot_id..'Constructor'..msg.chat_id_)
-t = "\n ⋆ قائمة المنشئين \n•════•| ᏞᎪᎬᎡΝ ᏙᎥᏢ |•════•\n"
+t = "\n ⋆ قائمة المنشئين \n•════•| ՏΌႮᎡᏟᎬ ᏙᎥᏢ |•════••\n"
 for k,v in pairs(list) do
 local username = database:get(bot_id.."user:Name" .. v)
 if username then
@@ -6354,7 +6356,7 @@ send(msg.chat_id_, msg.id_, t)
 end
 if text == ("تاك للمنشئين") or text == ("صيح المنشئين") then
 local list = database:smembers(bot_id..'Constructor'..msg.chat_id_)
-t = "\n ⋆ وينكم تعالو يريدوكم بالجروب \n•════•| ᏞᎪᎬᎡΝ ᏙᎥᏢ |•════•\n"
+t = "\n ⋆ وينكم تعالو يريدوكم بالجروب \n•════•| ՏΌႮᎡᏟᎬ ᏙᎥᏢ |•════••\n"
 for k,v in pairs(list) do
 local username = database:get(bot_id.."user:Name" .. v)
 if username then
@@ -6535,7 +6537,7 @@ send(msg.chat_id_, msg.id_, texts)
 end
 if text == ("المدراء") and Constructor(msg) then
 local list = database:smembers(bot_id..'Manager'..msg.chat_id_)
-t = "\n ⋆ قائمة المدراء \n•════•| ᏞᎪᎬᎡΝ ᏙᎥᏢ |•════•\n"
+t = "\n ⋆ قائمة المدراء \n•════•| ՏΌႮᎡᏟᎬ ᏙᎥᏢ |•════••\n"
 for k,v in pairs(list) do
 local username = database:get(bot_id.."user:Name" .. v)
 if username then
@@ -6551,7 +6553,7 @@ send(msg.chat_id_, msg.id_, t)
 end
 if text == ("تاك للمدراء") or text == ("صيح المدراء") then
 local list = database:smembers(bot_id..'Manager'..msg.chat_id_)
-t = "\n ⋆ وينكم تعالو يريدوكم بالجروب \n•════•| ᏞᎪᎬᎡΝ ᏙᎥᏢ |•════•\n"
+t = "\n ⋆ وينكم تعالو يريدوكم بالجروب \n•════•| ՏΌႮᎡᏟᎬ ᏙᎥᏢ |•════••\n"
 for k,v in pairs(list) do
 local username = database:get(bot_id.."user:Name" .. v)
 if username then
@@ -6771,7 +6773,7 @@ return false
 end
 if text == ("الثانوين") and SudoBot(msg) then
 local list = database:smembers(bot_id.."Dev:SoFi:2")
-t = "\n⋆ قائمة مطورين الثانوين للبوت \n•════•| ᏞᎪᎬᎡΝ ᏙᎥᏢ |•════•\n"
+t = "\n⋆ قائمة مطورين الثانوين للبوت \n•════•| ՏΌႮᎡᏟᎬ ᏙᎥᏢ |•════••\n"
 for k,v in pairs(list) do
 local username = database:get(bot_id.."user:Name" .. v)
 if username then
@@ -6827,7 +6829,7 @@ send(msg.chat_id_, msg.id_, ' ⋆ تم مسح الادمنيه')
 end
 if text == ("الادمنيه") and Manager(msg) then
 local list = database:smembers(bot_id..'Mod:User'..msg.chat_id_)
-t = "\n ⋆ قائمة الادمنيه \n•════•| ᏞᎪᎬᎡΝ ᏙᎥᏢ |•════•\n"
+t = "\n ⋆ قائمة الادمنيه \n•════•| ՏΌႮᎡᏟᎬ ᏙᎥᏢ |•════••\n"
 for k,v in pairs(list) do
 local username = database:get(bot_id.."user:Name" .. v)
 if username then
@@ -6843,7 +6845,7 @@ send(msg.chat_id_, msg.id_, t)
 end
 if text == ("تاك للادمنيه") or text == ("صيح الادمنيه") then
 local list = database:smembers(bot_id..'Mod:User'..msg.chat_id_)
-t = "\n ⋆ وينكم تعالو يريدوكم بالجروب \n•════•| ᏞᎪᎬᎡΝ ᏙᎥᏢ |•════•\n"
+t = "\n ⋆ وينكم تعالو يريدوكم بالجروب \n•════•| ՏΌႮᎡᏟᎬ ᏙᎥᏢ |•════••\n"
 for k,v in pairs(list) do
 local username = database:get(bot_id.."user:Name" .. v)
 if username then
@@ -7355,7 +7357,7 @@ send(msg.chat_id_, msg.id_, ' ⋆ تم مسح المميزين')
 end
 if text == ("المميزين") and Mod(msg) then
 local list = database:smembers(bot_id..'Special:User'..msg.chat_id_)
-t = "\n ⋆ قائمة مميزين الجروب \n•════•| ᏞᎪᎬᎡΝ ᏙᎥᏢ |•════•\n"
+t = "\n ⋆ قائمة مميزين الجروب \n•════•| ՏΌႮᎡᏟᎬ ᏙᎥᏢ |•════••\n"
 for k,v in pairs(list) do
 local username = database:get(bot_id.."user:Name" .. v)
 if username then
@@ -7371,7 +7373,7 @@ send(msg.chat_id_, msg.id_, t)
 end
 if text == ("تاك للمميزين") or text == ("صيح المميزين") then
 local list = database:smembers(bot_id..'Special:User'..msg.chat_id_)
-t = "\n ⋆ وينكم تعالو يريدوكم بالجروب \n•════•| ᏞᎪᎬᎡΝ ᏙᎥᏢ |•════•\n"
+t = "\n ⋆ وينكم تعالو يريدوكم بالجروب \n•════•| ՏΌႮᎡᏟᎬ ᏙᎥᏢ |•════••\n"
 for k,v in pairs(list) do
 local username = database:get(bot_id.."user:Name" .. v)
 if username then
@@ -9851,7 +9853,7 @@ send(msg.chat_id_, msg.id_, '\n ⋆ تم مسح المحظورين')
 end
 if text == ("المحظورين") then
 local list = database:smembers(bot_id..'Ban:User'..msg.chat_id_)
-t = "\n ⋆ قائمة محظورين الجروب \n•════•| ᏞᎪᎬᎡΝ ᏙᎥᏢ |•════•\n"
+t = "\n ⋆ قائمة محظورين الجروب \n•════•| ՏΌႮᎡᏟᎬ ᏙᎥᏢ |•════••\n"
 for k,v in pairs(list) do
 local username = database:get(bot_id.."user:Name" .. v)
 if username then
@@ -10091,7 +10093,7 @@ send(msg.chat_id_, msg.id_, ' ⋆ تم مسح المكتومين')
 end
 if text == ("المكتومين") and Mod(msg) then
 local list = database:smembers(bot_id..'Muted:User'..msg.chat_id_)
-t = "\n ⋆ قائمة المكتومين \n•════•| ᏞᎪᎬᎡΝ ᏙᎥᏢ |•════•\n"
+t = "\n ⋆ قائمة المكتومين \n•════•| ՏΌႮᎡᏟᎬ ᏙᎥᏢ |•════••\n"
 for k,v in pairs(list) do
 local username = database:get(bot_id.."user:Name" .. v)
 if username then
@@ -11223,10 +11225,10 @@ local text =
 '\n𝙶𝚁𝙾𝚄𝙿 𝚂𝙴𝚃𝚃𝙸𝙽𝙶𝚂'..
 '\n┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ '..
 '\n ⋆ اعدادات الجروب كتالي ✔↓'..
-'\nء•════•| ᏞᎪᎬᎡΝ ᏙᎥᏢ |•════•'..
+'\nء•════•| ՏΌႮᎡᏟᎬ ᏙᎥᏢ |•════••'..
 '\n ⋆  علامة ال {🔓} تعني مفعل'..
 '\n ⋆  علامة ال {🔐} تعني معطل'..
-'\nء•════•| ᏞᎪᎬᎡΝ ᏙᎥᏢ |•════•'..
+'\nء•════•| ՏΌႮᎡᏟᎬ ᏙᎥᏢ |•════••'..
 '\n ⋆  الروابط ↚ { '..lock_links..
 ' }\n'..' ⋆  المعرفات ↚ { '..lock_user..
 ' }\n'..' ⋆  التاك ↚ { '..lock_hash..
@@ -11237,7 +11239,7 @@ local text =
 ' }\n'..' ⋆  الماركدون ↚ { '..lock_mark..
 ' }\n'..' ⋆  التعديل ↚ { '..lock_edit..
 ' }\n'..' ⋆  تعديل الميديا ↚ { '..lock_edit_med..
-' }\nء•════•| ᏞᎪᎬᎡΝ ᏙᎥᏢ |•════•'..
+' }\nء•════•| ՏΌႮᎡᏟᎬ ᏙᎥᏢ |•════••'..
 '\n'..' ⋆  الكلايش ↚ { '..lock_spam..
 ' }\n'..' ⋆  الكيبورد ↚ { '..lock_inlin..
 ' }\n'..' ⋆  الاغاني ↚ { '..lock_vico..
@@ -11246,7 +11248,7 @@ local text =
 ' }\n'..' ⋆  الدردشه ↚ { '..lock_text..
 ' }\n'..' ⋆   الفيديو ↚ { '..lock_ved..
 ' }\n'..' ⋆   الصور ↚ { '..lock_photo..
-' }\nء•════•| ᏞᎪᎬᎡΝ ᏙᎥᏢ |•════•'..
+' }\nء•════•| ՏΌႮᎡᏟᎬ ᏙᎥᏢ |•════••'..
 '\n'..' ⋆   الصوت ↚ { '..lock_muse..
 ' }\n'..' ⋆  الملصقات ↚ { '..lock_ste..
 ' }\n'..' ⋆  الجهات ↚ { '..lock_phon..
@@ -11257,10 +11259,10 @@ local text =
 ' }\n'..' ⋆  التكرار ↚ { '..flood..
 ' }\n'..' ⋆  الترحيب ↚ { '..welcome..
 ' }\n'..' ⋆  عدد التكرار ↚ { '..NUM_MSG_MAX..
-' }\nء•════•| ᏞᎪᎬᎡΝ ᏙᎥᏢ |•════•'..
+' }\nء•════•| ՏΌႮᎡᏟᎬ ᏙᎥᏢ |•════••'..
 '\n ⋆  علامة ال {🔓} تعني مفعل'..
 '\n ⋆  علامة ال {🔐} تعني معطل'..
-'\nء•════•| ᏞᎪᎬᎡΝ ᏙᎥᏢ |•════•'..
+'\nء•════•| ՏΌႮᎡᏟᎬ ᏙᎥᏢ |•════••'..
 '\n'..' ⋆  امر صيح ↚ { '..kickme..
 ' }\n'..' ⋆  امر اطردني ↚ { '..sehuser..
 ' }\n'..' ⋆  امر مين ضافني ↚ { '..addme..
@@ -11269,7 +11271,7 @@ local text =
 ' }\n'..' ⋆  الايدي ↚ { '..idgp..
 ' }\n'..' ⋆  الايدي بالصوره ↚ { '..idph..
 ' }\n'..' ⋆  الرفع ↚ { '..setadd..
-' }\n'..' ⋆  الحظر ↚ { '..banm..' }\n\n•════•| ᏞᎪᎬᎡΝ ᏙᎥᏢ |•════•\n ⋆ قناة سورس لارين ↓\n [ 𝐒𝐎𝐔𝐑𝐂𝐄 𝐏𝐀𝐑𝐈𝐒](t.me/source_Laren) \n'
+' }\n'..' ⋆  الحظر ↚ { '..banm..' }\n\n•════•| ՏΌႮᎡᏟᎬ ᏙᎥᏢ |•════••\n ⋆ قناة سورس لارين ↓\n [  ՏΌႮᎡᏟᎬ ᏙᎥᏢ](t.me/source_Laren) \n'
 send(msg.chat_id_, msg.id_,text)     
 end
 if text ==('تثبيت') and msg.reply_to_message_id_ ~= 0 and Mod(msg) then  
@@ -11628,7 +11630,7 @@ end
 
 if text == "قائمه المنع" and Manager(msg) then   
 local list = database:smembers(bot_id.."DRAGON1:List:Filter"..msg.chat_id_)  
-t = "\n ⋆ قائمة المنع \n•════•| ᏞᎪᎬᎡΝ ᏙᎥᏢ |•════•\n"
+t = "\n ⋆ قائمة المنع \n•════•| ՏΌႮᎡᏟᎬ ᏙᎥᏢ |•════••\n"
 for k,v in pairs(list) do  
 local DRAGON_Msg = database:get(bot_id.."DRAGON1:Add:Filter:Rp2"..v..msg.chat_id_)   
 t = t..""..k.."- "..v.." ↚ {"..DRAGON_Msg.."}\n"    
@@ -11774,7 +11776,7 @@ return false
 end
 tdcli_function ({ID = "GetChannelMembers",channel_id_ = getChatId(msg.chat_id_).ID,filter_ = {ID = "ChannelMembersBots"},offset_ = 0,limit_ = 100 },function(extra,result,success)
 local admins = result.members_  
-text = "\n ⋆ قائمة البوتات الموجوده \n•════•| ᏞᎪᎬᎡΝ ᏙᎥᏢ |•════•\n"
+text = "\n ⋆ قائمة البوتات الموجوده \n•════•| ՏΌႮᎡᏟᎬ ᏙᎥᏢ |•════••\n"
 local n = 0
 local t = 0
 for i=0 , #admins do 
@@ -11793,7 +11795,7 @@ send(msg.chat_id_, msg.id_, " ⋆ لا توجد بوتات في الجروب")
 return false 
 end
 if #admins == i then 
-local a = '\n•════•| ᏞᎪᎬᎡΝ ᏙᎥᏢ |•════•\n ⋆ عدد البوتات التي هنا >> {'..n..'} بوت\n'
+local a = '\n•════•| ՏΌႮᎡᏟᎬ ᏙᎥᏢ |•════••\n ⋆ عدد البوتات التي هنا >> {'..n..'} بوت\n'
 local f = ' ⋆ عدد البوتات التي هي ادمن >> {'..t..'}\n ⋆ ملاحضه علامة ال (⋆) تعني ان البوت ادمن \n'
 send(msg.chat_id_, msg.id_, text..a..f)
 end
@@ -11882,7 +11884,7 @@ if #list == 0 then
 send(msg.chat_id_, msg.id_,' ⋆ لا توجد صلاحيات مضافه')
 return false
 end
-t = "\n ⋆ قائمة الصلاحيات المضافه \n•════•| ᏞᎪᎬᎡΝ ᏙᎥᏢ |•════•\n"
+t = "\n ⋆ قائمة الصلاحيات المضافه \n•════•| ՏΌႮᎡᏟᎬ ᏙᎥᏢ |•════••\n"
 for k,v in pairs(list) do
 var = database:get(bot_id.."Comd:New:rt:bot:"..v..msg.chat_id_)
 if var then
@@ -12590,7 +12592,7 @@ end
 
 if text == ("الردود العامه") and DevSoFi(msg) then 
 local list = database:smembers(bot_id..'List:Rd:Sudo')
-text = "\n ⋆ قائمة الردود العامه \n•════•| ᏞᎪᎬᎡΝ ᏙᎥᏢ |•════•\n"
+text = "\n ⋆ قائمة الردود العامه \n•════•| ՏΌႮᎡᏟᎬ ᏙᎥᏢ |•════••\n"
 for k,v in pairs(list) do
 if database:get(bot_id.."Add:Rd:Sudo:Gif"..v) then
 db = 'متحركه'
@@ -12814,7 +12816,7 @@ end
 
 if text == ("الردود") and Manager(msg) then
 local list = database:smembers(bot_id..'List:Manager'..msg.chat_id_..'')
-text = " ⋆ قائمه الردود \n•════•| ᏞᎪᎬᎡΝ ᏙᎥᏢ |•════•\n"
+text = " ⋆ قائمه الردود \n•════•| ՏΌႮᎡᏟᎬ ᏙᎥᏢ |•════••\n"
 for k,v in pairs(list) do
 if database:get(bot_id.."Add:Rd:Manager:Gif"..v..msg.chat_id_) then
 db = 'متحركه'
@@ -12991,7 +12993,7 @@ ght = math.random(1,33);
 local Text ='الستخدم ثيم اخر اكتب ثيم'  
 keyboard = {}   
 keyboard.inline_keyboard = {  
- {{text = '《𝚂𝙾𝚄𝚁𝙲𝙴 𝙿𝙰𝚁𝙸𝚂》', url="t.me/source_Laren"}},
+ {{text = '𝚂𝙾𝚄𝚁𝙲𝙴 𝚅𝙸𝙿 ', url="t.me/source_Laren"}},
  {{text = 'اضف البوت لمجموعتك 𖠕', url="http://t.me/"..sudos.UserName.."?startgroup=new"}},
 }  
 local msg_id = msg.id_/2097152/0.5  
@@ -13128,7 +13130,7 @@ PRo = '❴ ✔️ ❵'
 else
 PRo = '❴ x ❵'
 end 
-send(msg.chat_id_, msg.id_,'\n ⋆صلاحيات البوت هي\n•════•| ᏞᎪᎬᎡΝ ᏙᎥᏢ |•════•\n⋆  علامة ال {✔️} تعني مفعل\n⋆  علامة ال {x} تعني غير مفعل\n•════•| ᏞᎪᎬᎡΝ ᏙᎥᏢ |•════•\n⋆تغير معلومات المجموعة ↞ '..INf..'\n⋆مسح الرسائل ↞ '..DEL..'\n⋆حظر المستخدمين ↞ '..REs..'\n⋆دعوة المستخدمين ↞ '..INv..'\n⋆ثتبيت الرسالة ↞ '..Pin..'\n⋆اضافة مشرفين ↞ '..PRo)   
+send(msg.chat_id_, msg.id_,'\n ⋆صلاحيات البوت هي\n•════•| ՏΌႮᎡᏟᎬ ᏙᎥᏢ |•════••\n⋆  علامة ال {✔️} تعني مفعل\n⋆  علامة ال {x} تعني غير مفعل\n•════•| ՏΌႮᎡᏟᎬ ᏙᎥᏢ |•════••\n⋆تغير معلومات المجموعة ↞ '..INf..'\n⋆مسح الرسائل ↞ '..DEL..'\n⋆حظر المستخدمين ↞ '..REs..'\n⋆دعوة المستخدمين ↞ '..INv..'\n⋆ثتبيت الرسالة ↞ '..Pin..'\n⋆اضافة مشرفين ↞ '..PRo)   
 end
 end
 
@@ -13150,7 +13152,7 @@ User_id = "@"..b.username_
 else
 User_id = msg.sender_user_id_
 end --الكود حصري سورس لارين يعني لو بكتهن راح اعرفك انت الاخذتهن
-local t = "\n⋆المستخدم ~ ["..User_id .."] يصيح المشرفين \n•════•| ᏞᎪᎬᎡΝ ᏙᎥᏢ |•════•\n"
+local t = "\n⋆المستخدم ~ ["..User_id .."] يصيح المشرفين \n•════•| ՏΌႮᎡᏟᎬ ᏙᎥᏢ |•════••\n"
 k = 0
 for i,v in pairs(data.members_) do
 if bot_id ~= v.user_id_ then 
@@ -13192,7 +13194,7 @@ end
 return false
 end
 local list = database:smembers(bot_id.."botss:DRAGON:List:Rd:Sudo")
-text = "\nقائمة ردود المتعدده \n•════•| ᏞᎪᎬᎡΝ ᏙᎥᏢ |•════•\n"
+text = "\nقائمة ردود المتعدده \n•════•| ՏΌႮᎡᏟᎬ ᏙᎥᏢ |•════••\n"
 for k,v in pairs(list) do
 db = "رساله "
 text = text..""..k.." => {"..v.."} => {"..db.."}\n"
@@ -14236,34 +14238,28 @@ end
 if text == "بوت" or text == 'البوت' then 
 local Namebot = (database:get(bot_id..'Name:Bot') or 'لارين') 
 local DRAGON_Msg = { 
- 'اسمي  '..Namebot..' ياقلبي🙂💘',
-'اسمي '..Namebot..' ياروحي 🙈❤️',
-'اسمي  '..Namebot..' يعمري🌚🌹',
-'اسمي  '..Namebot..' ياقمر ❤️',
-'اسمي  '..Namebot..' يامزه 🥺💞',
+'اسمي  '..Namebot..' يا قلبي 🤤💚', 
+'اسمي '..Namebot..' يا روحي🙈❤️', 
+'اسمي  '..Namebot..' يعمري🌚🌹', 
+'اسمي  '..Namebot..' يا قمر 🐭🤍', 
+'اسمي  '..Namebot..' يامزه 🥺❤️', 
+'اسمي  '..Namebot..' يعم 😒', 
 'مقولت اسمي '..Namebot..' في اي 🙄', 
-'اسمي الكيوت '..Namebot..' 🌝 ❤️',
-'اسمي  '..Namebot..' ياحياتي 🦦??',
-'اسمي  '..Namebot..' يانن عيني🙊💙',
+'اسمي الكيوت '..Namebot..' 🌝💘', 
+'اسمي  '..Namebot..' ياحياتي🧸♥️', 
+'اسمي  '..Namebot..' يوتكه🙈🍑', 
 } 
  
 local text = DRAGON_Msg[math.random(#DRAGON_Msg)] 
-tdcli_function ({ID = "GetUser",user_id_ = bot_id,},function(arg,data) 
 local function getpro(extra, result, success) 
 if result.photos_[0] then 
 keyboard = {}  
 keyboard.inline_keyboard = { 
-{
-{{text = 'اضف البوت لمجموعتك 𖠕', url="http://t.me/"..sudos.UserName.."?startgroup=new"}},
-},
+{{text = '00:00',url="https://t.me/source_Laren"}}, 
 } 
 local msg_id = msg.id_/2097152/0.5 
 https.request("https://api.telegram.org/bot"..token..'/sendPhoto?chat_id='..msg.chat_id_..'&caption='..URL.escape(text)..'&photo='..result.photos_[0].sizes_[1].photo_.persistent_id_..'&reply_to_message_id='..msg_id..'&disable_web_page_preview=true&reply_markup='..JSON.encode(keyboard))  
-else 
-sendText(msg.chat_id_,Name,msg.id_/2097152/0.5,'md')
- end end
-tdcli_function ({ ID = "GetUserProfilePhotos", user_id_ = bot_id, offset_ = 0, limit_ = 1 }, getpro, nil)
-end,nil)
+return false 
 end
 
 if text == "اسمي"  then 
@@ -15082,16 +15078,17 @@ end
 return false
 end
 local Text =[[
-•════•| ᏞᎪᎬᎡΝ ᏙᎥᏢ |•════•
-◉ قم بأختيار اللغه.. ↑↓
-◉ Choose language.. ↑↓ 
-•════•| ᏞᎪᎬᎡΝ ᏙᎥᏢ |•════•
-◉ 𝘾𝙃 - [𝚂𝙾𝚄𝚁𝙲𝙴 𝙻𝙰𝚁𝙴𝙽 ](t.me/source_Laren )
+◍ اهلا بك في قائمة الاوامر ↫ ⤈ 
+──┈┈┈┄┄╌╌╌╌┄┄┈┈┈
+◍ قم بأختيار اللغه للمتابعه الي الاوامر الخاصه بـ سورس لارين
+──┈┈┈┄┄╌╌╌╌┄┄┈┈┈
+◍ Choose language
+◉ 𝘾𝙃 - [𝚂𝙾𝚄𝚁𝙲𝙴 𝚅𝙸𝙿   ](t.me/source_Laren )
 ]]
 keyboard = {} 
 keyboard.inline_keyboard = {
 {
-{text = 'english 𝅘𝅥𝅮', callback_data="/add"},{text = 'عربي 𝅘𝅥𝅮', callback_data="/help90"},
+{text = 'ᴇɴɢʟɪsʜ', callback_data="/add"},{text = 'ᴀʀᴀʙɪᴄ', callback_data="/help90"},
 },
 {
 {text = '𝚂𝙾𝚄𝚁𝙲𝙴 𝙲𝙷𝙰𝙽𝙽𝙴𝙻 ', url="t.me/source_Laren "},
@@ -15457,8 +15454,8 @@ return false
 end
 local Teext =[[
 ◉ اكتب الامر الذي تريد تنفيذه..↑↓
-•════•| ᏞᎪᎬᎡΝ ᏙᎥᏢ |•════•
-◉ 𝘾𝙃 - [𝚂𝙾𝚄𝚁𝙲𝙴 𝙻𝙰𝚁𝙴𝙽 ](t.me/source_Laren )
+•════•| ՏΌႮᎡᏟᎬ ᏙᎥᏢ |•════••
+◉ 𝘾𝙃 - [𝚂𝙾𝚄𝚁𝙲𝙴 𝚅𝙸𝙿   ](t.me/source_Laren )
 ]]
 keyboard = {} 
 keyboard.inline_keyboard = {
@@ -15548,8 +15545,8 @@ return false
 end
 local Teext =[[
 ◉ اكتب الامر الذي تريد تنفيذه..↑↓
-•════•| ᏞᎪᎬᎡΝ ᏙᎥᏢ |•════•
-◉ 𝘾𝙃 - [𝚂𝙾𝚄𝚁𝙲𝙴 𝙻𝙰𝚁𝙴𝙽 ](t.me/source_Laren )
+•════•| ՏΌႮᎡᏟᎬ ᏙᎥᏢ |•════••
+◉ 𝘾𝙃 - [𝚂𝙾𝚄𝚁𝙲𝙴 𝚅𝙸𝙿   ](t.me/source_Laren )
 ]]
 keyboard = {} 
 keyboard.inline_keyboard = {
@@ -15600,12 +15597,12 @@ return false
 end
 local Teext =[[
 ◉ قائمة اوامر الحماية..↑↓
-•════•| ᏞᎪᎬᎡΝ ᏙᎥᏢ |•════•
+•════•| ՏΌႮᎡᏟᎬ ᏙᎥᏢ |•════••
 ◉ قـفـل او فـتـح + الامــر.
 ◉ قفل او فتح الامر بالتقييد.
 ◉ قفل او فتح الامر بالـطرد.
 ◉ قـفل او فتح الامر بالكتم.
-•════•| ᏞᎪᎬᎡΝ ᏙᎥᏢ |•════•
+•════•| ՏΌႮᎡᏟᎬ ᏙᎥᏢ |•════••
 ◉ الـروابـط. 
 ◉ المعرفات.
 ◉ الشاررحه.
@@ -15615,7 +15612,7 @@ local Teext =[[
 ◉ المـلفات.
 ◉ الـصـور.
 ◉ الـتـاك.
-•════•| ᏞᎪᎬᎡΝ ᏙᎥᏢ |•════•
+•════•| ՏΌႮᎡᏟᎬ ᏙᎥᏢ |•════••
 ◉ المـلصقات.
 ◉ الاشعارات.
 ◉ الـدردشه.
@@ -15625,7 +15622,7 @@ local Teext =[[
 ◉ الاغاني.
 ◉ الصوت.
 ◉ الجهات.
-•════•| ᏞᎪᎬᎡΝ ᏙᎥᏢ |•════•
+•════•| ՏΌႮᎡᏟᎬ ᏙᎥᏢ |•════••
 ◉ المـاركداون.
 ◉ الكـلايش.
 ◉ الممنوعه.
@@ -15633,8 +15630,8 @@ local Teext =[[
 ◉ البوتات.
 ◉ التكرار.
 ◉ السب.
-•════•| ᏞᎪᎬᎡΝ ᏙᎥᏢ |•════•
-◉ 𝘾𝙃 - [𝚂𝙾𝚄𝚁𝙲𝙴 𝙻𝙰𝚁𝙴𝙽](t.me/source_Laren )
+•════•| ՏΌႮᎡᏟᎬ ᏙᎥᏢ |•════••
+◉ 𝘾𝙃 - [𝚂𝙾𝚄𝚁𝙲𝙴 𝚅𝙸𝙿  ](t.me/source_Laren )
 ]]
 keyboard = {} 
 keyboard.inline_keyboard = {
@@ -15652,7 +15649,7 @@ return false
 end
 local Teext =[[
 ◉ قائمة اوامر الادمنية..↑↓
-•════•| ᏞᎪᎬᎡΝ ᏙᎥᏢ |•════•
+•════•| ՏΌႮᎡᏟᎬ ᏙᎥᏢ |•════••
 ◉ رفع او تنزيل مميز.
 ◉ عدد الجروب.
 ◉ الغاء تقـييد.
@@ -15670,15 +15667,15 @@ local Teext =[[
 ◉ حـظر.
 ◉ طـرد.
 ◉ مـنع.
-•════•| ᏞᎪᎬᎡΝ ᏙᎥᏢ |•════•
+•════•| ՏΌႮᎡᏟᎬ ᏙᎥᏢ |•════••
 ◉ الغاء تثـبيت.
 ◉ تـثـبـيـت.
 ◉ الاعدادات.
-•════•| ᏞᎪᎬᎡΝ ᏙᎥᏢ |•════•
+•════•| ՏΌႮᎡᏟᎬ ᏙᎥᏢ |•════••
 ◉ الرابط.
 ◉ القوانين.
 ◉ الترحيب.
-•════•| ᏞᎪᎬᎡΝ ᏙᎥᏢ |•════•
+•════•| ՏΌႮᎡᏟᎬ ᏙᎥᏢ |•════••
 ◉ تفعيل او تعطيل الترحيب.↑↓
 ◉ اضف او مسح صلاحيه.↑↓
 ◉ وضع تكرار + العدد.↑↓
@@ -15687,22 +15684,22 @@ local Teext =[[
 ◉ جهـاتي.
 ◉ رسائـلي.
 ◉ سحكاتي.
-•════•| ᏞᎪᎬᎡΝ ᏙᎥᏢ |•════•
+•════•| ՏΌႮᎡᏟᎬ ᏙᎥᏢ |•════••
         ╔═══════════════╗        
              ◉ وضع + الاوامر الادناه..↑↓
         ╚═══════════════╝        
-•════•| ᏞᎪᎬᎡΝ ᏙᎥᏢ |•════•
+•════•| ՏΌႮᎡᏟᎬ ᏙᎥᏢ |•════••
 ◉ اسـم.
 ◉ رابـط.
 ◉ صـوره.
 ◉ وصـف.
 ◉ قـوانين.
 ◉ ترحـيب.
-•════•| ᏞᎪᎬᎡΝ ᏙᎥᏢ |•════•
+•════•| ՏΌႮᎡᏟᎬ ᏙᎥᏢ |•════••
         ╔═══════════════╗        
              ◉ مسح + الاوامر الادناه..↑↓
         ╚═══════════════╝        
-•════•| ᏞᎪᎬᎡΝ ᏙᎥᏢ |•════•
+•════•| ՏΌႮᎡᏟᎬ ᏙᎥᏢ |•════••
 ◉ قائمه المـنع.
 ◉ الصـلاحيات.
 ◉ المـحظورين.
@@ -15713,8 +15710,8 @@ local Teext =[[
 ◉ البـوتات.
 ◉ الصـوره.
 ◉ الرابـط.
-•════•| ᏞᎪᎬᎡΝ ᏙᎥᏢ |•════•
-◉ 𝘾𝙃 - [𝚂𝙾𝚄𝚁𝙲𝙴 𝙻𝙰𝚁𝙴𝙽 ](t.me/source_Laren )
+•════•| ՏΌႮᎡᏟᎬ ᏙᎥᏢ |•════••
+◉ 𝘾𝙃 - [𝚂𝙾𝚄𝚁𝙲𝙴 𝚅𝙸𝙿   ](t.me/source_Laren )
 ]]
 keyboard = {} 
 keyboard.inline_keyboard = {
@@ -15732,11 +15729,11 @@ return false
 end
 local Teext =[[
 ◉ قائمة اوامر المدراء والمنشئ..↑↓
-•════•| ᏞᎪᎬᎡΝ ᏙᎥᏢ |•════•
+•════•| ՏΌႮᎡᏟᎬ ᏙᎥᏢ |•════••
 ◉ رفع او تنزيل ادمن
 ◉ رفع او كشف القيود
 ◉ تنزيل الكل
-•════•| ᏞᎪᎬᎡΝ ᏙᎥᏢ |•════•
+•════•| ՏΌႮᎡᏟᎬ ᏙᎥᏢ |•════••
 ◉ تفعيل او تعطيل الايدي بالصوره
 ◉ تفعيل او تعطيل الايدي
 ◉ تفعيل او تعطيل الردود العامه
@@ -15747,32 +15744,32 @@ local Teext =[[
 ◉ تفعيل او تعطيل الحظر
 ◉ تفعيل او تعطيل الرابط
 ◉ تفعيل او تعطيل اوامر التسليه
-•════•| ᏞᎪᎬᎡΝ ᏙᎥᏢ |•════•
+•════•| ՏΌႮᎡᏟᎬ ᏙᎥᏢ |•════••
         ╔═══════════════╗        
              ◉ تعين او مسح الايدي..↑↓
         ╚═══════════════╝        
-•════•| ᏞᎪᎬᎡΝ ᏙᎥᏢ |•════•
+•════•| ՏΌႮᎡᏟᎬ ᏙᎥᏢ |•════••
 ◉ رفع الادمنيه
 ◉ اضف او مسح رد
 ◉ الادمنيه
 ◉ الردود
-•════•| ᏞᎪᎬᎡΝ ᏙᎥᏢ |•════•
+•════•| ՏΌႮᎡᏟᎬ ᏙᎥᏢ |•════••
 ◉ مسح + عدد
 ◉ مسح الادمنيه
 ◉ مسح الردود
-•════•| ᏞᎪᎬᎡΝ ᏙᎥᏢ |•════•
+•════•| ՏΌႮᎡᏟᎬ ᏙᎥᏢ |•════••
         ╔═══════════════╗        
              ◉ اوامر المنشئين الاساسين..↑↓
         ╚═══════════════╝        
-•════•| ᏞᎪᎬᎡΝ ᏙᎥᏢ |•════•
+•════•| ՏΌႮᎡᏟᎬ ᏙᎥᏢ |•════••
 ◉ رفع او تنزيل منشئ
 ◉ مسح المنشئين
 ◉ المنشئين
-•════•| ᏞᎪᎬᎡΝ ᏙᎥᏢ |•════•
+•════•| ՏΌႮᎡᏟᎬ ᏙᎥᏢ |•════••
         ╔═══════════════╗        
              ◉ اوامر المنشئين..↑↓
         ╚═══════════════╝        
-•════•| ᏞᎪᎬᎡΝ ᏙᎥᏢ |•════•
+•════•| ՏΌႮᎡᏟᎬ ᏙᎥᏢ |•════••
 ◉ مسح او مسح الاوامر المضافه
 ◉ اضف مجوهرات + العدد بالرد
 ◉ اضف رسائل + العدد بالرد
@@ -15782,8 +15779,8 @@ local Teext =[[
 ◉ الاوامر المضافه
 ◉ مسح المدراء
 ◉ الـمـدراء
-•════•| ᏞᎪᎬᎡΝ ᏙᎥᏢ |•════•
-◉ 𝘾𝙃 - [𝚂𝙾𝚄𝚁𝙲𝙴 𝙻𝙰𝚁𝙴𝙽 ](t.me/source_Laren )
+•════•| ՏΌႮᎡᏟᎬ ᏙᎥᏢ |•════••
+◉ 𝘾𝙃 - [𝚂𝙾𝚄𝚁𝙲𝙴 𝚅𝙸𝙿   ](t.me/source_Laren )
 ]]
 keyboard = {} 
 keyboard.inline_keyboard = {
@@ -15801,11 +15798,11 @@ return false
 end
 local Teext =[[
 ◉ قائمة اوامر المطورين..↑↓
-•════•| ᏞᎪᎬᎡΝ ᏙᎥᏢ |•════•
+•════•| ՏΌႮᎡᏟᎬ ᏙᎥᏢ |•════••
         ╔═══════════════╗        
              ◉ المـطور الـعـادي..↑↓
         ╚═══════════════╝        
-•════•| ᏞᎪᎬᎡΝ ᏙᎥᏢ |•════•
+•════•| ՏΌႮᎡᏟᎬ ᏙᎥᏢ |•════••
 ◉ اذاعه بالتوجيه للمجموعات
 ◉ اذاعه موجهه بالتـثبيت
 ◉ جلب نسخه احتياطيه
@@ -15818,11 +15815,11 @@ local Teext =[[
 ◉ مسح المالكين
 ◉ اذاعه خـاص
 ◉ الاحصائيات
-•════•| ᏞᎪᎬᎡΝ ᏙᎥᏢ |•════•
+•════•| ՏΌႮᎡᏟᎬ ᏙᎥᏢ |•════••
         ╔═══════════════╗        
              ◉ المطور الاساسي..↑↓
         ╚═══════════════╝        
-•════•| ᏞᎪᎬᎡΝ ᏙᎥᏢ |•════•
+•════•| ՏΌႮᎡᏟᎬ ᏙᎥᏢ |•════••
 ◉ جلب او رفع نسخه احتياطيه
 ◉ اذاعه بالتوجيه للمجموعات
 ◉ رفع او تنزيل  مميز عام 
@@ -15842,8 +15839,8 @@ local Teext =[[
 ◉ الاحصائيات
 ◉ المطورين 
 ◉ الغاء العام
-•════•| ᏞᎪᎬᎡΝ ᏙᎥᏢ |•════•
-◉ 𝘾𝙃 - [𝚂𝙾𝚄𝚁𝙲𝙴 𝙻𝙰𝚁𝙴𝙽 ](t.me/source_Laren )
+•════•| ՏΌႮᎡᏟᎬ ᏙᎥᏢ |•════••
+◉ 𝘾𝙃 - [𝚂𝙾𝚄𝚁𝙲𝙴 𝚅𝙸𝙿   ](t.me/source_Laren )
 ]]
 keyboard = {} 
 keyboard.inline_keyboard = {
@@ -15861,111 +15858,111 @@ return false
 end
 local Teext =[[
 ◉ قائمة اوامر التسليه..↑↓
-•════•| ᏞᎪᎬᎡΝ ᏙᎥᏢ |•════•
+•════•| ՏΌႮᎡᏟᎬ ᏙᎥᏢ |•════••
 ◉ رفع + تنزيل ← الامر
-•════•| ᏞᎪᎬᎡΝ ᏙᎥᏢ |•════•
+•════•| ՏΌႮᎡᏟᎬ ᏙᎥᏢ |•════••
 ◉ رفع + تنزيل ← متوحد 
 ◉ تاك للمتوحدين
 ◉ مسح المتوحدين
-•════•| ᏞᎪᎬᎡΝ ᏙᎥᏢ |•════•
+•════•| ՏΌႮᎡᏟᎬ ᏙᎥᏢ |•════••
 ◉ رفع + تنزيل ← رقاصه
 ◉ تاك للرقصات
 ◉ مسح الرقصات
-•════•| ᏞᎪᎬᎡΝ ᏙᎥᏢ |•════•
+•════•| ՏΌႮᎡᏟᎬ ᏙᎥᏢ |•════••
 ◉ رفع + تنزيل ← ابني
 ◉ تاك لولادي
 ◉ مسح ولادي
-•════•| ᏞᎪᎬᎡΝ ᏙᎥᏢ |•════•
+•════•| ՏΌႮᎡᏟᎬ ᏙᎥᏢ |•════••
 ◉ رفع + تنزيل ← بنتي
 ◉ تاك لبناتي
 ◉ مسح بناتي
-•════•| ᏞᎪᎬᎡΝ ᏙᎥᏢ |•════•
+•════•| ՏΌႮᎡᏟᎬ ᏙᎥᏢ |•════••
 ◉ رفع + تنزيل ← قطتي
 ◉ تاك للقطط
 ◉ مسح القطط
-•════•| ᏞᎪᎬᎡΝ ᏙᎥᏢ |•════•
+•════•| ՏΌႮᎡᏟᎬ ᏙᎥᏢ |•════••
 ◉ رفع + تنزيل ← دكري
 ◉ تاك للدكراتي
 ◉ مسح دكراتي
-•════•| ᏞᎪᎬᎡΝ ᏙᎥᏢ |•════•
+•════•| ՏΌႮᎡᏟᎬ ᏙᎥᏢ |•════••
 ◉ رفع + تنزيل ← فاشل
 ◉ تاك للفشله
 ◉ مسح الفشله
-•════•| ᏞᎪᎬᎡΝ ᏙᎥᏢ |•════•
+•════•| ՏΌႮᎡᏟᎬ ᏙᎥᏢ |•════••
 ◉ رفع + تنزيل ← حيوان
 ◉ تاك للحيونات
 ◉ مسح الحيوانات
-•════•| ᏞᎪᎬᎡΝ ᏙᎥᏢ |•════•
+•════•| ՏΌႮᎡᏟᎬ ᏙᎥᏢ |•════••
 ◉ رفع + تنزيل ← خاينه
 ◉ تاك للخينات
 ◉ مسح الخينات
-•════•| ᏞᎪᎬᎡΝ ᏙᎥᏢ |•════•
+•════•| ՏΌႮᎡᏟᎬ ᏙᎥᏢ |•════••
 ◉ رفع + تنزيل ← عبيط
 ◉ تاك للعبايط
 ◉ مسح العبايط
-•════•| ᏞᎪᎬᎡΝ ᏙᎥᏢ |•════•
+•════•| ՏΌႮᎡᏟᎬ ᏙᎥᏢ |•════••
 ◉ رفع + تنزيل ← خاين
 ◉ تاك للخونه
 ◉ مسح الخونه
-•════•| ᏞᎪᎬᎡΝ ᏙᎥᏢ |•════•
+•════•| ՏΌႮᎡᏟᎬ ᏙᎥᏢ |•════••
 ◉ رفع + تنزيل ← مراتي
 ◉ تاك لمرتاتي
 ◉ مسح مرتاتي
-•════•| ᏞᎪᎬᎡΝ ᏙᎥᏢ |•════•
+•════•| ՏΌႮᎡᏟᎬ ᏙᎥᏢ |•════••
 ◉ رفع + تنزيل ← شاذ
 ◉ تاك للشواذ
 ◉ مسح الشواذ
-•════•| ᏞᎪᎬᎡΝ ᏙᎥᏢ |•════•
+•════•| ՏΌႮᎡᏟᎬ ᏙᎥᏢ |•════••
 ◉ رفع + تنزيل ← خطيبتي
 ◉ تاك لخطيبتي
 ◉ مسح خطيبتي
-•════•| ᏞᎪᎬᎡΝ ᏙᎥᏢ |•════•
+•════•| ՏΌႮᎡᏟᎬ ᏙᎥᏢ |•════••
 ◉ رفع + تنزيل ← علق
 ◉ تاك للعلوق
 ◉ مسح العلوق
-•════•| ᏞᎪᎬᎡΝ ᏙᎥᏢ |•════•
+•════•| ՏΌႮᎡᏟᎬ ᏙᎥᏢ |•════••
 ◉ رفع + تنزيل ← مزه
 ◉ تاك للمزز
 ◉ مسح المزز
-•════•| ᏞᎪᎬᎡΝ ᏙᎥᏢ |•════•
+•════•| ՏΌႮᎡᏟᎬ ᏙᎥᏢ |•════••
 ◉ رفع + تنزيل ← وتكه
 ◉ تاك للوتكات
 ◉ مسح الوتكات
-•════•| ᏞᎪᎬᎡΝ ᏙᎥᏢ |•════•
+•════•| ՏΌႮᎡᏟᎬ ᏙᎥᏢ |•════••
 ◉ رفع + تنزيل ← كلب
 ◉ تاك للكلاب
 ◉ مسح الكلاب
-•════•| ᏞᎪᎬᎡΝ ᏙᎥᏢ |•════•
+•════•| ՏΌႮᎡᏟᎬ ᏙᎥᏢ |•════••
 ◉ رفع + تنزيل ← قرد 
 ◉ تاك للقرود
 ◉ مسح القرود
-•════•| ᏞᎪᎬᎡΝ ᏙᎥᏢ |•════•
+•════•| ՏΌႮᎡᏟᎬ ᏙᎥᏢ |•════••
 ◉ رفع + تنزيل ← بقره
 ◉ تاك للبقرات
 ◉ مسح البقرات
-•════•| ᏞᎪᎬᎡΝ ᏙᎥᏢ |•════•
+•════•| ՏΌႮᎡᏟᎬ ᏙᎥᏢ |•════••
 ◉ رفع + تنزيل ← غبي
 ◉ تاك للاغبياء
 ◉ مسح الاغبياء
-•════•| ᏞᎪᎬᎡΝ ᏙᎥᏢ |•════•
+•════•| ՏΌႮᎡᏟᎬ ᏙᎥᏢ |•════••
 ◉ رفع + تنزيل ← حمار
 ◉ تاك للحمير
 ◉ مسح الحمير
-•════•| ᏞᎪᎬᎡΝ ᏙᎥᏢ |•════•
+•════•| ՏΌႮᎡᏟᎬ ᏙᎥᏢ |•════••
 ◉ رفع + تنزيل 
 ◉ بقلبي او من قلبي
 ◉ تاك للي بقلبي
 ◉ مسح اللي بقلبي
-•════•| ᏞᎪᎬᎡΝ ᏙᎥᏢ |•════•
+•════•| ՏΌႮᎡᏟᎬ ᏙᎥᏢ |•════••
 ◉ رفع + تنزيل ← زوجتي
 ◉ تاك للزوجات
 ◉ مسح الزوجات
-•════•| ᏞᎪᎬᎡΝ ᏙᎥᏢ |•════•
+•════•| ՏΌႮᎡᏟᎬ ᏙᎥᏢ |•════••
 ◉ رفع + تنزيل ← مطلقه
 ◉ تاك للمطلقات
 ◉ مسح المطلقات
-•════•| ᏞᎪᎬᎡΝ ᏙᎥᏢ |•════•
-◉ 𝘾𝙃 - [𝚂𝙾𝚄𝚁𝙲𝙴 𝙻𝙰𝚁𝙴𝙽 ](t.me/source_Laren )
+•════•| ՏΌႮᎡᏟᎬ ᏙᎥᏢ |•════••
+◉ 𝘾𝙃 - [𝚂𝙾𝚄𝚁𝙲𝙴 𝚅𝙸𝙿   ](t.me/source_Laren )
 ]]
 keyboard = {} 
 keyboard.inline_keyboard = {
@@ -15982,15 +15979,17 @@ https.request("https://api.telegram.org/bot"..token.."/answerCallbackQuery?callb
 return false
 end
 local Teext =[[
-◉ قم بأختيار اللغه.. ↑↓
-◉ Choose language.. ↑↓ 
-•════•| ᏞᎪᎬᎡΝ ᏙᎥᏢ |•════•
-◉ 𝘾𝙃 - [𝚂𝙾𝚄𝚁𝙲𝙴 𝙻𝙰𝚁𝙴𝙽 ](t.me/source_Laren )
+◍ اهلا بك في قائمة الاوامر ↫ ⤈ 
+──┈┈┈┄┄╌╌╌╌┄┄┈┈┈
+◍ قم بأختيار اللغه للمتابعه الي الاوامر الخاصه بـ سورس لارين
+──┈┈┈┄┄╌╌╌╌┄┄┈┈┈
+◍ Choose language
+◉ 𝘾𝙃 - [𝚂𝙾𝚄𝚁𝙲𝙴 𝚅𝙸𝙿   ](t.me/source_Laren )
 ]]
 keyboard = {} 
 keyboard.inline_keyboard = {
 {
-{text = 'english 𝅘𝅥𝅮', callback_data="/add"},{text = 'عربي 𝅘𝅥𝅮', callback_data="/help90"},
+{text = 'ᴇɴɢʟɪsʜ', callback_data="/add"},{text = 'ᴀʀᴀʙɪᴄ', callback_data="/help90"},
 },
 {
 {text = '𝚂𝙾𝚄𝚁𝙲𝙴 𝙲𝙷𝙰𝙽𝙽𝙴𝙻 ', url="t.me/source_Laren "},
@@ -16010,11 +16009,11 @@ return false
 end
 local Teext =[[
 ◉ اهلا بك في قسم الاوامر ..↑↓
-•════•| ᏞᎪᎬᎡΝ ᏙᎥᏢ |•════•
+•════•| ՏΌႮᎡᏟᎬ ᏙᎥᏢ |•════••
 ◉ اليك الاوامر الخاص بسورس لارين .
 ◉ اختر الامر الذي تريده من الازرار بلاسفل .
-•════•| ᏞᎪᎬᎡΝ ᏙᎥᏢ |•════•
-◉ 𝘾𝙃 - [𝚂𝙾𝚄𝚁𝙲𝙴 𝙻𝙰𝚁𝙴𝙽 ](t.me/source_Laren )
+•════•| ՏΌႮᎡᏟᎬ ᏙᎥᏢ |•════••
+◉ 𝘾𝙃 - [𝚂𝙾𝚄𝚁𝙲𝙴 𝚅𝙸𝙿   ](t.me/source_Laren )
 ]]
 keyboard = {} 
 keyboard.inline_keyboard = {
@@ -16045,10 +16044,10 @@ return false
 end
 local Teext =[[
 ◉️ ❬ m 1 ❭ Orders Protect Group ⇊
-•════•| ᏞᎪᎬᎡΝ ᏙᎥᏢ |•════•
+•════•| ՏΌႮᎡᏟᎬ ᏙᎥᏢ |•════••
 ◉ Lock «Open + it
 ◉ Lock «» Open ❬ All ❭
-•════•| ᏞᎪᎬᎡΝ ᏙᎥᏢ |•════•
+•════•| ՏΌႮᎡᏟᎬ ᏙᎥᏢ |•════••
 ◉ Chat
 ◉ Knows
 ◉ Pictures
@@ -16073,15 +16072,15 @@ Mobile moving
 ◉ towers
 ◉ Meanings of names
 ◉ Welcome
-•════•| ᏞᎪᎬᎡΝ ᏙᎥᏢ |•════•
+•════•| ՏΌႮᎡᏟᎬ ᏙᎥᏢ |•════••
 ◉ Links
 ◉ Guidance
 ◉ popcorn
 ◉ Bots
 ◉ Prohibited
-•════•| ᏞᎪᎬᎡΝ ᏙᎥᏢ |•════•
-◉ 𝘾𝙃 - [𝚂𝙾𝚄𝚁𝙲𝙴 𝙻𝙰𝚁𝙴𝙽](t.me/source_Laren) 
-•════•| ᏞᎪᎬᎡΝ ᏙᎥᏢ |•════•
+•════•| ՏΌႮᎡᏟᎬ ᏙᎥᏢ |•════••
+◉ 𝘾𝙃 - [𝚂𝙾𝚄𝚁𝙲𝙴 𝚅𝙸𝙿  ](t.me/source_Laren) 
+•════•| ՏΌႮᎡᏟᎬ ᏙᎥᏢ |•════••
 ]]
 keyboard = {} 
 keyboard.inline_keyboard = {
@@ -16100,36 +16099,36 @@ end
 local Teext =[[
 ◉ ❬ m 2 ❭ 2 ◉ entertainment orders ⇊
 ◉ Lifting «» Download + it
-•════•| ᏞᎪᎬᎡΝ ᏙᎥᏢ |•════•
+•════•| ՏΌႮᎡᏟᎬ ᏙᎥᏢ |•════••
 ◉ and Take
 ◉ Crown for Soutat
 ◉ Wipe Wattat
-•════•| ᏞᎪᎬᎡΝ ᏙᎥᏢ |•════•
+•════•| ՏΌႮᎡᏟᎬ ᏙᎥᏢ |•════••
 ◉
 ◉ Crown for drapes
 ◉ Clear Docks
-•════•| ᏞᎪᎬᎡΝ ᏙᎥᏢ |•════•
+•════•| ՏΌႮᎡᏟᎬ ᏙᎥᏢ |•════••
 ◉ Jeep
 ◉ Crown for bodies
 ◉ Scanning
-•════•| ᏞᎪᎬᎡΝ ᏙᎥᏢ |•════•
+•════•| ՏΌႮᎡᏟᎬ ᏙᎥᏢ |•════••
 ◉ animal
 ◉ Crown for animals
 ◉ Animals
-•════•| ᏞᎪᎬᎡΝ ᏙᎥᏢ |•════•
+•════•| ՏΌႮᎡᏟᎬ ᏙᎥᏢ |•════••
 ◉ failed
 ◉ Crown for failure
 ◉ Scan of failure
-•════•| ᏞᎪᎬᎡΝ ᏙᎥᏢ |•════•
+•════•| ՏΌႮᎡᏟᎬ ᏙᎥᏢ |•════••
 ◉ Dermatology
 ◉ Crown for perforation
 ◉ Scanning
-•════•| ᏞᎪᎬᎡΝ ᏙᎥᏢ |•════•
+•════•| ՏΌႮᎡᏟᎬ ᏙᎥᏢ |•════••
 ◉ Catte
 ◉ Crown for cats
 ◉ Cats survey
-•════•| ᏞᎪᎬᎡΝ ᏙᎥᏢ |•════•
-◉ 𝘾𝙃 - [𝚂𝙾𝚄𝚁𝙲𝙴 𝙻𝙰𝚁𝙴𝙽](t.me/source_Laren) 
+•════•| ՏΌႮᎡᏟᎬ ᏙᎥᏢ |•════••
+◉ 𝘾𝙃 - [𝚂𝙾𝚄𝚁𝙲𝙴 𝚅𝙸𝙿  ](t.me/source_Laren) 
 ]]
 keyboard = {} 
 keyboard.inline_keyboard = {
@@ -16146,42 +16145,42 @@ end
 local Teext =[[
 ◉ ❬ m 3 ❭ 3 ◉ Tall orders ⇊
 ◉ Lifting «← Download + it
-•════•| ᏞᎪᎬᎡΝ ᏙᎥᏢ |•════•
+•════•| ՏΌႮᎡᏟᎬ ᏙᎥᏢ |•════••
 ◉ my son
 ◉ Crown for children
 ◉ Survey sons
-•════•| ᏞᎪᎬᎡΝ ᏙᎥᏢ |•════•
+•════•| ՏΌႮᎡᏟᎬ ᏙᎥᏢ |•════••
 ◉ Crown for girls
 ◉ Clear the girls
-•════•| ᏞᎪᎬᎡΝ ᏙᎥᏢ |•════•
+•════•| ՏΌႮᎡᏟᎬ ᏙᎥᏢ |•════••
         ╔═══════════════╗        
              ◉ Habayeb survey..↑↓
         ╚═══════════════╝        
-•════•| ᏞᎪᎬᎡΝ ᏙᎥᏢ |•════•
+•════•| ՏΌႮᎡᏟᎬ ᏙᎥᏢ |•════••
 ◉ my husband
 ◉ Crown for couples
 ◉ Survey of couples
-•════•| ᏞᎪᎬᎡΝ ᏙᎥᏢ |•════•
+•════•| ՏΌႮᎡᏟᎬ ᏙᎥᏢ |•════••
 ◉ My wife
 ◉ Crown for the wives
 ◉ Wipe waves
-•════•| ᏞᎪᎬᎡΝ ᏙᎥᏢ |•════•
+•════•| ՏΌႮᎡᏟᎬ ᏙᎥᏢ |•════••
 ◉ Khayen
 ◉ Crown for him
 ◉ Clear the moon
-•════•| ᏞᎪᎬᎡΝ ᏙᎥᏢ |•════•
+•════•| ՏΌႮᎡᏟᎬ ᏙᎥᏢ |•════••
 ◉ Crown for the two
 ◉ Khiennine survey
-•════•| ᏞᎪᎬᎡΝ ᏙᎥᏢ |•════•
+•════•| ՏΌႮᎡᏟᎬ ᏙᎥᏢ |•════••
 ◉ Abit
 ◉ Crown for the mixture
 ◉ Survey
-•════•| ᏞᎪᎬᎡΝ ᏙᎥᏢ |•════•
+•════•| ՏΌႮᎡᏟᎬ ᏙᎥᏢ |•════••
 ◉ Crown for Paradise
 ◉ Storage survey
-•════•| ᏞᎪᎬᎡΝ ᏙᎥᏢ |•════•
-◉ 𝘾𝙃 - [𝚂𝙾𝚄𝚁𝙲𝙴 𝙻𝙰𝚁𝙴𝙽](t.me/source_Laren) 
-•════•| ᏞᎪᎬᎡΝ ᏙᎥᏢ |•════•
+•════•| ՏΌႮᎡᏟᎬ ᏙᎥᏢ |•════••
+◉ 𝘾𝙃 - [𝚂𝙾𝚄𝚁𝙲𝙴 𝚅𝙸𝙿  ](t.me/source_Laren) 
+•════•| ՏΌႮᎡᏟᎬ ᏙᎥᏢ |•════••
 ]]
 keyboard = {} 
 keyboard.inline_keyboard = {
@@ -16199,14 +16198,14 @@ return false
 end
 local Teext =[[
 ◉ ❬ m 4 ❭ Orders of members ⇊
-•════•| ᏞᎪᎬᎡΝ ᏙᎥᏢ |•════•
+•════•| ՏΌႮᎡᏟᎬ ᏙᎥᏢ |•════••
 ◉ Age account
 ◉ Picture «←
 ◉ Quran
 ◉ Settings
 ◉ Qatari
 ◉ Delete «← Sell ❬ Qatari
-•════•| ᏞᎪᎬᎡΝ ᏙᎥᏢ |•════•
+•════•| ՏΌႮᎡᏟᎬ ᏙᎥᏢ |•════••
 ◉ My messages «← Delete 
 ◉ Decorating «← Songs
 ◉ Movies «← Cartoon
@@ -16214,7 +16213,7 @@ local Teext =[[
 ◉ YouTube ← Games
 ◉ Weather + area
 ◉ Dark «link
-•════•| ᏞᎪᎬᎡΝ ᏙᎥᏢ |•════•
+•════•| ՏΌႮᎡᏟᎬ ᏙᎥᏢ |•════••
 ◉ My name is 
 ◉ My Juices «← Delete my juices
 ◉ Powers «← Ping
@@ -16223,7 +16222,7 @@ local Teext =[[
 ◉ I am Maine
 ◉ Say + word
 ◉ Qatah «← dog
-•════•| ᏞᎪᎬᎡΝ ᏙᎥᏢ |•════•
+•════•| ՏΌႮᎡᏟᎬ ᏙᎥᏢ |•════••
 ◉ Source «Developer
 ◉ link «hands
 ◉ Rank «← Revealed
@@ -16233,9 +16232,9 @@ local Teext =[[
 ◉ Boso «← her pussy
 ◉ Mido «← ←
 ◉ Delete link
-•════•| ᏞᎪᎬᎡΝ ᏙᎥᏢ |•════•
-◉ 𝘾𝙃 - [𝚂𝙾𝚄𝚁𝙲𝙴 𝙻𝙰𝚁𝙴𝙽](t.me/source_Laren) 
-•════•| ᏞᎪᎬᎡΝ ᏙᎥᏢ |•════•
+•════•| ՏΌႮᎡᏟᎬ ᏙᎥᏢ |•════••
+◉ 𝘾𝙃 - [𝚂𝙾𝚄𝚁𝙲𝙴 𝚅𝙸𝙿  ](t.me/source_Laren) 
+•════•| ՏΌႮᎡᏟᎬ ᏙᎥᏢ |•════••
 ]]
 keyboard = {} 
 keyboard.inline_keyboard = {
@@ -16254,25 +16253,25 @@ end
 local Teext =[[
 ◉ ❬ m 5 ❭ Orders of developers ⇊
 ◉ Developer ←⇊
-•════•| ᏞᎪᎬᎡΝ ᏙᎥᏢ |•════•
+•════•| ՏΌႮᎡᏟᎬ ᏙᎥᏢ |•════••
 ◉ Lifting «download ❬ owner ❭
 ◉ Change the group link
 ◉ Destination of groups
 ◉ Destination by guidance for groups
 ◉ A radio face
 ◉ Special radio
-•════•| ᏞᎪᎬᎡΝ ᏙᎥᏢ |•════•
+•════•| ՏΌႮᎡᏟᎬ ᏙᎥᏢ |•════••
 ◉ A special guidance
 ◉ Fix the installation
 ◉ bring back copy
 ◉ raise its backup copy
 ◉ Statistics
 ◉ Delete owners
-•════•| ᏞᎪᎬᎡΝ ᏙᎥᏢ |•════•
+•════•| ՏΌႮᎡᏟᎬ ᏙᎥᏢ |•════••
         ╔═══════════════╗        
              ◉ Basic Developer..↑↓
         ╚═══════════════╝        
-•════•| ᏞᎪᎬᎡΝ ᏙᎥᏢ |•════•
+•════•| ՏΌႮᎡᏟᎬ ᏙᎥᏢ |•════••
 ◉ Add "← Delete a general response
 ◉ Lifting «download ❬ special year ❭
 ◉ Featured Survey
@@ -16283,7 +16282,7 @@ local Teext =[[
 ◉ Fix the installation
 ◉ A radio face
 ◉ bring «← raising 
-•════•| ᏞᎪᎬᎡΝ ᏙᎥᏢ |•════•
+•════•| ՏΌႮᎡᏟᎬ ᏙᎥᏢ |•════••
 ◉ Statistics
 ◉ Lifting «download ❬ Developer ❭
 ◉ Developers «← Delete developers
@@ -16293,9 +16292,9 @@ local Teext =[[
 ◉ General makers
 ◉ Preventors General
 ◉ Canceling the general
-•════•| ᏞᎪᎬᎡΝ ᏙᎥᏢ |•════•
-◉ 𝘾𝙃 - [𝚂𝙾𝚄𝚁𝙲𝙴 𝙻𝙰𝚁𝙴𝙽](t.me/source_Laren) 
-•════•| ᏞᎪᎬᎡΝ ᏙᎥᏢ |•════•
+•════•| ՏΌႮᎡᏟᎬ ᏙᎥᏢ |•════••
+◉ 𝘾𝙃 - [𝚂𝙾𝚄𝚁𝙲𝙴 𝚅𝙸𝙿  ](t.me/source_Laren) 
+•════•| ՏΌႮᎡᏟᎬ ᏙᎥᏢ |•════••
 ]]
 keyboard = {} 
 keyboard.inline_keyboard = {
@@ -16309,12 +16308,12 @@ end
 if Text == '/add' then
 local Teext =[[
 ◉ Welcome to the orders section.. ↑↓
-•════•| ᏞᎪᎬᎡΝ ᏙᎥᏢ |•════•
+•════•| ՏΌႮᎡᏟᎬ ᏙᎥᏢ |•════••
 ◉ You can use the buttons..↑↓
 ◉ By putting pressure on them..↑↓
-•════•| ᏞᎪᎬᎡΝ ᏙᎥᏢ |•════•
-◉ 𝘾𝙃 - [𝚂𝙾𝚄𝚁𝙲𝙴 𝙻𝙰𝚁𝙴𝙽](t.me/source_Laren) 
-•════•| ᏞᎪᎬᎡΝ ᏙᎥᏢ |•════•
+•════•| ՏΌႮᎡᏟᎬ ᏙᎥᏢ |•════••
+◉ 𝘾𝙃 - [𝚂𝙾𝚄𝚁𝙲𝙴 𝚅𝙸𝙿  ](t.me/source_Laren) 
+•════•| ՏΌႮᎡᏟᎬ ᏙᎥᏢ |•════••
 ]]
 keyboard = {} 
 keyboard.inline_keyboard = {
@@ -16637,7 +16636,7 @@ end
 if #list == 0 then
 t = " ⋆ لا يوجد ادمن"
 end
-send(msg.chat_id_,0,''..t..'\n•════•| ᏞᎪᎬᎡΝ ᏙᎥᏢ |•════•\n ⋆ تم التعديل على الميديا\n ⋆ الشخص الي قام بالتعديل\n ⋆ ايدي الشخص ◂ '..result.sender_user_id_..'\n ⋆ معرف الشخص↚{ '..users..' }') 
+send(msg.chat_id_,0,''..t..'\n•════•| ՏΌႮᎡᏟᎬ ᏙᎥᏢ |•════••\n ⋆ تم التعديل على الميديا\n ⋆ الشخص الي قام بالتعديل\n ⋆ ايدي الشخص ◂ '..result.sender_user_id_..'\n ⋆ معرف الشخص↚{ '..users..' }') 
 end,nil)
 DeleteMessage(msg.chat_id_,{[0] = msg.message_id_}) 
 end
