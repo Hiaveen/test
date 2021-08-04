@@ -907,6 +907,7 @@ send(msg.chat_id_, msg.id_,'    يرجى الاشتراك في القناة حت
 end
 return false
 end
+end
 if DevSoFi(msg) then
 local bl = '⋆ مرحبا بك في اوامر المطور الجاهزه \n⋆ [قناة السورس](t.me/source_Laren)'
 local keyboard = {
