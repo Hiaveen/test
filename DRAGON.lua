@@ -1252,7 +1252,7 @@ keyboard.inline_keyboard = {
 } 
 local msg_id = msg.id_/2097152/0.5 
 https.request("https://api.telegram.org/bot"..token..'/sendPhoto?chat_id=' .. msg.chat_id_ .. '&photo=https://t.me/laren_aoamer/10&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
-endح
+end
 if text == "ضع اسم للبوت" and DevSoFi(msg) then  
 database:setex(bot_id..'Set:Name:Bot'..msg.sender_user_id_,300,true) 
 send(msg.chat_id_, msg.id_," ⋆ ارسل اليه الاسم الان ")
@@ -15386,7 +15386,7 @@ send(msg.chat_id_, msg.id_, ''..texting[math.random(#texting)]..'')
 return false
 end
 if text == "بوسها" or text == "بوسه" then
-local texting = {"امووووووووواحح😘💕","استغفر الله فاسق 😒","الوجه ميساعد 😐✋","ببوس حريم بس????","خدك نضيف!؟ 😂","تدفع كام! 🌝","طب خليه يستحمي اول 🙊😂","كل شويه بوسه بوسه 😏","مش بايس حد انا فل!! ","امموووواه لعيونك ي جميل 💎💗😹"}
+local texting = {"امووووووووواحح😘💕","استغفر الله فاسق 😒","الوجه ميساعد 😐✋","ببوس حريم بس😌??","خدك نضيف!؟ 😂","تدفع كام! 🌝","طب خليه يستحمي اول 🙊😂","كل شويه بوسه بوسه 😏","مش بايس حد انا فل!! ","امموووواه لعيونك ي جميل 💎💗😹"}
 send(msg.chat_id_, msg.id_, ''..texting[math.random(#texting)]..'')
 return false
 end
