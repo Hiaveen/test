@@ -325,7 +325,7 @@ var = 'البوت'
 elseif database:sismember(bot_id..'Sudo:User', user_id) then
 var = database:get(bot_id.."Sudo:Rd"..msg.chat_id_) or 'المطور'  
 elseif database:sismember(bot_id..'CoSu'..chat_id, user_id) then
-var = database:get(bot_id.."CoSu:Rd"..msg.chat_id_) or 'لارين'
+var = database:get(bot_id.."CoSu:Rd"..msg.chat_id_) or 'V I P'
 elseif database:sismember(bot_id..'Basic:Constructor'..chat_id, user_id) then
 var = database:get(bot_id.."BasicConstructor:Rd"..msg.chat_id_) or 'المنشئ اساسي'
 elseif database:sismember(bot_id..'Constructor'..chat_id, user_id) then
@@ -1196,7 +1196,7 @@ end
 
 if text == "/start" then
 if not DevSoFi(msg) then
-local Namebot = (database:get(bot_id..'Name:Bot') or 'لارين') 
+local Namebot = (database:get(bot_id..'Name:Bot') or 'V I P') 
 local DRAGON_Msg = { 
 '⋆ انا بوت اسمي '..Namebot..' \n⋆ اختصاصي حمايه المجموعات\n⋆ من التخريب والتوجيه الخ..\n↫ ❬اضف البوت الى المجموعه❭\n↫ ❬ارفع البوت ادمن في المجموعه❭\n↫ ❬وارسل تفعيل وسيتم تفعيل البوت ورفع مشرفي الكروب تلقائين ❭',
 } 
@@ -1933,7 +1933,7 @@ end
 if msg.content_.ID == "MessageChatAddMembers" then 
 if msg.content_.members_[0].id_ == tonumber(bot_id) then 
 print("it is Bot")
-N = (database:get(bot_id.."Name:Bot") or "لارين")
+N = (database:get(bot_id.."Name:Bot") or "V I P")
 tdcli_function ({ID = "GetUser",user_id_ = bot_id,},function(arg,data) 
 tdcli_function ({ID = "GetUserProfilePhotos",user_id_ = bot_id,offset_ = 0,limit_ = 1},function(extra,result,success) 
 if result.photos_[0] then
@@ -3004,7 +3004,7 @@ keyboard.inline_keyboard = {
 {{text = '₀²₁˝₀₆˝₂₁l₁₀:₁₄ ᴘᴍ ⤶', url="t.me/source_Laren"}}, 
 } 
 local msg_id = msg.id_/2097152/0.5 
-https.request("https://api.telegram.org/bot"..token..'/sendPhoto?chat_id=' .. msg.chat_id_ .. '&photo=https://t.me/laren_aoamer/10&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
+https.request("https://api.telegram.org/bot"..token..'/sendPhoto?chat_id=' .. msg.chat_id_ .. '&photo=https://t.me/laren_aoamer/34&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
 end
 
 if text == 'يوتيوب' or text == 'بحث' or text == 'اليوتيوب' then
@@ -3143,12 +3143,12 @@ local TWEET_Msg = {
 "اخر اغنية سمعتها ?", 
 "تكلم عن نفسك", 
 "ليه انت مش سالك", 
-"ما هيا عيوب سورس لارين؟ ", 
+"ما هيا عيوب سورس V I P؟ ", 
 "اخر كتاب قرآته", 
 "روايتك المفضله ?", 
 "اخر اكله اكلتها", 
 "اخر كتاب قرآته", 
-"اي رائيك في لارين..😂 ", 
+"اي رائيك في V I P..😂 ", 
 "افضل يوم ف حياتك", 
 "ليه مضيفتش كل جهاتك", 
 "حكمتك ف الحياه", 
@@ -4022,7 +4022,7 @@ keyboard.inline_keyboard = {
 local msg_id = msg.id_/2097152/0.5 
 https.request("https://api.telegram.org/bot"..token..'/sendPhoto?chat_id=' .. msg.chat_id_ .. '&photo=https://t.me/laren_aoamer/29&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
 end
-if text == 'العاب لارين' or text == 'العاب مطوره' or text == 'العاب متطوره' then  
+if text == 'العاب V I P' or text == 'العاب مطوره' or text == 'العاب متطوره' then  
 local Text = [[  
  ⋆ حسنا قم باختيار اللعبه 
  ⋆ وبعدها الشات الذي تريد ان تلعب فيه
@@ -5556,7 +5556,7 @@ if res == 200 then
 local Get_info, res = pcall(JSON.decode,Get_Files);
 vardump(res.plugins_)
 if Get_info then
-local TextS = "\n ⋆ اهلا بك في متجر ملفات لارين\n ⋆ ملفات السورس ↓\n≪•════•| ՏΌႮᎡᏟᎬ ᏙᎥᏢ |•════•≫\n\n"
+local TextS = "\n ⋆ اهلا بك في متجر ملفات V I P\n ⋆ ملفات السورس ↓\n≪•════•| ՏΌႮᎡᏟᎬ ᏙᎥᏢ |•════•≫\n\n"
 local TextE = "\n•════•| ՏΌႮᎡᏟᎬ ᏙᎥᏢ |•════•\n ⋆ علامة تعني { ✔️ } ملف مفعل\n ⋆ علامة تعني { x } ملف معطل\n ⋆ قناة سورس V I P↓\n".." ⋆ [اضغط هنا لدخول](t.me/source_Laren) \n"
 local NumFile = 0
 for name,Info in pairs(res.plugins_) do
@@ -5771,13 +5771,13 @@ send(msg.chat_id_, msg.id_, usertext..status)
 end;end,nil)
 return false 
 end
-if text == ("مسح قائمه لارين") and Sudo(msg) then
+if text == ("مسح قائمه V I P") and Sudo(msg) then
 database:del(bot_id..'CoSu'..msg.chat_id_)
-send(msg.chat_id_, msg.id_, '\n ⋆ تم مسح قائمه لارين')
+send(msg.chat_id_, msg.id_, '\n ⋆ تم مسح قائمه V I P')
 return false
 end
 
-if text == 'قائمه لارين' and Sudo(msg) then
+if text == 'قائمه V I P' and Sudo(msg) then
 local list = database:smembers(bot_id..'CoSu'..msg.chat_id_)
 t = "\n ⋆ قائمه V I P\n•════•| ՏΌႮᎡᏟᎬ ᏙᎥᏢ |•════•\n"
 for k,v in pairs(list) do
@@ -5789,7 +5789,7 @@ t = t..""..k.."- (`"..v.."`)\n"
 end
 end
 if #list == 0 then
-t = " ⋆ لا يوجد احد في قائمه لارين"
+t = " ⋆ لا يوجد احد في قائمه V I P"
 end
 send(msg.chat_id_, msg.id_, t)
 return false
@@ -13243,7 +13243,7 @@ end
 end
 
 -------------------------------
-if text == ""..(database:get(bot_id..'Name:Bot') or 'لارين').." غادر" or text == 'غادر' then  
+if text == ""..(database:get(bot_id..'Name:Bot') or 'V I P').." غادر" or text == 'غادر' then  
 if Sudo(msg) and not database:get(bot_id..'Left:Bot'..msg.chat_id_)  then 
 tdcli_function ({ID = "ChangeChatMemberStatus",chat_id_=msg.chat_id_,user_id_=bot_id,status_={ID = "ChatMemberStatusLeft"},},function(e,g) end, nil) 
 send(msg.chat_id_, msg.id_,'⋆ تم مغادرة المجموعه') 
@@ -13621,7 +13621,7 @@ return false
 end
 
 if text == 'زخرفه' or text == 'زخرفة' then
-send(msg.chat_id_,msg.id_, 'اكتب زخرفه + الاسم للي هتزخرفه مثال زخرفه لارين') 
+send(msg.chat_id_,msg.id_, 'اكتب زخرفه + الاسم للي هتزخرفه مثال زخرفه V I P') 
 return false
 end
 
@@ -14121,14 +14121,14 @@ end
 end
 end
 
-if text == ""..(database:get(bot_id..'Name:Bot') or 'لارين').."" then  
-Namebot = (database:get(bot_id..'Name:Bot') or 'لارين')
+if text == ""..(database:get(bot_id..'Name:Bot') or 'V I P').."" then  
+Namebot = (database:get(bot_id..'Name:Bot') or 'V I P')
 local DRAGON_Msg = {
 'نعم يروحي♥️🙈',
 'نعم يا قلب '..Namebot..'🥺',
 'عاوز اي من '..Namebot..'🌚♥️',
 'دوختو '..Namebot..'🤦♥️',
-'انت تعرف انو بوت  '..Namebot..'  متنصب علي سورس لارين🙈♥️',
+'انت تعرف انو بوت  '..Namebot..'  متنصب علي سورس V I P🙈♥️',
 'بتشقط وجي ويت 🤪',
 'تع اشرب شاي 🥺💙',
 'متيجي 😉',
@@ -15008,7 +15008,7 @@ local Text =[[
 •════•| ՏΌႮᎡᏟᎬ ᏙᎥᏢ |•════•
 ◍ اهلا بك في قائمة الاوامر ↫ ⤈ 
 ──┈┈┈┄┄╌╌╌╌┄┄┈┈┈
-◍ قم بأختيار اللغه للمتابعه الي الاوامر الخاصه بـ سورس لارين
+◍ قم بأختيار اللغه للمتابعه الي الاوامر الخاصه بـ سورس V I P
 ──┈┈┈┄┄╌╌╌╌┄┄┈┈┈
 ◍ Choose language
 •════•| ՏΌႮᎡᏟᎬ ᏙᎥᏢ |•════•
@@ -15910,7 +15910,7 @@ end
 local Teext =[[
 ◍ اهلا بك في قائمة الاوامر ↫ ⤈ 
 ──┈┈┈┄┄╌╌╌╌┄┄┈┈┈
-◍ قم بأختيار اللغه للمتابعه الي الاوامر الخاصه بـ سورس لارين
+◍ قم بأختيار اللغه للمتابعه الي الاوامر الخاصه بـ سورس V I P
 ──┈┈┈┄┄╌╌╌╌┄┄┈┈┈
 ◍ Choose language
 •════•| ՏΌႮᎡᏟᎬ ᏙᎥᏢ |•════•
