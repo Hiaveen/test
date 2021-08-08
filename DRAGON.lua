@@ -13450,9 +13450,10 @@ end
 end
 tdcli_function ({ID = "SearchPublicChat",username_ = username}, start_function, nil)
 end
-if text == 'رتبتي' then
-local rtp = Rutba(msg.sender_user_id_,msg.chat_id_)
-send(msg.chat_id_, msg.id_,' ⋆ رتـبتـك ↚ '..rtp)
+if text == "رتبتي"  then
+local rtp_ph = database:get(bot_id.."my_photo:status"..msg.chat_id_)
+if not my_ph then
+send(msg.chat_id_, msg.id_,' ⋆ رتـبتـك ↚ '..rtp") 
 end
 
 if text == 'انا مين' and SudoBot(msg) then 
@@ -16223,7 +16224,7 @@ local Teext =[[
 ◍ Preventors General
 ◍ Canceling the general
 •════•| ՏΌႮᎡᏟᎬ ᏙᎥᏢ |•════•
-◍ 𝘾𝙃 - [𝚂𝙾𝚄𝚁𝙲𝙴 𝙻𝙰𝚁𝙴𝙽](t.me/source_Laren) 
+◍ 𝘾𝙃 - [𝚂𝙾??𝚁𝙲𝙴 𝙻𝙰𝚁𝙴𝙽](t.me/source_Laren) 
 •════•| ՏΌႮᎡᏟᎬ ᏙᎥᏢ |•════•
 ]]
 keyboard = {} 
