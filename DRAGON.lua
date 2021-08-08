@@ -13457,11 +13457,6 @@ send(msg.chat_id_, msg.id_,' ⋆ رتـبتـك ↚ '..rtp)
 return false  
 end
 
-if text == 'رتبتي' then
-local rtp = Rutba(msg.sender_user_id_,msg.chat_id_)
-send(msg.chat_id_, msg.id_,' ⋆ رتـبتـك ↚ '..rtp)
-end
-
 if text == 'انا مين' and SudoBot(msg) then 
 send(msg.chat_id_,msg.id_,'⋆ انت مطوري حبيبي..🥺♥️')
 return false
@@ -14447,7 +14442,7 @@ end
 if text == 'تعطيل اطردني' and Manager(msg) then  
 if not database:get(bot_id..'Cick:Me'..msg.chat_id_) then
 database:set(bot_id..'Cick:Me'..msg.chat_id_,true)  
-Text = '\n ⋆ تم تعطيل امر اطردني اترزع هن بقى مفيش خروج ??'
+Text = '\n ⋆ تم تعطيل امر اطردني اترزع هن بقى مفيش خروج 😹'
 else
 Text = '\n ⋆ بالتاكيد تم تعطيل امر اطردني مفيش خروج يولاد الكلب 😹'
 end
