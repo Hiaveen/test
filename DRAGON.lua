@@ -13451,9 +13451,15 @@ end
 tdcli_function ({ID = "SearchPublicChat",username_ = username}, start_function, nil)
 end
 if text == "رتبتي"  then
-local rtp_ph = database:get(bot_id.."my_photo:status"..msg.chat_id_)
+local rtp = Rutba(msg.sender_user_id_,msg.chat_id_)
 if not my_ph then
 send(msg.chat_id_, msg.id_,' ⋆ رتـبتـك ↚ '..rtp) 
+return false  
+end
+
+if text == 'رتبتي' then
+local rtp = Rutba(msg.sender_user_id_,msg.chat_id_)
+send(msg.chat_id_, msg.id_,' ⋆ رتـبتـك ↚ '..rtp)
 end
 
 if text == 'انا مين' and SudoBot(msg) then 
@@ -14441,7 +14447,7 @@ end
 if text == 'تعطيل اطردني' and Manager(msg) then  
 if not database:get(bot_id..'Cick:Me'..msg.chat_id_) then
 database:set(bot_id..'Cick:Me'..msg.chat_id_,true)  
-Text = '\n ⋆ تم تعطيل امر اطردني اترزع هن بقى مفيش خروج 😹'
+Text = '\n ⋆ تم تعطيل امر اطردني اترزع هن بقى مفيش خروج ??'
 else
 Text = '\n ⋆ بالتاكيد تم تعطيل امر اطردني مفيش خروج يولاد الكلب 😹'
 end
