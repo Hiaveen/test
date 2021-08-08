@@ -13809,20 +13809,10 @@ end
 end
 
 if text == 'تيست' then 
-local my_ph = database:get(bot_id.."my_GHoeq2:status"..msg.chat_id_)
-if not my_ph then
-send(msg.chat_id_, msg.id_,"  ") 
-return false  
-end
 send(msg.chat_id_,msg.id_, ' شغال بس صياح ي مهزق 😹🏃‍♀') 
 return false
 end
 if text == 'بوتي' then 
-local my_ph = database:get(bot_id.."my_GHoeq2:status"..msg.chat_id_)
-if not my_ph then
-send(msg.chat_id_, msg.id_,"  ") 
-return false  
-end
 send(msg.chat_id_,msg.id_, ' قلب بوتكك من جواا 🥺♥️ ') 
 return false
 end
@@ -13870,13 +13860,9 @@ end
 if text == 'صباح الخير' then 
 send(msg.chat_id_,msg.id_, ' صباحووو فل ❤️😂 ') 
 return false
+end
 
 if text == 'سيفي' or text == 'سي في' then 
-local my_ph = database:get(bot_id.."my_GHoeq2:status"..msg.chat_id_)
-if not my_ph then
-send(msg.chat_id_, msg.id_,"  ") 
-return false  
-end
 send(msg.chat_id_,msg.id_, ' كفايه شقط يبني سيب حاجه لغيرك 😹👅 ') 
 return false
 end
