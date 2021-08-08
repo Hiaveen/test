@@ -13456,6 +13456,7 @@ if not my_ph then
 send(msg.chat_id_, msg.id_,' ⋆ رتـبتـك ↚ '..rtp) 
 return false  
 end
+end
 
 if text == 'انا مين' and SudoBot(msg) then 
 send(msg.chat_id_,msg.id_,'⋆ انت مطوري حبيبي..🥺♥️')
