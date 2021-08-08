@@ -13450,8 +13450,9 @@ end
 end
 tdcli_function ({ID = "SearchPublicChat",username_ = username}, start_function, nil)
 end
+
 if text == "رتبتي"  then
-local rtp = Rutba(msg.sender_user_id_,msg.chat_id_)
+local my_ph = database:get(bot_id.."my_photo:status"..msg.chat_id_)
 if not my_ph then
 send(msg.chat_id_, msg.id_,' ⋆ رتـبتـك ↚ '..rtp) 
 return false  
