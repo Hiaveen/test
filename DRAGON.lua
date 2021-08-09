@@ -12504,12 +12504,12 @@ database:del(bot_id.."Add:Rd:Sudo:File"..v)
 database:del(bot_id.."Add:Rd:Sudo:Audio"..v)
 database:del(bot_id..'List:Rd:Sudo')
 end
-send(msg.chat_id_, msg.id_," ⋆ تم مسح الردود العامه")
+send(msg.chat_id_, msg.id_," تم مسح الردود العامه")
 end
 
 if text == ("الردود العامه") and DevSoFi(msg) then 
 local list = database:smembers(bot_id..'List:Rd:Sudo')
-text = "\n ⋆ قائمة الردود العامه \n•════•| ՏΌႮᎡᏟᎬ ᏙᎥᏢ |•════•\n"
+text = "\n قائمة الردود العامه \n•════•| ՏΌႮᎡᏟᎬ ᏙᎥᏢ |•════•\n"
 for k,v in pairs(list) do
 if database:get(bot_id.."Add:Rd:Sudo:Gif"..v) then
 db = 'متحركه'
@@ -12528,17 +12528,17 @@ db = 'ملف'
 elseif database:get(bot_id.."Add:Rd:Sudo:Audio"..v) then
 db = 'اغنيه'
 end
-text = text..""..k.." >> ("..v..") ↚ {"..db.."}\n"
+text = text..""..k.." >> ↝ '..v..' ↜  ⇇↝ '..db..' ↜\n"
 end
 if #list == 0 then
-text = " ⋆ لا يوجد ردود للمطور"
+text = " لا يوجد ردود للمطور"
 end
 send(msg.chat_id_, msg.id_,'['..text..']')
 end
 if text or msg.content_.sticker_ or msg.content_.voice_ or msg.content_.animation_ or msg.content_.audio_ or msg.content_.document_ or msg.content_.photo_ or msg.content_.video_ then  
-local test = database:get(bot_id..'Text:Sudo:Bot「'..msg.sender_user_id_..'」:'..msg.chat_id_)
-if database:get(bot_id..'Set:Rd「'..msg.sender_user_id_..'」:'..msg.chat_id_) == 'true1' then
-database:del(bot_id..'Set:Rd「'..msg.sender_user_id_..'」:'..msg.chat_id_)
+local test = database:get(bot_id..'Text:Sudo:Bot↝'..msg.sender_user_id_..'↜:'..msg.chat_id_)
+if database:get(bot_id..'Set:Rd↝'..msg.sender_user_id_..'↜:'..msg.chat_id_) == 'true1' then
+database:del(bot_id..'Set:Rd↝'..msg.sender_user_id_..'↜:'..msg.chat_id_)
 if msg.content_.sticker_ then   
 database:set(bot_id.."Add:Rd:Sudo:stekr"..test, msg.content_.sticker_.sticker_.persistent_id_)  
 end   
@@ -12579,56 +12579,56 @@ photo_in_group = msg.content_.photo_.sizes_[3].photo_.persistent_id_
 end
 database:set(bot_id.."Add:Rd:Sudo:Photo"..test, photo_in_group)  
 end
-send(msg.chat_id_, msg.id_,' ⋆ تم حفظ الرد')
+send(msg.chat_id_, msg.id_,' تم حفظ الرد')
 return false  
 end  
 end
 if text and text:match("^(.*)$") then
-if database:get(bot_id..'Set:Rd「'..msg.sender_user_id_..'」:'..msg.chat_id_) == 'true' then
-send(msg.chat_id_, msg.id_,' ⋆ ارسل الرد الذي تريد اضافته')
-database:set(bot_id..'Set:Rd「'..msg.sender_user_id_..'」:'..msg.chat_id_, 'true1')
-database:set(bot_id..'Text:Sudo:Bot「'..msg.sender_user_id_..'」:'..msg.chat_id_, text)
+if database:get(bot_id..'Set:Rd↝'..msg.sender_user_id_..'↜:'..msg.chat_id_) == 'true' then
+send(msg.chat_id_, msg.id_,' ارسل الرد الذي تريد اضافته')
+database:set(bot_id..'Set:Rd↝'..msg.sender_user_id_..'↜:'..msg.chat_id_, 'true1')
+database:set(bot_id..'Text:Sudo:Bot↝'..msg.sender_user_id_..'↜:'..msg.chat_id_, text)
 database:sadd(bot_id..'List:Rd:Sudo', text)
 return false end
 end
 if text and text:match("^(.*)$") then
-if database:get(bot_id..'Set:On「'..msg.sender_user_id_..'」:'..msg.chat_id_) == 'true' then
-send(msg.chat_id_, msg.id_,' ⋆ تم ازالة الرد العام')
+if database:get(bot_id..'Set:On↝'..msg.sender_user_id_..'↜:'..msg.chat_id_) == 'true' then
+send(msg.chat_id_, msg.id_,' تم ازالة الرد العام')
 list = {"Add:Rd:Sudo:Audio","Add:Rd:Sudo:File","Add:Rd:Sudo:Video","Add:Rd:Sudo:Photo","Add:Rd:Sudo:Text","Add:Rd:Sudo:stekr","Add:Rd:Sudo:vico","Add:Rd:Sudo:Gif"}
 for k,v in pairs(list) do
 database:del(bot_id..v..text)
 end
-database:del(bot_id..'Set:On「'..msg.sender_user_id_..'」:'..msg.chat_id_)
+database:del(bot_id..'Set:On↝'..msg.sender_user_id_..'↜:'..msg.chat_id_)
 database:srem(bot_id..'List:Rd:Sudo', text)
 return false
 end
 end
 if text == 'اضف رد عام' and DevSoFi(msg) then 
 if AddChannel(msg.sender_user_id_) == false then
-local source_Laren = database:get(bot_id..'text:ch:user')
-if source_Laren then
-send(msg.chat_id_, msg.id_,'['..source_Laren..']')
+local textchuser = database:get(bot_id..'text:ch:user')
+if textchuser then
+send(msg.chat_id_, msg.id_,'['..textchuser..']')
 else
-send(msg.chat_id_, msg.id_,'    \n  ⋆ اشترك اولا بلقناه \n  ['..database:get(bot_id..'add:ch:username')..']')
+send(msg.chat_id_, msg.id_,' لا تستطيع استخدام البوت \n 🍀  يرجى الاشتراك بالقناه اولا \n 🍀  اشترك هنا ['..database:get(bot_id..'add:ch:username')..']')
 end
 return false
 end
-send(msg.chat_id_, msg.id_,' ⋆ ارسل الكلمه تريد اضافتها')
-database:set(bot_id..'Set:Rd「'..msg.sender_user_id_..'」:'..msg.chat_id_,true)
+send(msg.chat_id_, msg.id_,' ارسل الكلمه تريد اضافتها')
+database:set(bot_id..'Set:Rd↝'..msg.sender_user_id_..'↜:'..msg.chat_id_,true)
 return false 
 end
 if text == 'مسح رد عام' and DevSoFi(msg) then 
 if AddChannel(msg.sender_user_id_) == false then
-local source_Laren = database:get(bot_id..'text:ch:user')
-if source_Laren then
-send(msg.chat_id_, msg.id_,'['..source_Laren..']')
+local textchuser = database:get(bot_id..'text:ch:user')
+if textchuser then
+send(msg.chat_id_, msg.id_,'['..textchuser..']')
 else
-send(msg.chat_id_, msg.id_,'    \n  ⋆ اشترك اولا بلقناه \n  ['..database:get(bot_id..'add:ch:username')..']')
+send(msg.chat_id_, msg.id_,'  لا تستطيع استخدام البوت \n 🍀  يرجى الاشتراك بالقناه اولا \n 🍀  اشترك هنا ['..database:get(bot_id..'add:ch:username')..']')
 end
 return false
 end
-send(msg.chat_id_, msg.id_,' ⋆ ارسل الكلمه تريد مسحها')
-database:set(bot_id..'Set:On「'..msg.sender_user_id_..'」:'..msg.chat_id_,true)
+send(msg.chat_id_, msg.id_,'  ارسل الكلمه تريد مسحها')
+database:set(bot_id..'Set:On↝'..msg.sender_user_id_..'↜:'..msg.chat_id_,true)
 return false 
 end
 if text and not database:get(bot_id..'Reply:Sudo'..msg.chat_id_) then
@@ -12644,7 +12644,7 @@ local audio = database:get(bot_id.."Add:Rd:Sudo:Audio"..text)
 ------------------------------------------------------------------------
 if text and text:match("^(.*)$") then
 if database:get(bot_id.."botss:DRAGON:Set:Rd"..msg.sender_user_id_..":"..msg.chat_id_) == "true" then
-send(msg.chat_id_, msg.id_, '\n ⋆ ارسل الكلمه تريد اضافتها')
+send(msg.chat_id_, msg.id_, '\n  ارسل الكلمه تريد اضافتها')
 database:set(bot_id.."botss:DRAGON:Set:Rd"..msg.sender_user_id_..":"..msg.chat_id_, "true1")
 database:set(bot_id.."botss:DRAGON:Text:Sudo:Bot"..msg.sender_user_id_..":"..msg.chat_id_, text)
 database:sadd(bot_id.."botss:DRAGON:List:Rd:Sudo", text)
@@ -12652,7 +12652,7 @@ return false end
 end
 if text and text:match("^(.*)$") then
 if database:get(bot_id.."botss:DRAGON:Set:On"..msg.sender_user_id_..":"..msg.chat_id_) == "true" then
-send(msg.chat_id_, msg.id_,"⋆ تم مسح الرد من ردود المتعدده")
+send(msg.chat_id_, msg.id_,"  تم مسح الرد من ردود المتعدده")
 database:del(bot_id..'botss:DRAGON:Add:Rd:Sudo:Text'..text)
 database:del(bot_id..'botss:DRAGON:Add:Rd:Sudo:Text1'..text)
 database:del(bot_id..'botss:DRAGON:Add:Rd:Sudo:Text2'..text)
@@ -12663,11 +12663,11 @@ end
 end
 if text == ("مسح الردود المتعدده") and CoSu(msg) then
 if AddChannel(msg.sender_user_id_) == false then
-local source_Laren = database:get(bot_id..'text:ch:user')
-if source_Laren then
-send(msg.chat_id_, msg.id_,'['..source_Laren..']')
+local textchuser = database:get(bot_id..'text:ch:user')
+if textchuser then
+send(msg.chat_id_, msg.id_,'['..textchuser..']')
 else
-send(msg.chat_id_, msg.id_,'    \n  ⋆ اشترك اولا بلقناه \n  ['..database:get(bot_id..'add:ch:username')..']')
+send(msg.chat_id_, msg.id_,'  لا تستطيع استخدام البوت \n 🍀  يرجى الاشتراك بالقناه اولا \n 🍀  اشترك هنا ['..database:get(bot_id..'add:ch:username')..']')
 end
 return false
 end
@@ -12678,7 +12678,7 @@ database:del(bot_id.."botss:DRAGON:Add:Rd:Sudo:Text1"..v)
 database:del(bot_id.."botss:DRAGON:Add:Rd:Sudo:Text2"..v)   
 database:del(bot_id.."botss:DRAGON:List:Rd:Sudo")
 end
-send(msg.chat_id_, msg.id_,"⋆تم مسح ردود المتعدده")
+send(msg.chat_id_, msg.id_," تم مسح ردود المتعدده")
 end
 ------------------------------------------------------------------------
 if text1 then 
@@ -12728,12 +12728,12 @@ database:del(bot_id.."Add:Rd:Manager:File"..v..msg.chat_id_)
 database:del(bot_id.."Add:Rd:Manager:Audio"..v..msg.chat_id_)
 database:del(bot_id..'List:Manager'..msg.chat_id_)
 end
-send(msg.chat_id_, msg.id_," ⋆ تم مسح الردود")
+send(msg.chat_id_, msg.id_,"  تم مسح الردود")
 end
 
 if text == ("الردود") and Manager(msg) then
 local list = database:smembers(bot_id..'List:Manager'..msg.chat_id_..'')
-text = " ⋆ قائمه الردود \n•════•| ՏΌႮᎡᏟᎬ ᏙᎥᏢ |•════•\n"
+text = " قائمه الردود \n•════•| ՏΌႮᎡᏟᎬ ᏙᎥᏢ |•════•\n"
 for k,v in pairs(list) do
 if database:get(bot_id.."Add:Rd:Manager:Gif"..v..msg.chat_id_) then
 db = 'متحركه'
@@ -12752,17 +12752,17 @@ db = 'ملف'
 elseif database:get(bot_id.."Add:Rd:Manager:Audio"..v..msg.chat_id_) then
 db = 'اغنيه'
 end
-text = text..""..k..">> ("..v..") ↚ {"..db.."}\n"
+text = text..""..k..">> ↝ '..v..' ↜  ⇇↝ '..db..' ↜\n"
 end
 if #list == 0 then
-text = " ⋆ لا يوجد ردود للمدير"
+text = " لا يوجد ردود للمدير"
 end
 send(msg.chat_id_, msg.id_,'['..text..']')
 end
 if text or msg.content_.sticker_ or msg.content_.voice_ or msg.content_.animation_ or msg.content_.audio_ or msg.content_.document_ or msg.content_.photo_ or msg.content_.video_ then  
-local test = database:get(bot_id..'Text:Manager「'..msg.sender_user_id_..'」:'..msg.chat_id_..'')
-if database:get(bot_id..'Set:Manager:rd「'..msg.sender_user_id_..'」:'..msg.chat_id_) == 'true1' then
-database:del(bot_id..'Set:Manager:rd「'..msg.sender_user_id_..'」:'..msg.chat_id_)
+local test = database:get(bot_id..'Text:Manager↝'..msg.sender_user_id_..'↜:'..msg.chat_id_..'')
+if database:get(bot_id..'Set:Manager:rd↝'..msg.sender_user_id_..'↜:'..msg.chat_id_) == 'true1' then
+database:del(bot_id..'Set:Manager:rd↝'..msg.sender_user_id_..'↜:'..msg.chat_id_)
 if msg.content_.sticker_ then   
 database:set(bot_id.."Add:Rd:Manager:Stekrs"..test..msg.chat_id_, msg.content_.sticker_.sticker_.persistent_id_)  
 end   
@@ -12803,15 +12803,15 @@ photo_in_group = msg.content_.photo_.sizes_[3].photo_.persistent_id_
 end
 database:set(bot_id.."Add:Rd:Manager:Photo"..test..msg.chat_id_, photo_in_group)  
 end
-send(msg.chat_id_, msg.id_,' ⋆ تم حفظ الرد')
+send(msg.chat_id_, msg.id_,'  تم حفظ الرد')
 return false  
 end  
 end
 if text and text:match("^(.*)$") then
-if database:get(bot_id..'Set:Manager:rd「'..msg.sender_user_id_..'」:'..msg.chat_id_) == 'true' then
-send(msg.chat_id_, msg.id_,' ⋆ ارسل الرد الذي تريد اضافته')
-database:set(bot_id..'Set:Manager:rd「'..msg.sender_user_id_..'」:'..msg.chat_id_,'true1')
-database:set(bot_id..'Text:Manager「'..msg.sender_user_id_..'」:'..msg.chat_id_, text)
+if database:get(bot_id..'Set:Manager:rd↝'..msg.sender_user_id_..'↜:'..msg.chat_id_) == 'true' then
+send(msg.chat_id_, msg.id_,'  ارسل الرد الذي تريد اضافته')
+database:set(bot_id..'Set:Manager:rd↝'..msg.sender_user_id_..'↜:'..msg.chat_id_,'true1')
+database:set(bot_id..'Text:Manager↝'..msg.sender_user_id_..'↜:'..msg.chat_id_, text)
 database:del(bot_id.."Add:Rd:Manager:Gif"..text..msg.chat_id_)   
 database:del(bot_id.."Add:Rd:Manager:Vico"..text..msg.chat_id_)   
 database:del(bot_id.."Add:Rd:Manager:Stekrs"..text..msg.chat_id_)     
@@ -12824,8 +12824,8 @@ database:sadd(bot_id..'List:Manager'..msg.chat_id_..'', text)
 return false end
 end
 if text and text:match("^(.*)$") then
-if database:get(bot_id..'Set:Manager:rd「'..msg.sender_user_id_..'」:'..msg.chat_id_..'') == 'true2' then
-send(msg.chat_id_, msg.id_,' ⋆ تم ازالة الرد ')
+if database:get(bot_id..'Set:Manager:rd↝'..msg.sender_user_id_..'↜:'..msg.chat_id_..'') == 'true2' then
+send(msg.chat_id_, msg.id_,'  تم ازالة الرد ')
 database:del(bot_id.."Add:Rd:Manager:Gif"..text..msg.chat_id_)   
 database:del(bot_id.."Add:Rd:Manager:Vico"..text..msg.chat_id_)   
 database:del(bot_id.."Add:Rd:Manager:Stekrs"..text..msg.chat_id_)     
@@ -12834,37 +12834,37 @@ database:del(bot_id.."Add:Rd:Manager:Photo"..text..msg.chat_id_)
 database:del(bot_id.."Add:Rd:Manager:Video"..text..msg.chat_id_)
 database:del(bot_id.."Add:Rd:Manager:File"..text..msg.chat_id_)
 database:del(bot_id.."Add:Rd:Manager:Audio"..text..msg.chat_id_)
-database:del(bot_id..'Set:Manager:rd「'..msg.sender_user_id_..'」:'..msg.chat_id_)
+database:del(bot_id..'Set:Manager:rd↝'..msg.sender_user_id_..'↜:'..msg.chat_id_)
 database:srem(bot_id..'List:Manager'..msg.chat_id_..'', text)
 return false
 end
 end
 if text == 'اضف رد' and Manager(msg) then
 if AddChannel(msg.sender_user_id_) == false then
-local source_Laren = database:get(bot_id..'text:ch:user')
-if source_Laren then
-send(msg.chat_id_, msg.id_,'['..source_Laren..']')
+local textchuser = database:get(bot_id..'text:ch:user')
+if textchuser then
+send(msg.chat_id_, msg.id_,'['..textchuser..']')
 else
-send(msg.chat_id_, msg.id_,'    \n  ⋆ اشترك اولا بلقناه \n  ['..database:get(bot_id..'add:ch:username')..']')
+send(msg.chat_id_, msg.id_,' لا تستطيع استخدام البوت \n 🍀  يرجى الاشتراك بالقناه اولا \n 🍀  اشترك هنا ['..database:get(bot_id..'add:ch:username')..']')
 end
 return false
 end
-send(msg.chat_id_, msg.id_,' ⋆ ارسل الكلمه التي تريد اضافتها')
-database:set(bot_id..'Set:Manager:rd「'..msg.sender_user_id_..'」:'..msg.chat_id_,true)
+send(msg.chat_id_, msg.id_,' ارسل الكلمه التي تريد اضافتها')
+database:set(bot_id..'Set:Manager:rd↝'..msg.sender_user_id_..'↜:'..msg.chat_id_,true)
 return false 
 end
 if text == 'مسح رد' and Manager(msg) then
 if AddChannel(msg.sender_user_id_) == false then
-local source_Laren = database:get(bot_id..'text:ch:user')
-if source_Laren then
-send(msg.chat_id_, msg.id_,'['..source_Laren..']')
+local textchuser = database:get(bot_id..'text:ch:user')
+if textchuser then
+send(msg.chat_id_, msg.id_,'['..textchuser..']')
 else
-send(msg.chat_id_, msg.id_,'    \n  ⋆ اشترك اولا بلقناه \n  ['..database:get(bot_id..'add:ch:username')..']')
+send(msg.chat_id_, msg.id_,' لا تستطيع استخدام البوت \n 🍀  يرجى الاشتراك بالقناه اولا \n 🍀  اشترك هنا ['..database:get(bot_id..'add:ch:username')..']')
 end
 return false
 end
-send(msg.chat_id_, msg.id_,' ⋆ ارسل الكلمه التي تريد مسحها')
-database:set(bot_id..'Set:Manager:rd「'..msg.sender_user_id_..'」:'..msg.chat_id_,'true2')
+send(msg.chat_id_, msg.id_,' ارسل الكلمه التي تريد مسحها')
+database:set(bot_id..'Set:Manager:rd↝'..msg.sender_user_id_..'↜:'..msg.chat_id_,'true2')
 return false 
 end
 if text and not database:get(bot_id..'Reply:Manager'..msg.chat_id_) then
@@ -13451,15 +13451,256 @@ end
 tdcli_function ({ID = "SearchPublicChat",username_ = username}, start_function, nil)
 end
 
-if text == 'رتبتي' then
-local rtp = Rutba(msg.sender_user_id_,msg.chat_id_)
-local function getpro(extra, result, success)
-if result.photos_[0] then
-sendPhoto(msg.chat_id_, msg.id_, 0, 1, nil, result.photos_[0].sizes_[1].photo_.persistent_id_," ~ رتبتك "..Rutba(msg.sender_user_id_,msg.chat_id_).." 💞🥺 ", msg.id_, msg.id_, "md")
-else
-send(msg.chat_id_, msg.id_,'لا تمتلك صوره في حسابك', 1, 'md')
-  end end
-tdcli_function ({ ID = "GetUserProfilePhotos", user_id_ = msg.sender_user_id_, offset_ = 0, limit_ = 1 }, getpro, nil)
+if text == "رتبتي" then
+local msg_id = msg.id_/2097152/0.5  
+local textt = ' ~ رتبتك '..Rutba(msg.sender_user_id_,msg.chat_id_)
+keyboard = {} 
+keyboard.inline_keyboard = {
+{
+{text = 'الـمـطـور', url="http://t.me/"..sudos.UserName},
+},
+{
+{text = 'اضف البوت الي مجموعتك ' ,url="t.me/"..dofile("./Bkar.lua").botUserName.."?startgroup=start"},
+},
+}
+local function getpro(extra, result, success) 
+if result.photos_[0] then 
+https.request("https://api.telegram.org/bot"..token..'/sendPhoto?chat_id=' .. msg.chat_id_ .. '&photo='..result.photos_[0].sizes_[1].photo_.persistent_id_..'&caption=' .. URL.escape(textt).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
+else 
+send(msg.chat_id_, msg.id_,textt, 1, 'md') 
+end 
+end 
+tdcli_function ({ ID = "GetUserProfilePhotos", user_id_ = msg.sender_user_id_, offset_ = 0, limit_ = 1 }, getpro, nil) 
+end
+
+if text == 'انا مين' and SudoBot(msg) then
+local msg_id = msg.id_/2097152/0.5  
+local textt = '[⋆ انت مطوري حبيبي..🥺♥️](t.me/source_Laren)'
+keyboard = {} 
+keyboard.inline_keyboard = {
+{
+{text = 'الـمـطـور', url="http://t.me/"..sudos.UserName},
+},
+{
+{text = 'اضف البوت الي مجموعتك ' ,url="t.me/"..dofile("./Bkar.lua").botUserName.."?startgroup=start"},
+},
+}
+local function getpro(extra, result, success) 
+if result.photos_[0] then 
+https.request("https://api.telegram.org/bot"..token..'/sendPhoto?chat_id=' .. msg.chat_id_ .. '&photo='..result.photos_[0].sizes_[1].photo_.persistent_id_..'&caption=' .. URL.escape(textt).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
+else 
+send(msg.chat_id_, msg.id_,textt, 1, 'md') 
+end 
+end 
+tdcli_function ({ ID = "GetUserProfilePhotos", user_id_ = msg.sender_user_id_, offset_ = 0, limit_ = 1 }, getpro, nil) 
+return false
+end
+
+if text == 'انا مين' and DevSoFi(msg) then 
+local msg_id = msg.id_/2097152/0.5  
+local textt = '[⋆ انت مطوري الثاني يحياتي..🙂♥️](t.me/source_Laren)'
+keyboard = {} 
+keyboard.inline_keyboard = {
+{
+{text = 'الـمـطـور', url="http://t.me/"..sudos.UserName},
+},
+{
+{text = 'اضف البوت الي مجموعتك ' ,url="t.me/"..dofile("./Bkar.lua").botUserName.."?startgroup=start"},
+},
+}
+local function getpro(extra, result, success) 
+if result.photos_[0] then 
+https.request("https://api.telegram.org/bot"..token..'/sendPhoto?chat_id=' .. msg.chat_id_ .. '&photo='..result.photos_[0].sizes_[1].photo_.persistent_id_..'&caption=' .. URL.escape(textt).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
+else 
+send(msg.chat_id_, msg.id_,textt, 1, 'md') 
+end 
+end 
+tdcli_function ({ ID = "GetUserProfilePhotos", user_id_ = msg.sender_user_id_, offset_ = 0, limit_ = 1 }, getpro, nil) 
+return false
+end
+
+if text == 'انا مين' and Sudo(msg) then 
+local msg_id = msg.id_/2097152/0.5  
+local textt = '[⋆ انت مطور يقلبيتي..🌚💘](t.me/source_Laren)'
+keyboard = {} 
+keyboard.inline_keyboard = {
+{
+{text = 'الـمـطـور', url="http://t.me/"..sudos.UserName},
+},
+{
+{text = 'اضف البوت الي مجموعتك ' ,url="t.me/"..dofile("./Bkar.lua").botUserName.."?startgroup=start"},
+},
+}
+local function getpro(extra, result, success) 
+if result.photos_[0] then 
+https.request("https://api.telegram.org/bot"..token..'/sendPhoto?chat_id=' .. msg.chat_id_ .. '&photo='..result.photos_[0].sizes_[1].photo_.persistent_id_..'&caption=' .. URL.escape(textt).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
+else 
+send(msg.chat_id_, msg.id_,textt, 1, 'md') 
+end 
+end 
+tdcli_function ({ ID = "GetUserProfilePhotos", user_id_ = msg.sender_user_id_, offset_ = 0, limit_ = 1 }, getpro, nil) 
+return false
+end
+
+if text == 'انا مين' and CoSu(msg) then 
+local msg_id = msg.id_/2097152/0.5  
+local textt = '[⋆ نت المالك ونملكك..🥺💘](t.me/source_Laren)'
+keyboard = {} 
+keyboard.inline_keyboard = {
+{
+{text = 'الـمـطـور', url="http://t.me/"..sudos.UserName},
+},
+{
+{text = 'اضف البوت الي مجموعتك ' ,url="t.me/"..dofile("./Bkar.lua").botUserName.."?startgroup=start"},
+},
+}
+local function getpro(extra, result, success) 
+if result.photos_[0] then 
+https.request("https://api.telegram.org/bot"..token..'/sendPhoto?chat_id=' .. msg.chat_id_ .. '&photo='..result.photos_[0].sizes_[1].photo_.persistent_id_..'&caption=' .. URL.escape(textt).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
+else 
+send(msg.chat_id_, msg.id_,textt, 1, 'md') 
+end 
+end 
+tdcli_function ({ ID = "GetUserProfilePhotos", user_id_ = msg.sender_user_id_, offset_ = 0, limit_ = 1 }, getpro, nil) 
+return false
+end
+
+if text == 'انا مين' and Constructor(msg) then 
+local msg_id = msg.id_/2097152/0.5  
+local textt = '[⋆ انت المنشئ ياروحي ..🥺💘](t.me/source_Laren)'
+keyboard = {} 
+keyboard.inline_keyboard = {
+{
+{text = 'الـمـطـور', url="http://t.me/"..sudos.UserName},
+},
+{
+{text = 'اضف البوت الي مجموعتك ' ,url="t.me/"..dofile("./Bkar.lua").botUserName.."?startgroup=start"},
+},
+}
+local function getpro(extra, result, success) 
+if result.photos_[0] then 
+https.request("https://api.telegram.org/bot"..token..'/sendPhoto?chat_id=' .. msg.chat_id_ .. '&photo='..result.photos_[0].sizes_[1].photo_.persistent_id_..'&caption=' .. URL.escape(textt).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
+else 
+send(msg.chat_id_, msg.id_,textt, 1, 'md') 
+end 
+end 
+tdcli_function ({ ID = "GetUserProfilePhotos", user_id_ = msg.sender_user_id_, offset_ = 0, limit_ = 1 }, getpro, nil) 
+return false
+end
+
+if text == 'انا مين' and BasicConstructor(msg) then 
+local msg_id = msg.id_/2097152/0.5  
+local textt = '[ ⋆ انت المنشئ الاساسي ياسطا..😹💘](t.me/source_Laren)'
+keyboard = {} 
+keyboard.inline_keyboard = {
+{
+{text = 'الـمـطـور', url="http://t.me/"..sudos.UserName},
+},
+{
+{text = 'اضف البوت الي مجموعتك ' ,url="t.me/"..dofile("./Bkar.lua").botUserName.."?startgroup=start"},
+},
+}
+local function getpro(extra, result, success) 
+if result.photos_[0] then 
+https.request("https://api.telegram.org/bot"..token..'/sendPhoto?chat_id=' .. msg.chat_id_ .. '&photo='..result.photos_[0].sizes_[1].photo_.persistent_id_..'&caption=' .. URL.escape(textt).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
+else 
+send(msg.chat_id_, msg.id_,textt, 1, 'md') 
+end 
+end 
+tdcli_function ({ ID = "GetUserProfilePhotos", user_id_ = msg.sender_user_id_, offset_ = 0, limit_ = 1 }, getpro, nil) 
+return false
+end
+
+if text == 'انا مين' and Manager(msg) then 
+local msg_id = msg.id_/2097152/0.5  
+local textt = '[ ⋆ نت مدير واحلا مدير..🥺♥️](t.me/source_Laren)'
+keyboard = {} 
+keyboard.inline_keyboard = {
+{
+{text = 'الـمـطـور', url="http://t.me/"..sudos.UserName},
+},
+{
+{text = 'اضف البوت الي مجموعتك ' ,url="t.me/"..dofile("./Bkar.lua").botUserName.."?startgroup=start"},
+},
+}
+local function getpro(extra, result, success) 
+if result.photos_[0] then 
+https.request("https://api.telegram.org/bot"..token..'/sendPhoto?chat_id=' .. msg.chat_id_ .. '&photo='..result.photos_[0].sizes_[1].photo_.persistent_id_..'&caption=' .. URL.escape(textt).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
+else 
+send(msg.chat_id_, msg.id_,textt, 1, 'md') 
+end 
+end 
+tdcli_function ({ ID = "GetUserProfilePhotos", user_id_ = msg.sender_user_id_, offset_ = 0, limit_ = 1 }, getpro, nil) 
+return false
+end
+
+if text == 'انا مين' and Mod(msg) then 
+local msg_id = msg.id_/2097152/0.5  
+local textt = '[⋆ انت ادمن الله يسهلو..😹💘 ](t.me/source_Laren)'
+keyboard = {} 
+keyboard.inline_keyboard = {
+{
+{text = 'الـمـطـور', url="http://t.me/"..sudos.UserName},
+},
+{
+{text = 'اضف البوت الي مجموعتك ' ,url="t.me/"..dofile("./Bkar.lua").botUserName.."?startgroup=start"},
+},
+}
+local function getpro(extra, result, success) 
+if result.photos_[0] then 
+https.request("https://api.telegram.org/bot"..token..'/sendPhoto?chat_id=' .. msg.chat_id_ .. '&photo='..result.photos_[0].sizes_[1].photo_.persistent_id_..'&caption=' .. URL.escape(textt).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
+else 
+send(msg.chat_id_, msg.id_,textt, 1, 'md') 
+end 
+end 
+tdcli_function ({ ID = "GetUserProfilePhotos", user_id_ = msg.sender_user_id_, offset_ = 0, limit_ = 1 }, getpro, nil) 
+return false
+end
+
+if text == 'انا مين' and Special(msg) then 
+local msg_id = msg.id_/2097152/0.5  
+local textt = '[ ⋆ نت عضو مميز يعني متميز..😹💘 ](t.me/source_Laren)'
+keyboard = {} 
+keyboard.inline_keyboard = {
+{
+{text = 'الـمـطـور', url="http://t.me/"..sudos.UserName},
+},
+{
+{text = 'اضف البوت الي مجموعتك ' ,url="t.me/"..dofile("./Bkar.lua").botUserName.."?startgroup=start"},
+},
+}
+local function getpro(extra, result, success) 
+if result.photos_[0] then 
+https.request("https://api.telegram.org/bot"..token..'/sendPhoto?chat_id=' .. msg.chat_id_ .. '&photo='..result.photos_[0].sizes_[1].photo_.persistent_id_..'&caption=' .. URL.escape(textt).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
+else 
+send(msg.chat_id_, msg.id_,textt, 1, 'md') 
+end 
+end 
+tdcli_function ({ ID = "GetUserProfilePhotos", user_id_ = msg.sender_user_id_, offset_ = 0, limit_ = 1 }, getpro, nil) 
+return false
+end
+
+if text == 'انا مين' then
+local msg_id = msg.id_/2097152/0.5  
+local textt = '[ ⋆ انت عضو قمر هنا..😹💘 ](t.me/source_Laren)'
+keyboard = {} 
+keyboard.inline_keyboard = {
+{
+{text = 'الـمـطـور', url="http://t.me/"..sudos.UserName},
+},
+{
+{text = 'اضف البوت الي مجموعتك ' ,url="t.me/"..dofile("./Bkar.lua").botUserName.."?startgroup=start"},
+},
+}
+local function getpro(extra, result, success) 
+if result.photos_[0] then 
+https.request("https://api.telegram.org/bot"..token..'/sendPhoto?chat_id=' .. msg.chat_id_ .. '&photo='..result.photos_[0].sizes_[1].photo_.persistent_id_..'&caption=' .. URL.escape(textt).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
+else 
+send(msg.chat_id_, msg.id_,textt, 1, 'md') 
+end 
+end 
+tdcli_function ({ ID = "GetUserProfilePhotos", user_id_ = msg.sender_user_id_, offset_ = 0, limit_ = 1 }, getpro, nil) 
+return false
 end
 
 if text == 'انا مين' and SudoBot(msg) then 
@@ -13867,10 +14108,7 @@ send(msg.chat_id_,msg.id_, ' كفايه شقط يبني سيب حاجه لغير
 return false
 end
 
-if text == 'لا' then
-local msg_id = msg.id_/2097152/0.5
-https.request("https://api.telegram.org/bot"..token..'/sendsticker?chat_id=' .. msg.chat_id_ .. '&sticker=https://t.me/V_I_K_I_N_G_2/34/14&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
-end
+
 
 if text == ""..(database:get(bot_id..'Name:Bot') or 'V I P').."" then  
 Namebot = (database:get(bot_id..'Name:Bot') or 'V I P')
