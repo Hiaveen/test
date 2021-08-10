@@ -2840,51 +2840,6 @@ local msg_id = msg.id_/2097152/0.5
 https.request("https://api.telegram.org/bot"..token..'/sendMessage?chat_id=' .. msg.chat_id_ .. '&text=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
 end
 
-if text == "الاضافات" and Constructor(msg) then
-local Xx = database:get(bot_id.."AL:Sre:stats") or "لم يتم التحديد"
-TextAdd = [[
-📯┇ اهلا بك عزيزي 💞
-📯┇ اوامر الاضافات كتالي⟱
-ٴ━  ━ ━ ━ ━ ━ ━ ━ ━
-📪┇ كتم الاسماء
-1- كتم اسم +(اسم)
-2- الغاء كتم اسم +(اسم)
-3- الاسماء المكتومه
-4- مسح الاسماء المكتومه
-5- تفعيل كتم الاسم
-6- تعطيل كتم الاسم
-ٴ━  ━ ━ ━ ━ ━ ━ ━ ━
-📋┇ وضع توحيد
-1- وضع توحيد +(التوحيد)
-2- تعين عدد الكتم+(العدد)
-3- التوحيد
-4- تفعيل التوحيد
-5- تعطيل التوحيد 
-ٴ━  ━ ━ ━ ━ ━ ━ ━ ━
-📌┇ اهلا بك عزيزي 💞
-📌┇ اوامر التنبيه كتالي⟱
-ٴ━  ━ ━ ━ ━ ━ ━ ━ ━
-📳┇ تنبيه الاسماء 💗
-1- تفعيل تنبيه الاسماء 
-2- تعطيل تنبيه الاسماء
-🆔┇ تنبيه المعرف 💗
-1- تفعيل تنبيه المعرف
-2- تعطيل تنبيه المعرف
-🏞┇ تنبيه الصور 💗
-1- تفعيل تنبيه الصور 
-2- تعطيل تنبيه الصور 
-ٴ━  ━ ━ ━ ━ ━ ━ ━ ━ ━
-[🔥🌐 𝐂𝐡𝐚𝐚𝐧𝐞𝐥 𝐌𝐚𝐑𝐜𝐨𝐒 🦅](t.me/THE_M3RK)
-]]
-send(msg.chat_id_, msg.id_,(TextAdd)) 
-end
-function bnnaGet(user_id, cb)
-tdcli_function ({
-ID = "GetUser",
-user_id_ = user_id
-}, cb, nil)
-end
-
 if database:get(bot_id.."block:name:stats"..msg.chat_id_) == "open" then
 if text and text:match("^كتم اسم (.*)$") and Constructor(msg) and database:get(bot_id.."block:name:stats"..msg.chat_id_) == "open" then
 local BlNe = text:match("^كتم اسم (.*)$")
@@ -3010,11 +2965,11 @@ end
 if data.first_name_ then 
 if DRAGONChengName ~= data.first_name_ then 
 local Text = {
-  "جان خوش اسم يول 🐵😅",
-"ليش غيرته اسمك بس لا خانوك/ج🙊",
-"هذا الحلو غير اسمه 😉",
-"ها ولك/ج شو غيرت اسمك 😁",
-"لكفتك/ج تعال تعال ليش مغير اسمك ابو درب 😅",
+  "اسمك الجديد مش حلو بالمره🌝😂",
+"اسمك الجديد يخبل ضلعي بمت 😹 .",
+"الحلو ده لسه مغير اسمو 🤓 .",
+"ها غيرت اسمك لي انطق 🤔 .",
+"قفشتك قفشتك غيرت اسمك لي ها لي 😹😹💔.",
 }
 send(msg.chat_id_, msg.id_,Text[math.random(#Text)])
 end  
@@ -3039,20 +2994,19 @@ if data.id_ ~= bot_id then
 local DRAGONChengUserName = database:get(bot_id.."DRAGON:Cheng:UserName"..data.id_)
 if not data.username_ then 
 if DRAGONChengUserName then 
-send(msg.chat_id_, msg.id_, 1, "حذف معرفه خمطو بساع بساع  \n هاذه معرفه  : [@"..DRAGONChengUserName..']')
+send(msg.chat_id_, msg.id_, 1, "اقفش حذف معرفه اهو معرفه القديم وربنا يقوينا علي فعل الخير 🥺😹   \n هاذه معرفه  : [@"..MaRcoSChengUserName..']')
 database:del(bot_id.."DRAGON:Cheng:UserName"..data.id_) 
 end
 end
 if data.username_ then 
 if DRAGONChengUserName ~= data.username_ then 
 local Text = {
-'شكو غيرت معرفك شنو نشروك بقنوات فضايح😂🥺',
-"هاها شو غيرت معرفك بس لا هددتك/ج الحب",
-"شسالفه شو غيرت معرفك 😐🌝",
-"غير معرفه خمطو بساع بساع \n هاذه معرفه : @"..data.username_.."",
-'ها عار مو جان معرفك \n شكو غيرته ل @'..data.username_..' ',
-'ها يول شو مغير معرفك بيش مشتري يول', 
-"منور معرف جديد :  "..data.username_.."",
+'"يا تري القمر غير اليوزر لي 🤓😹",
+"هه مش هعرف انك غيرت اليوزر يعني🌝😹",
+"غير اليوزر القديم مبروك الجديد تعيش وتدوب😹💔 \ n اهو يوزره 😹❤️.  : @"..data.username_.."",
+'مبروك اليوزر الجديد😹♥️.  \n غيرتو بقا 😹♥️.  @'..data.username_..' ',
+'ها الود ده غير اليوزر عل فكره 🦦 . ', 
+"منور اليوزر الجديد 🦦.  :  "..data.username_.."",
 }
 send(msg.chat_id_, msg.id_,Text[math.random(#Text)])
 end  
@@ -3077,19 +3031,19 @@ if data.id_ ~= bot_id then
 local DRAGONChengPhoto = database:get(bot_id.."DRAGON:Cheng:Photo"..data.id_)
 if not data.profile_photo_ then 
 if DRAGONChengPhoto then 
-send(msg.chat_id_, msg.id_, "حذف كل صورة ابن الحلو عود صاير حزين 🍁😂")
+send(msg.chat_id_, msg.id_, "الود الهكر قد مسح كل الصور 😹😹💔. ")
 database:del(bot_id.."DRAGON:Cheng:Photo"..data.id_) 
 end
 end
 if data.profile_photo_.big_.persistent_id_ then 
 if DRAGONChengPhoto ~= data.profile_photo_.big_.persistent_id_ then 
 local Text = {
-  "شكو غيرت صورتك يلصاك 🙊😥",
-  "منور طالع حلو ع صوره جديده 🙈🤭",
-  "ها يول شو غيرت صورتك😍😂",
-  "شكو غيرت صورتك شنو قطيت وحده جديده 😹😹🌚",
-  "شو غيرت صورتك شنو تعاركت ويه الحب ؟😹🌞",
-  "شكو غيرت الصوره شسالفه ؟؟ 🤔🌞",
+"الود الهكر غير صورتو الي عفنت 😹💔. ",
+  "لا حلوه الصوره الجديده 🙂😹",
+  "صورتك مش حلوه بالمره 🙄😹",
+  "لي غيرت صورتك شنو شقط وحده جديده 😹😹🌝",
+  "شو غيرت صورتك شنو تعاركت مع الحب ؟ 😂",
+  "ميين غير صورتو ناو 😹♥️. ",
 }
 send(msg.chat_id_, msg.id_,Text[math.random(#Text)])
 end  
@@ -14068,155 +14022,466 @@ send(msg.chat_id_,msg.id_, ' كفايه شقط يبني سيب حاجه لغير
 return false
 end
 
-if text == 'هيهي' then
+ if text == 'هسكت' then
 local Text = [[
 ]]
 keyboard = {} 
 keyboard.inline_keyboard = {
-{{text = '•–⁨ ࿈『⌯﮼ＶＩＰ ﮼⌯』࿈⁩ –•', url="t.me/laren_aoamer/55"}},
+{{text = '•–⁨ ࿈『⌯﮼ＶＩＰ ﮼⌯』࿈⁩ –•', url="t.me/source_Laren"}},
 }
 local msg_id = msg.id_/2097152/0.5
-https.request("https://api.telegram.org/bot"..token..'/sendvideo?chat_id=' .. msg.chat_id_ .. '&video=https://t.me/comxnxp/18&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
+https.request("https://api.telegram.org/bot"..token..'/sendvideo?chat_id=' .. msg.chat_id_ .. '&video=https://t.me/laren_aoamer/240&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
 end
-if text == '🙂🙂' then
+
+if text == 'بصو' or text == 'بص' or text == 'بصي' then
 local Text = [[
 ]]
 keyboard = {} 
 keyboard.inline_keyboard = {
-{{text = ' •–⁨ ࿈『⌯﮼ＶＩＰ ﮼⌯』࿈⁩ –•', url="t.me/laren_aoamer/60"}},
+{{text = '•–⁨ ࿈『⌯﮼ＶＩＰ ﮼⌯』࿈⁩ –•', url="t.me/source_Laren"}},
 }
 local msg_id = msg.id_/2097152/0.5
-https.request("https://api.telegram.org/bot"..token..'/sendsticker?chat_id=' .. msg.chat_id_ .. '&sticker=https://t.me/comxnxp/20&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
+https.request("https://api.telegram.org/bot"..token..'/sendvideo?chat_id=' .. msg.chat_id_ .. '&video=https://t.me/laren_aoamer/242&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
 end
-if text == 'انا' then
+
+if text == 'انتو مين' or text == 'انت مين' or text == 'انتا مين' then
 local Text = [[
 ]]
 keyboard = {} 
 keyboard.inline_keyboard = {
-{{text = ' •–⁨ ࿈『⌯﮼ＶＩＰ ﮼⌯』࿈⁩ –•', url="t.me/laren_aoamer/62"}},
+{{text = '•–⁨ ࿈『⌯﮼ＶＩＰ ﮼⌯』࿈⁩ –•', url="t.me/source_Laren"}},
 }
 local msg_id = msg.id_/2097152/0.5
-https.request("https://api.telegram.org/bot"..token..'/sendsticker?chat_id=' .. msg.chat_id_ .. '&sticker=https://t.me/V_I_K_I_N_G_2/55/14&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
+https.request("https://api.telegram.org/bot"..token..'/sendvideo?chat_id=' .. msg.chat_id_ .. '&video=https://t.me/laren_aoamer/244&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
 end
+
+if text == 'هيي. ' or text == 'هاي' or text == 'هيي' then
+local Text = [[
+]]
+keyboard = {} 
+keyboard.inline_keyboard = {
+{{text = '•–⁨ ࿈『⌯﮼ＶＩＰ ﮼⌯』࿈⁩ –•', url="t.me/source_Laren"}},
+}
+local msg_id = msg.id_/2097152/0.5
+https.request("https://api.telegram.org/bot"..token..'/sendvideo?chat_id=' .. msg.chat_id_ .. '&video=https://t.me/laren_aoamer/246&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
+end
+
+if text == 'تبا' then
+local Text = [[
+]]
+keyboard = {} 
+keyboard.inline_keyboard = {
+{{text = '•–⁨ ࿈『⌯﮼ＶＩＰ ﮼⌯』࿈⁩ –•', url="t.me/source_Laren"}},
+}
+local msg_id = msg.id_/2097152/0.5
+https.request("https://api.telegram.org/bot"..token..'/sendvideo?chat_id=' .. msg.chat_id_ .. '&video=https://t.me/laren_aoamer/248 &caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
+end
+
+if text == 'بتحبوني' or text == 'بتحبيني' or text == 'بتحبني' then
+local Text = [[
+]]
+keyboard = {} 
+keyboard.inline_keyboard = {
+{{text = '•–⁨ ࿈『⌯﮼ＶＩＰ ﮼⌯』࿈⁩ –•', url="t.me/source_Laren"}},
+}
+local msg_id = msg.id_/2097152/0.5
+https.request("https://api.telegram.org/bot"..token..'/sendvideo?chat_id=' .. msg.chat_id_ .. '&video=https://t.me/laren_aoamer/250&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
+end
+
+if text == 'فييك' or text == 'فيكك' or text == 'فيك' then
+local Text = [[
+]]
+keyboard = {} 
+keyboard.inline_keyboard = {
+{{text = '•–⁨ ࿈『⌯﮼ＶＩＰ ﮼⌯』࿈⁩ –•', url="t.me/source_Laren"}},
+}
+local msg_id = msg.id_/2097152/0.5
+https.request("https://api.telegram.org/bot"..token..'/sendvideo?chat_id=' .. msg.chat_id_ .. '&video=https://t.me/laren_aoamer/252&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
+end
+
+if text == 'تم' or text == 'تمم' or text == 'تمم. ' then
+local Text = [[
+]]
+keyboard = {} 
+keyboard.inline_keyboard = {
+{{text = '•–⁨ ࿈『⌯﮼ＶＩＰ ﮼⌯』࿈⁩ –•', url="t.me/source_Laren"}},
+}
+local msg_id = msg.id_/2097152/0.5
+https.request("https://api.telegram.org/bot"..token..'/sendvideo?chat_id=' .. msg.chat_id_ .. '&video=https://t.me/laren_aoamer/254&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
+end
+
+if text == 'بحبح' or text == 'وحشتيني' or text == 'ميسد' then
+local Text = [[
+]]
+keyboard = {} 
+keyboard.inline_keyboard = {
+{{text = '•–⁨ ࿈『⌯﮼ＶＩＰ ﮼⌯』࿈⁩ –•', url="t.me/source_Laren"}},
+}
+local msg_id = msg.id_/2097152/0.5
+https.request("https://api.telegram.org/bot"..token..'/sendvideo?chat_id=' .. msg.chat_id_ .. '&video=https://t.me/laren_aoamer/256&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
+end
+
+if text == 'هه' or text == 'ههههه' or text == 'ههه' then
+local Text = [[
+]]
+keyboard = {} 
+keyboard.inline_keyboard = {
+{{text = '•–⁨ ࿈『⌯﮼ＶＩＰ ﮼⌯』࿈⁩ –•', url="t.me/source_Laren"}},
+}
+local msg_id = msg.id_/2097152/0.5
+https.request("https://api.telegram.org/bot"..token..'/sendvideo?chat_id=' .. msg.chat_id_ .. '&video=https://t.me/laren_aoamer/259&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
+end
+
+if text == 'سيفي. ' or text == 'سيفي ' or text == 'سي في ' then
+local Text = [[
+]]
+keyboard = {} 
+keyboard.inline_keyboard = {
+{{text = '•–⁨ ࿈『⌯﮼ＶＩＰ ﮼⌯』࿈⁩ –•', url="t.me/source_Laren"}},
+}
+local msg_id = msg.id_/2097152/0.5
+https.request("https://api.telegram.org/bot"..token..'/sendvideo?chat_id=' .. msg.chat_id_ .. '&video=https://t.me/laren_aoamer/261&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
+end
+
+if text == 'مشهتيجي' or text == 'متيقي' or text == 'متيجي' then
+local Text = [[
+]]
+keyboard = {} 
+keyboard.inline_keyboard = {
+{{text = '•–⁨ ࿈『⌯﮼ＶＩＰ ﮼⌯』࿈⁩ –•', url="t.me/source_Laren"}},
+}
+local msg_id = msg.id_/2097152/0.5
+https.request("https://api.telegram.org/bot"..token..'/sendvideo?chat_id=' .. msg.chat_id_ .. '&video=https://t.me/laren_aoamer/263&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
+end
+
+if text == 'بتعملو اي' or text == 'بتعمل اي' or text == 'بتعملي اي' then
+local Text = [[
+]]
+keyboard = {} 
+keyboard.inline_keyboard = {
+{{text = '•–⁨ ࿈『⌯﮼ＶＩＰ ﮼⌯』࿈⁩ –•', url="t.me/source_Laren"}},
+}
+local msg_id = msg.id_/2097152/0.5
+https.request("https://api.telegram.org/bot"..token..'/sendvideo?chat_id=' .. msg.chat_id_ .. '&video=https://t.me/laren_aoamer/265&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
+end
+
+if text == '+1' or text == 'حصل' or text == 'اتفق' then
+local Text = [[
+]]
+keyboard = {} 
+keyboard.inline_keyboard = {
+{{text = '•–⁨ ࿈『⌯﮼ＶＩＰ ﮼⌯』࿈⁩ –•', url="t.me/source_Laren"}},
+}
+local msg_id = msg.id_/2097152/0.5
+https.request("https://api.telegram.org/bot"..token..'/sendvideo?chat_id=' .. msg.chat_id_ .. '&video=https://t.me/laren_aoamer/267&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
+end
+
+if text == 'احظرني' or text == 'اطردني.' or text == 'اطردني' then
+local Text = [[
+]]
+keyboard = {} 
+keyboard.inline_keyboard = {
+{{text = '•–⁨ ࿈『⌯﮼ＶＩＰ ﮼⌯』࿈⁩ –•', url="t.me/source_Laren"}},
+}
+local msg_id = msg.id_/2097152/0.5
+https.request("https://api.telegram.org/bot"..token..'/sendvideo?chat_id=' .. msg.chat_id_ .. '&video=https://t.me/laren_aoamer/270&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
+end
+
+if text == 'نجيت' or text == 'انا جيت' or text == 'نا جيت' then
+local Text = [[
+]]
+keyboard = {} 
+keyboard.inline_keyboard = {
+{{text = '•–⁨ ࿈『⌯﮼ＶＩＰ ﮼⌯』࿈⁩ –•', url="t.me/source_Laren"}},
+}
+local msg_id = msg.id_/2097152/0.5
+https.request("https://api.telegram.org/bot"..token..'/sendvideo?chat_id=' .. msg.chat_id_ .. '&video=https://t.me/laren_aoamer/273&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
+end
+
+if text == 'ههآي' then
+local Text = [[
+]]
+keyboard = {} 
+keyboard.inline_keyboard = {
+{{text = '•–⁨ ࿈『⌯﮼ＶＩＰ ﮼⌯』࿈⁩ –•', url="t.me/source_Laren"}},
+}
+local msg_id = msg.id_/2097152/0.5
+https.request("https://api.telegram.org/bot"..token..'/sendvideo?chat_id=' .. msg.chat_id_ .. '&video=https://t.me/laren_aoamer/97 &caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
+end
+
+if text == 'نيني' then
+local Text = [[
+]]
+keyboard = {} 
+keyboard.inline_keyboard = {
+{{text = '•–⁨ ࿈『⌯﮼ＶＩＰ ﮼⌯』࿈⁩ –•', url="t.me/source_Laren"}},
+}
+local msg_id = msg.id_/2097152/0.5
+https.request("https://api.telegram.org/bot"..token..'/sendvideo?chat_id=' .. msg.chat_id_ .. '&video=https://t.me/laren_aoamer/89 &caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
+end
+
+if text == 'اديلو' then
+local Text = [[
+]]
+keyboard = {} 
+keyboard.inline_keyboard = {
+{{text = '•–⁨ ࿈『⌯﮼ＶＩＰ ﮼⌯』࿈⁩ –•', url="t.me/source_Laren"}},
+}
+local msg_id = msg.id_/2097152/0.5
+https.request("https://api.telegram.org/bot"..token..'/sendvideo?chat_id=' .. msg.chat_id_ .. '&video=https://t.me/laren_aoamer/79 &caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
+end
+
+if text == 'مين' then
+local Text = [[
+]]
+keyboard = {} 
+keyboard.inline_keyboard = {
+{{text = '•–⁨ ࿈『⌯﮼ＶＩＰ ﮼⌯』࿈⁩ –•', url="t.me/source_Laren"}},
+}
+local msg_id = msg.id_/2097152/0.5
+https.request("https://api.telegram.org/bot"..token..'/sendvideo?chat_id=' .. msg.chat_id_ .. '&video=https://t.me/laren_aoamer/76 &caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
+end
+
 if text == 'بضان' or text == 'رخمه' or text == 'رخم' then
 local Text = [[
 ]]
 keyboard = {} 
 keyboard.inline_keyboard = {
-{{text = '࿈『⌯﮼ＶＩＰ ﮼⌯』࿈⁩ ', url="t.me/laren_aoamer/66"}},
+{{text = '•–⁨ ࿈『⌯﮼ＶＩＰ ﮼⌯』࿈⁩ –•', url="t.me/source_Laren"}},
 }
 local msg_id = msg.id_/2097152/0.5
-https.request("https://api.telegram.org/bot"..token..'/sendvideo?chat_id=' .. msg.chat_id_ .. '&video=https://t.me/V_I_K_I_N_G_2/53/18&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
+https.request("https://api.telegram.org/bot"..token..'/sendvideo?chat_id=' .. msg.chat_id_ .. '&video=https://t.me/laren_aoamer/66&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
 end
-if text == 'طرد' or text == 'حظر' or text == 'كتم' or text == 'كتم عام' or text == 'حظر عام' then
+
+if text == 'انت' or text == 'انا' or text == 'انتو' then
 local Text = [[
 ]]
 keyboard = {} 
 keyboard.inline_keyboard = {
-{{text = ' •–⁨ ࿈『⌯﮼ＶＩＰ ﮼⌯』࿈⁩ –•', url="t.me/laren_aoamer/183"}},
+{{text = '•–⁨ ࿈『⌯﮼ＶＩＰ ﮼⌯』࿈⁩ –•', url="t.me/source_Laren"}},
 }
 local msg_id = msg.id_/2097152/0.5
-https.request("https://api.telegram.org/bot"..token..'/sendsticker?chat_id=' .. msg.chat_id_ .. '&sticker=https://t.me/V_I_K_I_N_G_2/39/14&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
+https.request("https://api.telegram.org/bot"..token..'/sendvideo?chat_id=' .. msg.chat_id_ .. '&video=https://t.me/laren_aoamer/288&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
 end
-if text == 'جيت' then
+
+if text == '🙂🙂🙂 ' or text == '🙂🙂' or text == '🙂' then
 local Text = [[
 ]]
 keyboard = {} 
 keyboard.inline_keyboard = {
-{{text = ' •–⁨ ࿈『⌯﮼ＶＩＰ ﮼⌯』࿈⁩ –•', url="t.me/laren_aoamer/97"}},
+{{text = '•–⁨ ࿈『⌯﮼ＶＩＰ ﮼⌯』࿈⁩ –•', url="t.me/source_Laren"}},
 }
 local msg_id = msg.id_/2097152/0.5
-https.request("https://api.telegram.org/bot"..token..'/sendsticker?chat_id=' .. msg.chat_id_ .. '&sticker=https://t.me/V_I_K_I_N_G_2/27/14&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
+https.request("https://api.telegram.org/bot"..token..'/sendvideo?chat_id=' .. msg.chat_id_ .. '&video=https://t.me/laren_aoamer/60&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
 end
-if text == 'بمتت' then
+
+if text == 'هيهيهي' or text == 'هيهي' or text == 'هيهيهيهي' then
 local Text = [[
 ]]
 keyboard = {} 
 keyboard.inline_keyboard = {
-{{text = ' •–⁨ ࿈『⌯﮼ＶＩＰ ﮼⌯』࿈⁩ –•', url="t.me/laren_aoamer/103"}},
+{{text = '•–⁨ ࿈『⌯﮼ＶＩＰ ﮼⌯』࿈⁩ –•', url="t.me/source_Laren"}},
 }
 local msg_id = msg.id_/2097152/0.5
-https.request("https://api.telegram.org/bot"..token..'/sendsticker?chat_id=' .. msg.chat_id_ .. '&sticker=https://t.me/V_I_K_I_N_G_2/30/14&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
+https.request("https://api.telegram.org/bot"..token..'/sendvideo?chat_id=' .. msg.chat_id_ .. '&video=https://t.me/laren_aoamer/55&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
 end
-if text == 'لي' then
+
+if text == 'تء' or text == 'لا' or text == 'لاا' then
 local Text = [[
 ]]
 keyboard = {} 
 keyboard.inline_keyboard = {
-{{text = ' •–⁨ ࿈『⌯﮼ＶＩＰ ﮼⌯』࿈⁩ –•', url="t.me/laren_aoamer/107"}},
+{{text = '•–⁨ ࿈『⌯﮼ＶＩＰ ﮼⌯』࿈⁩ –•', url="t.me/source_Laren"}},
 }
 local msg_id = msg.id_/2097152/0.5
-https.request("https://api.telegram.org/bot"..token..'/sendsticker?chat_id=' .. msg.chat_id_ .. '&sticker=https://t.me/V_I_K_I_N_G_2/34/14&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
+https.request("https://api.telegram.org/bot"..token..'/sendvideo?chat_id=' .. msg.chat_id_ .. '&video=https://t.me/laren_aoamer/176&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
 end
-if text == 'الو' then
+
+if text == 'ياارب' or text == 'يارب' or text == 'يارب. ' then
 local Text = [[
 ]]
 keyboard = {} 
 keyboard.inline_keyboard = {
-{{text = ' •–⁨ ࿈『⌯﮼ＶＩＰ ﮼⌯』࿈⁩ –•', url="http://t.me/laren_aoamer/188"}},
+{{text = '•–⁨ ࿈『⌯﮼ＶＩＰ ﮼⌯』࿈⁩ –•', url="t.me/source_Laren"}},
 }
 local msg_id = msg.id_/2097152/0.5
-https.request("https://api.telegram.org/bot"..token..'/sendsticker?chat_id=' .. msg.chat_id_ .. '&sticker=https://t.me/V_I_K_I_N_G_2/41/14&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
+https.request("https://api.telegram.org/bot"..token..'/sendvideo?chat_id=' .. msg.chat_id_ .. '&video=https://t.me/laren_aoamer/54&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
 end
-if text == 'حبك' then
+
+if text == 'تشرفت' then
 local Text = [[
 ]]
 keyboard = {} 
 keyboard.inline_keyboard = {
-{{text = ' •–⁨ ࿈『⌯﮼ＶＩＰ ﮼⌯』࿈⁩ –•', url="t.me/laren_aoamer/190"}},
+{{text = '•–⁨ ࿈『⌯﮼ＶＩＰ ﮼⌯』࿈⁩ –•', url="t.me/source_Laren"}},
 }
 local msg_id = msg.id_/2097152/0.5
-https.request("https://api.telegram.org/bot"..token..'/sendsticker?chat_id=' .. msg.chat_id_ .. '&sticker=https://t.me/V_I_K_I_N_G_2/13/14&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
+https.request("https://api.telegram.org/bot"..token..'/sendvideo?chat_id=' .. msg.chat_id_ .. '&video=https://t.me/laren_aoamer/275 &caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
 end
-if text == 'يارب' then
+
+if text == 'حبك' or text == 'حبكي' or text == 'بحبك' then
 local Text = [[
 ]]
 keyboard = {} 
 keyboard.inline_keyboard = {
-{{text = '࿈『⌯﮼ＶＩＰ ﮼⌯』࿈⁩', url="t.me/laren_aoamer/54"}},
+{{text = '•–⁨ ࿈『⌯﮼ＶＩＰ ﮼⌯』࿈⁩ –•', url="t.me/source_Laren"}},
 }
 local msg_id = msg.id_/2097152/0.5
-https.request("https://api.telegram.org/bot"..token..'/sendsticker?chat_id=' .. msg.chat_id_ .. '&sticker=https://t.me/V_I_K_I_N_G_2/72/14&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
+https.request("https://api.telegram.org/bot"..token..'/sendvideo?chat_id=' .. msg.chat_id_ .. '&video=https://t.me/laren_aoamer/278&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
 end
-if text == 'قمر' then
+
+if text == 'بيي' or text == 'بيي. ' or text == 'بي' then
 local Text = [[
 ]]
 keyboard = {} 
 keyboard.inline_keyboard = {
-{{text = ' •–⁨ ࿈『⌯﮼ＶＩＰ ﮼⌯』࿈⁩ –•', url="t.me/laren_aoamer/194"}},
+{{text = '•–⁨ ࿈『⌯﮼ＶＩＰ ﮼⌯』࿈⁩ –•', url="t.me/source_Laren"}},
 }
 local msg_id = msg.id_/2097152/0.5
-https.request("https://api.telegram.org/bot"..token..'/sendsticker?chat_id=' .. msg.chat_id_ .. '&sticker=https://t.me/V_I_K_I_N_G_2/76/14&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
+https.request("https://api.telegram.org/bot"..token..'/sendvideo?chat_id=' .. msg.chat_id_ .. '&video=https://t.me/laren_aoamer/280&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
 end
-if text == 'مح' or text == 'محح' or text == 'مححح' then
+
+if text == '... ' or text == '..' or text == '.' then
 local Text = [[
 ]]
 keyboard = {} 
 keyboard.inline_keyboard = {
-{{text = '•–⁨ ࿈『⌯﮼ＶＩＰ ﮼⌯』࿈⁩ –•', url="t.me/laren_aoamer/195"}},
+{{text = '•–⁨ ࿈『⌯﮼ＶＩＰ ﮼⌯』࿈⁩ –•', url="t.me/source_Laren"}},
 }
 local msg_id = msg.id_/2097152/0.5
-https.request("https://api.telegram.org/bot"..token..'/sendvideo?chat_id=' .. msg.chat_id_ .. '&video=https://t.me/V_I_K_I_N_G_2/43/18&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
+https.request("https://api.telegram.org/bot"..token..'/sendvideo?chat_id=' .. msg.chat_id_ .. '&video=https://t.me/laren_aoamer/282&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
 end
-if text == 'ضحك' then
+
+if text == 'مححح' or text == 'محح' or text == 'مح' then
 local Text = [[
 ]]
 keyboard = {} 
 keyboard.inline_keyboard = {
-{{text = ' •–⁨ ࿈『⌯﮼ＶＩＰ ﮼⌯』࿈⁩ –•', url="t.me/laren_aoamer/196"}},
+{{text = '•–⁨ ࿈『⌯﮼ＶＩＰ ﮼⌯』࿈⁩ –•', url="t.me/source_Laren"}},
 }
 local msg_id = msg.id_/2097152/0.5
-https.request("https://api.telegram.org/bot"..token..'/sendsticker?chat_id=' .. msg.chat_id_ .. '&sticker=https://t.me/Qtdao/15&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
+https.request("https://api.telegram.org/bot"..token..'/sendvideo?chat_id=' .. msg.chat_id_ .. '&video=https://t.me/laren_aoamer/284&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
 end
-if text == 'حصل' then
+
+if text == 'هضربك' or text == 'هفشخك' or text == 'هنفخك' then
 local Text = [[
 ]]
 keyboard = {} 
 keyboard.inline_keyboard = {
-{{text = '•–⁨ ࿈『⌯﮼ＶＩＰ ﮼⌯』࿈⁩ –•', url="t.me/laren_aoamer/197"}},
+{{text = '•–⁨ ࿈『⌯﮼ＶＩＰ ﮼⌯』࿈⁩ –•', url="t.me/source_Laren"}},
 }
 local msg_id = msg.id_/2097152/0.5
-https.request("https://api.telegram.org/bot"..token..'/sendvideo?chat_id=' .. msg.chat_id_ .. '&video=https://t.me/comxnxp/21&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
+https.request("https://api.telegram.org/bot"..token..'/sendvideo?chat_id=' .. msg.chat_id_ .. '&video=https://t.me/laren_aoamer/286&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
+end
+
+if text == '💋' or text == '💋💋' or text == '💋💋💋' then
+local Text = [[
+]]
+keyboard = {} 
+keyboard.inline_keyboard = {
+{{text = '•–⁨ ࿈『⌯﮼ＶＩＰ ﮼⌯』࿈⁩ –•', url="t.me/source_Laren"}},
+}
+local msg_id = msg.id_/2097152/0.5
+https.request("https://api.telegram.org/bot"..token..'/sendvideo?chat_id=' .. msg.chat_id_ .. '&video=https://t.me/laren_aoamer/290&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
+end
+
+if text == 'جامد' or text == 'جمده' or text == 'جمد' then
+local Text = [[
+]]
+keyboard = {} 
+keyboard.inline_keyboard = {
+{{text = '•–⁨ ࿈『⌯﮼ＶＩＰ ﮼⌯』࿈⁩ –•', url="t.me/source_Laren"}},
+}
+local msg_id = msg.id_/2097152/0.5
+https.request("https://api.telegram.org/bot"..token..'/sendvideo?chat_id=' .. msg.chat_id_ .. '&video=https://t.me/laren_aoamer/292&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
+end
+
+if text == 'كلتي' or text == 'كلت' or text == 'كلتو' then
+local Text = [[
+]]
+keyboard = {} 
+keyboard.inline_keyboard = {
+{{text = '•–⁨ ࿈『⌯﮼ＶＩＰ ﮼⌯』࿈⁩ –•', url="t.me/source_Laren"}},
+}
+local msg_id = msg.id_/2097152/0.5
+https.request("https://api.telegram.org/bot"..token..'/sendvideo?chat_id=' .. msg.chat_id_ .. '&video=https://t.me/laren_aoamer/296&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
+end
+
+if text == 'مجنون' or text == 'اهبل' or text == 'عبيط' then
+local Text = [[
+]]
+keyboard = {} 
+keyboard.inline_keyboard = {
+{{text = '•–⁨ ࿈『⌯﮼ＶＩＰ ﮼⌯』࿈⁩ –•', url="t.me/source_Laren"}},
+}
+local msg_id = msg.id_/2097152/0.5
+https.request("https://api.telegram.org/bot"..token..'/sendvideo?chat_id=' .. msg.chat_id_ .. '&video=https://t.me/laren_aoamer/355&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
+end
+
+if text == 'كتفمك' then
+local Text = [[
+]]
+keyboard = {} 
+keyboard.inline_keyboard = {
+{{text = '•–⁨ ࿈『⌯﮼ＶＩＰ ﮼⌯』࿈⁩ –•', url="t.me/source_Laren"}},
+}
+local msg_id = msg.id_/2097152/0.5
+https.request("https://api.telegram.org/bot"..token..'/sendvideo?chat_id=' .. msg.chat_id_ .. '&video=https://t.me/laren_aoamer/357 &caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
+end
+
+if text == 'بوت بضان' or text == 'كسمك بوت' or text == 'كتفمك بوت' then
+local Text = [[
+]]
+keyboard = {} 
+keyboard.inline_keyboard = {
+{{text = '•–⁨ ࿈『⌯﮼ＶＩＰ ﮼⌯』࿈⁩ –•', url="t.me/source_Laren"}},
+}
+local msg_id = msg.id_/2097152/0.5
+https.request("https://api.telegram.org/bot"..token..'/sendvideo?chat_id=' .. msg.chat_id_ .. '&video=https://t.me/laren_aoamer/359&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
+end
+
+if text == 'غور' then
+local Text = [[
+]]
+keyboard = {} 
+keyboard.inline_keyboard = {
+{{text = '•–⁨ ࿈『⌯﮼ＶＩＰ ﮼⌯』࿈⁩ –•', url="t.me/source_Laren"}},
+}
+local msg_id = msg.id_/2097152/0.5
+https.request("https://api.telegram.org/bot"..token..'/sendvideo?chat_id=' .. msg.chat_id_ .. '&video=https://t.me/laren_aoamer/361 &caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
+end
+
+if text == 'احلف' or text == 'ولله' or text == 'بجد' then
+local Text = [[
+]]
+keyboard = {} 
+keyboard.inline_keyboard = {
+{{text = '•–⁨ ࿈『⌯﮼ＶＩＰ ﮼⌯』࿈⁩ –•', url="t.me/source_Laren"}},
+}
+local msg_id = msg.id_/2097152/0.5
+https.request("https://api.telegram.org/bot"..token..'/sendvideo?chat_id=' .. msg.chat_id_ .. '&video=https://t.me/laren_aoamer/362&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
+end
+
+if text == 'مم' then
+local Text = [[
+]]
+keyboard = {} 
+keyboard.inline_keyboard = {
+{{text = '•–⁨ ࿈『⌯﮼ＶＩＰ ﮼⌯』࿈⁩ –•', url="t.me/source_Laren"}},
+}
+local msg_id = msg.id_/2097152/0.5
+https.request("https://api.telegram.org/bot"..token..'/sendvideo?chat_id=' .. msg.chat_id_ .. '&video=https://t.me/laren_aoamer/363 &caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
+end
+
+if text == 'يتي' or text == 'ياتي' or text == 'ياتي 💘. ' then
+local Text = [[
+]]
+keyboard = {} 
+keyboard.inline_keyboard = {
+{{text = '•–⁨ ࿈『⌯﮼ＶＩＰ ﮼⌯』࿈⁩ –•', url="t.me/source_Laren"}},
+}
+local msg_id = msg.id_/2097152/0.5
+https.request("https://api.telegram.org/bot"..token..'/sendvideo?chat_id=' .. msg.chat_id_ .. '&video=https://t.me/laren_aoamer/364&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
 end
 
 if text == ""..(database:get(bot_id..'Name:Bot') or 'V I P').."" then  
