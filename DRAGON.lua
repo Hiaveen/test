@@ -14552,7 +14552,7 @@ tdcli_function ({ ID = "GetUserProfilePhotos", user_id_ = bot_id, offset_ = 0, l
 end,nil)
 end
 
-if text:match("^معرفي$")  and dev11(msg) then
+if text:match("^معرفي$")  and DRAGON(msg) then
 function get_username(extra,result,success)
 text = '❅∫ معرفك ، {User}'
 local text = text:gsub('{User}',('@'..result.username_ or ''))
@@ -15420,7 +15420,7 @@ for k,v in pairs(zx.ok) do
 i = i + 1
 t = t..i.."-  `"..v.."` \n"
 end
-send(msg.chat_id_, msg.id_, t..'⚚━━━━━⚚Ꮩ Ꭵ Ꮲ ☽‘⚚━━━━━⚚\nاضغط علي الاسم ليتم نسخه\n⚚━━━━━⚚Ꮩ Ꭵ Ꮲ ☽‘⚚━━━━━⚚ٴ\n ⋆ ❲[Ꮩ Ꭵ Ꮲ ☽‘](t.me/source_Laren)❳ ⋆ ')
+send(msg.chat_id_, msg.id_, t..' ⚡— — — — — — — — —⚡\n⌯┇[🔥🌐 𝐂𝐡𝐚𝐚𝐧𝐞𝐥 🦅](t.me/source_Laren)')
 end
 
 if text == "تعطيل معاني الاسماء" and Manager(msg) then
