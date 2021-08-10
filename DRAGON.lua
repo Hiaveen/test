@@ -14552,6 +14552,16 @@ tdcli_function ({ ID = "GetUserProfilePhotos", user_id_ = bot_id, offset_ = 0, l
 end,nil)
 end
 
+if text:match("^معرفي$")  and dev11(msg) then
+function get_username(extra,result,success)
+text = '❅∫ معرفك ، {User}'
+local text = text:gsub('{User}',('@'..result.username_ or ''))
+data.x(msg.chat_id_, msg.id_, 1, text, 1, 'html')
+end
+getUser(msg.sender_user_id_,get_username)
+end
+
+
 if text == "اسمي"  then 
 tdcli_function({ID="GetUser",user_id_=msg.sender_user_id_},function(extra,result,success)
 if result.first_name_  then
@@ -15393,22 +15403,22 @@ end
 ----------------------------------------------------------------------------
 ----------------------------------------------------------------- انتهئ الاوامر الجديدة
 if text == "تعطيل الزخرفه" and Manager(msg) then
-send(msg.chat_id_, msg.id_, '℘︙ تم تعطيل الزخرفه')
-database:set(bot_id.." sofi:zhrf_Bots"..msg.chat_id_,"close")
+send(msg.chat_id_, msg.id_, '⌯┇تم تعطيل الزخرفه')
+database:set(bot_id.."zhrf_Bots"..msg.chat_id_,"close")
 end
 if text == "تفعيل الزخرفه" and Manager(msg) then
-send(msg.chat_id_, msg.id_,'℘︙ تم تفعيل الزخرفه')
-database:set(bot_id.." sofi:zhrf_Bots"..msg.chat_id_,"open")
+send(msg.chat_id_, msg.id_,'⌯┇تم تفعيل الزخرفه')
+database:set(bot_id.."zhrf_Bots"..msg.chat_id_,"open")
 end
-if text and text:match("^زخرفه (.*)$") and database:get(bot_id.." sofi:zhrf_Bots"..msg.chat_id_) == "open" then
+if text and text:match("^زخرفه (.*)$") and database:get(bot_id.."zhrf_Bots"..msg.chat_id_) == "open" then
 local TextZhrfa = text:match("^زخرفه (.*)$")
-zh = https.request('https://apiabs.ml/zrf.php?abs='..URL.escape(TextZhrfa)..'')
+zh = https.request('https://boyka-api.ml/frills.php?en='..URL.escape(TextZhrfa)..'')
 zx = JSON.decode(zh)
-t = "\n ⋆قائمه الزخرفه \n⚚━━━━━⚚Ꮩ Ꭵ Ꮲ ☽‘⚚━━━━━⚚\n"
+t = "\n✫️ : قائمه الزخرفه \n ⚡— — — — — — — — —⚡ \n"
 i = 0
 for k,v in pairs(zx.ok) do
 i = i + 1
-t = t..i.."-  "..v.." \n"
+t = t..i.."-  `"..v.."` \n"
 end
 send(msg.chat_id_, msg.id_, t..'⚚━━━━━⚚Ꮩ Ꭵ Ꮲ ☽‘⚚━━━━━⚚\nاضغط علي الاسم ليتم نسخه\n⚚━━━━━⚚Ꮩ Ꭵ Ꮲ ☽‘⚚━━━━━⚚ٴ\n ⋆ ❲[Ꮩ Ꭵ Ꮲ ☽‘](t.me/source_Laren)❳ ⋆ ')
 end
