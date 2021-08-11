@@ -4358,7 +4358,7 @@ end
 tdcli_function ({ ID = "GetMessage", chat_id_ = msg.chat_id_, message_id_ = tonumber(msg.reply_to_message_id_) }, by_reply, nil) 
 end
 
-if text =='تغيير المطور الاساسي ' and SudoBot(msg) then
+if text =='تغيير المطور الاساسي ✫ ' and SudoBot(msg) then
 send(msg.chat_id_, msg.id_,'✫: ارسل ايدي المطور الاساسي الجديد')
 database:set(bot_id..'DEV:Sudo:T',true) 
 end
