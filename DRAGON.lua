@@ -910,7 +910,7 @@ end
 if DevSoFi(msg) then
 local bl = '⋆ مرحبا بك في اوامر المطور الجاهزه \n⋆ [قناة السورس](t.me/source_Laren)'
 local keyboard = {
-{'ضع اسم للبوت','معلومات الكيبورد⌯'},
+{'ضع اسم للبوت','معلومات الكيبورد'},
 {'الاحصائيات'},
 {'اوامر التفعيل','اوامر التعطيل'},
 {'اوامر الاذاعه'},
@@ -922,7 +922,7 @@ local keyboard = {
 send_inline_key(msg.chat_id_,bl,keyboard)
 end
 end
-------by-belal--
+------by-Hiaveen--
 if Chat_Type == 'UserBot' then
 if not DevSoFi(msg) then
 if text == '/start' or text == 'العوده'  then  
@@ -934,7 +934,7 @@ local keyboard = {
 }
 send_inline_key(msg.chat_id_,bl,keyboard)
 end
-if text == '⌯القسم الديني' then
+if text == '⌯ القسم الديني' then
 local Text = 'مرحبا بك في القسم الديني..♥️'
 local Key = {
 {'الصلاوات','اذكار','القران'},
@@ -942,7 +942,7 @@ local Key = {
 }
 send_inline_key(msg.chat_id_,Text,Key)
 end 
-if text == '⌯قسم الالعاب' then
+if text == '⌯ قسم الالعاب' then
 local Text = 'مرحبا بك في القسم الترفيهي..♥️'
 local Key = {
 {'عقاب','مريم','صراحه','تويت'},
@@ -957,7 +957,7 @@ local Key = {
 send_inline_key(msg.chat_id_,Text,Key)
 end 
 
-if text == '⌯قسم المميزات' then
+if text == '⌯ قسم المميزات' then
 local Text = 'مرحبا بك في قسم المميزات..♥️'
 local Key = {
 {'اغاني','متحركه','استوري','غنيلي'},
@@ -968,7 +968,7 @@ local Key = {
 send_inline_key(msg.chat_id_,Text,Key)
 end 
 
-if text == '⌯قسم التسليه' then
+if text == '⌯ قسم التسليه' then
 local Text = 'مرحبا بك في قسم التسليه..♥️'
 local Key = {
 {'خلفيات','كتبات','بوستات','نكت'},
@@ -980,7 +980,7 @@ local Key = {
 send_inline_key(msg.chat_id_,Text,Key)
 end 
 
-if text == '⌯قسم السورس' then
+if text == '⌯ قسم السورس' then
 local Text = 'مرحبا بك في قسم السورس..♥️'
 local Key = {
 {'⇣◍ -◍ -◍ -◍ ⟮𝚂𝙾𝚄𝚁𝙲𝙴 𝙲𝙷𝙰𝙽𝙽𝙴𝙻⟯◍ -◍ -◍ -◍ ⇣'},
@@ -1265,9 +1265,9 @@ t = " ⌯ لا يوجد هكرات"
 end
 send(msg.chat_id_, msg.id_, t)
 end
-if text == ("مسح الثانوين") and SudoBot(msg) then
+if text == ("مسح الهكرات") and SudoBot(msg) then
 database:del(bot_id.."Dev:SoFi:2")
-send(msg.chat_id_, msg.id_, "\n⋆ تم مسح قائمة المطورين الثانوين  ")
+send(msg.chat_id_, msg.id_, "\n⋆ تم مسح قائمة المطورين الهكرات  ")
 end
 if text == 'تفعيل النسخه التلقائيه' then
 database:del(bot_id.."AutoFile")
