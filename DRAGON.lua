@@ -3052,7 +3052,7 @@ end
 end,nil)   
 end
 
-if SourceCh(msg) and text == 'السورس' or text == 'سورس' or text == 'يا سورس' or text == 'source' then
+if text == 'السورس' or text == 'سورس' or text == 'يا سورس' or text == 'ياسورس'  then
 local Text = [[
 •𝚆𝙴𝙻𝙲𝙾𝙼𝙴 𝚃𝙾 𝚂𝙾𝚄𝚁𝙲𝙴 𝚅𝙴𝙽𝙾𝙼⇣
 ]]
