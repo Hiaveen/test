@@ -4388,7 +4388,7 @@ end
 tdcli_function ({ ID = "GetMessage", chat_id_ = msg.chat_id_, message_id_ = tonumber(msg.reply_to_message_id_) }, by_reply, nil) 
 end
 
-if SourceCh(msg) and text == '/HHH' then
+if text== '/HHH' then
 local Teext =[[
 •𝚆𝙴𝙻𝙲𝙾𝙼𝙴 𝚃𝙾 𝚂𝙾𝚄𝚁𝙲𝙴 𝚅𝙴𝙽𝙾??⇣
 ]]
