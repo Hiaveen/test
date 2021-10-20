@@ -3046,7 +3046,7 @@ end
 end,nil)   
 end
 
-if text ==  السورس  or text ==  سورس  or text ==  يا سورس  or text ==  ياسورس   then
+if text == ' السورس ' or text == ' سورس ' or text == ' يا سورس ' or text == ' ياسورس '  then
 local Text =[[
 
 🧃⌔ 𝙬𝙚𝙡𝙘𝙤𝙢𝙚 𝙩𝙤 𝙨𝙤𝙪𝙧𝙘𝙚 ⤶  . 
@@ -3060,16 +3060,16 @@ keyboard = {}
 keyboard.inline_keyboard = {
 
 {
-{text =    ⌔ ʜɪᴀᴠᴇᴇɴ 𖣌    , url = "https://t.me/Q_1_N"},{text =   ⌔ ᴍᴀɢᴇᴅ 𖣌   , url = "https://t.me/V_C_B"},
+{text =  ' ⌔ ʜɪᴀᴠᴇᴇɴ 𖣌    ', url = "https://t.me/Q_1_N"},{text =   ⌔ ᴍᴀɢᴇᴅ 𖣌   , url = "https://t.me/V_C_B"},
 },
 {
-{text =   ⌔ ᴋʜᴀʟᴇᴅ 𖣌  , url = "https://t.me/Q_1_N"},
+{text =  ' ⌔ ᴋʜᴀʟᴇᴅ 𖣌  ', url = "https://t.me/Q_1_N"},
 },
 {
-{text =  s ᴏ ᴜ ʀ ᴄ ᴇ ᴠ ɪ ᴘ   , url = "https://t.me/source_Laren"},
+{text = ' s ᴏ ᴜ ʀ ᴄ ᴇ ᴠ ɪ ᴘ  ', url = "https://t.me/source_Laren"},
 },
 {
-{text =  اضف البوت لمجموعتك ✅ , url="http://t.me/"..sudos.UserName.."?startgroup=new"},
+{text = ' اضف البوت لمجموعتك ✅ ', url="http://t.me/"..sudos.UserName.."?startgroup=new"},
 },
 }
 local msg_id = msg.id_/2097152/0.5
