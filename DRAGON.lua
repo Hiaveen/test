@@ -3060,7 +3060,7 @@ keyboard = {}
 keyboard.inline_keyboard = {
 
 {
-{text =  ' ⌔ ʜɪᴀᴠᴇᴇɴ 𖣌    ', url = "https://t.me/Q_1_N"},{text =   ⌔ ᴍᴀɢᴇᴅ 𖣌   , url = "https://t.me/V_C_B"},
+{text =  ' ⌔ ʜɪᴀᴠᴇᴇɴ 𖣌    ', url = "https://t.me/Q_1_N"},{text = '  ⌔ ᴍᴀɢᴇᴅ 𖣌   ', url = "https://t.me/V_C_B"},
 },
 {
 {text =  ' ⌔ ᴋʜᴀʟᴇᴅ 𖣌  ', url = "https://t.me/Q_1_N"},
